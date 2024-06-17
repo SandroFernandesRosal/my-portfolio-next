@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <section className="px-5 bg-bgdarksecundary py-5">
+    <section className="px-5 bg-bgdarksecundary py-5 ">
       <h1 className="border-l-8 mb-5 border-primary pl-2 rounded-md text-2xl">
         Meus projetos
       </h1>

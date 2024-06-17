@@ -4,10 +4,10 @@ import fotoPerfil from '../../public/perfil-1.png'
 
 export default function HighLight() {
   return (
-    <div className="flex flex-wrap-reverse  gap-10 items-center   justify-evenly   px-5">
-      <div className="flex flex-col font-bold px-5  ">
+    <div className="flex flex-wrap-reverse  gap-10 items-center   justify-evenly  px-5">
+      <div className="flex flex-col font-bold  ">
         <h1 className="">Olá, eu sou o </h1>
-        <p className="font-MsMadi nome text-primary text-6xl max-w-[375px] ">
+        <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] ">
           Sandro Fernandes
         </p>
         <h2>Desenvolvedor Font-end</h2>

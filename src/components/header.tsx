@@ -6,7 +6,7 @@ import ChangeTheme from './change-theme'
 export default function Header() {
   return (
     <div
-      className={` w-full z-40 shadow-shadowlight flex items-center   dark:shadow-shadowdark  py-4 dark:bg-bgdark bg-bglight fixed '} `}
+      className={` w-[100vw] z-40 shadow-shadowlight flex items-center   dark:shadow-shadowdark  py-4 dark:bg-bgdark bg-bglight fixed '} `}
     >
       <div className="flex items-center justify-around gap-2 w-full ">
         <div className="flex items-center">

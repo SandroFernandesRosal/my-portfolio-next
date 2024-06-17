@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <section className="flex flex-col px-5 my-5 ">
+    <section className="w-full flex flex-col px-5 my-5">
       <h1 className="border-l-8 mb-5 border-primary pl-2 rounded-md text-2xl">
         Minhas Habilidades
       </h1>

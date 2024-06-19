@@ -5,7 +5,7 @@ import Skills from '@/components/skills'
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen pt-24 overflow-x-hidden ">
+    <main className="flex flex-col min-h-screen pt-[72px] overflow-x-hidden ">
       <HighLight />
       <Services />
       <Skills />

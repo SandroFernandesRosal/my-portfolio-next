@@ -2,13 +2,13 @@ import { Monitor, ShoppingCart, Rss, Speech } from 'lucide-react'
 
 export default function Services() {
   return (
-    <section className="z-10 px-5 mt-5  dark:bg-bgdarksecundary bg-bglightsecundary py-5">
+    <section className="z-10 px-5   dark:bg-bgdark bg-bglight py-5">
       <h1 className="border-l-8 border-primary pl-2 rounded-md text-2xl">
         Meus serviços
       </h1>
 
       <div className="flex  gap-4  mt-5">
-        <p className="w-20 h-20  bg-bgdark rounded-md justify-center items-center flex">
+        <p className="w-20 h-20  dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
           <Monitor className="text-primary" />
         </p>
         <div className="flex flex-col gap-2 flex-1">
@@ -18,7 +18,7 @@ export default function Services() {
       </div>
 
       <div className="flex  gap-4  mt-5 ">
-        <p className="w-20 h-20 bg-bgdark rounded-md justify-center items-center flex">
+        <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
           <ShoppingCart className="text-primary" />
         </p>
         <div className="flex flex-col gap-2 flex-1">
@@ -28,7 +28,7 @@ export default function Services() {
       </div>
 
       <div className="flex  gap-4  mt-5 ">
-        <p className="w-20 h-20 bg-bgdark rounded-md justify-center items-center flex">
+        <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
           <Rss className="text-primary" />
         </p>
         <div className="flex flex-col gap-2 flex-1">
@@ -38,7 +38,7 @@ export default function Services() {
       </div>
 
       <div className="flex  gap-4  mt-5 ">
-        <p className="w-20 h-20 bg-bgdark rounded-md justify-center items-center flex">
+        <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
           <Speech className="text-primary" />
         </p>
         <div className="flex flex-col gap-2 flex-1">

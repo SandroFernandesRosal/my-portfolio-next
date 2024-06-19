@@ -4,7 +4,7 @@ import fotoPerfil from '../../public/perfil-1.png'
 
 export default function HighLight() {
   return (
-    <div className="flex flex-wrap  items-center   justify-evenly  px-5">
+    <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection">
       <div className="flex flex-col font-bold  ">
         <h1 className="">Olá, eu sou o </h1>
         <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] ">
@@ -27,7 +27,7 @@ export default function HighLight() {
           rel="noopener noreferrer"
           locale={false}
           download
-          className=" mt-5 text-center p-3 rounded-lg dark:bg-bgdarksecundary z-10 shadow-shadowlight dark:shadow-shadowdark bg-bglightsecundary self-center hover:shadow-primary dark:hover:shadow-primary"
+          className=" mt-5 text-center p-3 rounded-lg dark:bg-bgdark z-10 shadow-shadowlight dark:shadow-shadowdark bg-bglight self-center hover:shadow-primary dark:hover:shadow-primary"
         >
           Entrar em contato
         </Link>

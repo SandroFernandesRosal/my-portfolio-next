@@ -5,7 +5,7 @@ export default function Skills() {
         Minhas Habilidades
       </h1>
 
-      <ul className="flex flex-wrap gap-2 ">
+      <ul className="flex flex-wrap gap-3 ">
         <li className="p-2 dark:bg-bgdark bg-bglight shadow-shadowlight dark:shadow-shadowdark rounded-md">
           HTML
         </li>

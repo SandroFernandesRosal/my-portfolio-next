@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { AlignRight, X } from 'lucide-react'
 
 import ChangeTheme from './change-theme'
+import Opacity from './opacity'
 
 export default function Menu() {
   const [menu, setMenu] = useState(false)
@@ -25,6 +26,8 @@ export default function Menu() {
           className="md:hidden cursor-pointer hover:text-primary"
         />
       )}
+
+      <Opacity menu={menu} />
 
       <div
         className={`fixed top-[70px]  right-0 z-30 flex min-h-screen w-[70%] shadow-shadowlight dark:shadow-shadowdark transform rounded-l-xl flex-col items-center pt-5 gap-10 bg-bglightsecundary dark:bg-bgdarksecundary font-bold backdrop-blur-md transition-transform duration-300 md:hidden ${

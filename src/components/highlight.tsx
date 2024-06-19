@@ -4,7 +4,7 @@ import fotoPerfil from '../../public/perfil-1.png'
 
 export default function HighLight() {
   return (
-    <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection">
+    <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10">
       <div className="flex flex-col font-bold  ">
         <h1 className="">Olá, eu sou o </h1>
         <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] ">
@@ -33,7 +33,7 @@ export default function HighLight() {
         </Link>
       </div>
 
-      <div className=" z-0 md:z-10 relative -bottom-10 md:static  md:dark:shadow-shadowdark md:shadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center md:rounded-perfil md:border-2px border-green md:dark:bg-bgdarksecundary overflow-hidden ">
+      <div className=" z-0 md:z-10 relative -bottom-10 md:static  md:dark:shadow-shadowdark md:shadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center md:rounded-perfil md:border-2px border-green md:dark:bg-bgdarksecundary overflow-hidden md:mt-5">
         <Image
           src={fotoPerfil}
           height={400}

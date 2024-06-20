@@ -37,7 +37,7 @@ export default async function ProjecttPage({ params }: ProjectProps) {
     <div className="pt-[90px] flex flex-col items-center gap-5 min-h-screen bg-bglightsecundary dark:bg-bgdarksecundary pb-10">
       <h1 className="text-center text-2xl font-extrabold">{project.title}</h1>
 
-      <div className="flex flex-wrap gap-5 justify-center">
+      <div className="flex flex-wrap gap-5 justify-evenly w-full ">
         <div className="flex flex-col gap-4">
           <p className="text-center">{project.description}</p>
           <ul className="flex px-1 gap-2 justify-center flex-wrap mb-2 font-bold">
@@ -53,7 +53,7 @@ export default async function ProjecttPage({ params }: ProjectProps) {
             })}
           </ul>
         </div>
-        <div className="flex flex-col justify-center px-10 gap-5 ">
+        <div className="flex flex-col justify-center gap-5">
           {project.imgs.map((img, i) => {
             return (
               <Image

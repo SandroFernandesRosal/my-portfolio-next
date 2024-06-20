@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center">
           <Link
             href="/"
-            className="md:text-2xl text-xl font-extrabold hover:text-green-950"
+            className="md:text-2xl text-xl font-extrabold hover:text-primary"
           >
             <p>Sandro Fernandes</p>
           </Link>

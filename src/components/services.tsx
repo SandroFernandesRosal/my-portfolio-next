@@ -9,7 +9,7 @@ export default function Services() {
 
       <div className="flex  gap-4  mt-5">
         <p className="w-20 h-20  dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
-          <Monitor className="text-primary" />
+          <Monitor className="text-primary size-8" />
         </p>
         <div className="flex flex-col gap-2 flex-1">
           <h1 className="text-lg font-bold">Criação de sites responsivos</h1>
@@ -19,7 +19,7 @@ export default function Services() {
 
       <div className="flex  gap-4  mt-5 ">
         <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
-          <ShoppingCart className="text-primary" />
+          <ShoppingCart className="text-primary size-8" />
         </p>
         <div className="flex flex-col gap-2 flex-1">
           <h1 className="text-lg font-bold">Criação de loja virtual</h1>
@@ -29,7 +29,7 @@ export default function Services() {
 
       <div className="flex  gap-4  mt-5 ">
         <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
-          <Rss className="text-primary" />
+          <Rss className="text-primary size-8" />
         </p>
         <div className="flex flex-col gap-2 flex-1">
           <h1 className="text-lg font-bold">Criação de Blog</h1>
@@ -39,7 +39,7 @@ export default function Services() {
 
       <div className="flex  gap-4  mt-5 ">
         <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
-          <Speech className="text-primary" />
+          <Speech className="text-primary size-8" />
         </p>
         <div className="flex flex-col gap-2 flex-1">
           <h1 className="text-lg font-bold">Criação de Landing Pages</h1>

@@ -21,7 +21,7 @@ export default function HighLight() {
           </p>
         </div>
 
-        <div className="flex mt-5 gap-4 justify-center">
+        <div className="flex my-5 gap-4 justify-center">
           <Link
             href={'/cv.pdf'}
             target="_blank"
@@ -46,7 +46,7 @@ export default function HighLight() {
         </div>
       </div>
 
-      <div className=" z-0 md:z-10 relative h-[315px] -bottom-10 md:static  md:dark:shadow-shadowdark md:shadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center md:rounded-perfil md:border-2px border-green md:dark:bg-bgdarksecundary overflow-hidden md:mt-5">
+      <div className=" h-[315px]   md:dark:shadow-shadowdark md:shadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center md:rounded-perfil md:border-2px border-green md:dark:bg-bgdarksecundary overflow-hidden md:mt-5">
         <Image
           src={fotoPerfil}
           height={400}

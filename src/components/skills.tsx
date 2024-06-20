@@ -5,6 +5,7 @@ import {
   RiAngularjsLine,
   RiNodejsLine,
   RiTailwindCssFill,
+  RiBearSmileLine,
 } from 'react-icons/ri'
 import { FaCss3Alt } from 'react-icons/fa'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
@@ -61,6 +62,10 @@ export default function Skills() {
         <li className="p-2 dark:bg-bgdark bg-bglight shadow-shadowlight dark:shadow-shadowdark  rounded-md flex flex-col items-center w-24 justify-center text-center h-32 border-b-4 border-primary">
           Styled Components
           <SiStyledcomponents className="text-6xl text-primary" />
+        </li>
+        <li className="p-2 dark:bg-bgdark bg-bglight shadow-shadowlight dark:shadow-shadowdark  rounded-md flex flex-col items-center w-24 justify-center text-center h-32 border-b-4 border-primary">
+          Zustand
+          <RiBearSmileLine className="text-6xl text-primary" />
         </li>
       </ul>
     </section>

@@ -3,6 +3,18 @@ import Image from 'next/image'
 import { Github, Info, ExternalLink } from 'lucide-react'
 import { Project } from '@/data/types/projects'
 import { api } from '@/data/api'
+import {
+  RiHtml5Line,
+  RiReactjsLine,
+  RiNextjsLine,
+  RiAngularjsLine,
+  RiNodejsLine,
+  RiTailwindCssFill,
+  RiBearSmileLine,
+} from 'react-icons/ri'
+import { FaCss3Alt } from 'react-icons/fa'
+import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
+import { SiPrisma, SiStyledcomponents } from 'react-icons/si'
 
 export default async function Projects() {
   const response = await api('/products', {
@@ -23,7 +35,7 @@ export default async function Projects() {
           return (
             <li
               key={project.id}
-              className="w-[45%] max-w-[250px] h-[440px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  hover:shadow-hover"
+              className="w-[45%] max-w-[250px] h-[400px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  hover:shadow-hover"
             >
               <Image
                 src={project.img}
@@ -64,7 +76,32 @@ export default async function Projects() {
                       className=" p-1 rounded-md bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark"
                       key={i}
                     >
-                      {tec}
+                      {tec === 'HTML' && <RiHtml5Line className="text-2xl" />}
+                      {tec === 'CSS' && <FaCss3Alt className="text-2xl" />}
+                      {tec === 'JS' && (
+                        <TbBrandJavascript className="text-2xl" />
+                      )}
+                      {tec === 'TS' && (
+                        <TbBrandTypescript className="text-2xl" />
+                      )}
+                      {tec === 'React' && (
+                        <RiReactjsLine className="text-2xl" />
+                      )}
+                      {tec === 'Next' && <RiNextjsLine className="text-2xl" />}
+                      {tec === 'Tailwind' && (
+                        <RiTailwindCssFill className="text-2xl" />
+                      )}
+                      {tec === 'Zustand' && (
+                        <RiBearSmileLine className="text-2xl" />
+                      )}
+                      {tec === 'Angular' && (
+                        <RiAngularjsLine className="text-2xl" />
+                      )}
+                      {tec === 'API' && <RiNodejsLine className="text-2xl" />}
+                      {tec === 'Styled Components' && (
+                        <SiStyledcomponents className="text-2xl" />
+                      )}
+                      {tec === 'Prisma' && <SiPrisma className="text-2xl" />}
                     </li>
                   )
                 })}

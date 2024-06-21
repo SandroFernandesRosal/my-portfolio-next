@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectProps {
   id: number
   title: string
   slug: string

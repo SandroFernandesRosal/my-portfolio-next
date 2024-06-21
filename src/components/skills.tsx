@@ -18,7 +18,7 @@ export default function Skills() {
         Minhas Habilidades
       </h1>
 
-      <ul className="flex flex-wrap gap-3 ">
+      <ul className="flex flex-wrap gap-3 justify-center">
         <li className="p-2 dark:bg-bgdark bg-bglight shadow-shadowlight dark:shadow-shadowdark rounded-md flex flex-col items-center w-24 justify-center text-center h-32 border-b-4 border-primary">
           HTML
           <RiHtml5Line className="text-6xl text-primary" />

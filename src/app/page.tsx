@@ -1,5 +1,6 @@
 import HighLight from '@/components/highlight'
 import Projects from '@/components/projects'
+
 import Services from '@/components/services'
 import Skills from '@/components/skills'
 

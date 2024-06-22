@@ -1,9 +1,9 @@
 'use client'
 import { ChangeEvent } from 'react'
 import { useSearch } from '../store/useStore'
-import { FaSearch } from 'react-icons/fa'
+import { Search } from 'lucide-react'
 
-export default function Search() {
+export default function SearchForm() {
   const { search, setSearch } = useSearch()
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -12,16 +12,16 @@ export default function Search() {
   }
 
   return (
-    <>
+    <form className="flex  items-center md:gap-3 rounded-full dark:bg-bgdarksecundary bg-bglightsecundary w-[250px]   p-1 shadow-shadowlight dark:shadow-shadowdark mb-5 justify-center">
       <input
         name="search"
         type="text"
         placeholder="Buscar notícia..."
-        className="border:none  flex  cursor-pointer rounded-lg border-none bg-bglight placeholder-black shadow-light outline-none focus:ring-0 dark:bg-bgdark dark:placeholder-white dark:shadow-dark "
+        className=" w-full bg-transparent text-sm outline-none placeholder:text-zinc-500 focus:ring-0 border-none rounded-full px-1"
         value={search}
         onChange={handleSearchChange}
       />
-      <FaSearch className="pointer-events-none relative -top-[27px] left-[85px] mb-1 text-primary dark:text-secundary" />
-    </>
+      <Search className="w- h-5 text-zinc-500" />
+    </form>
   )
 }

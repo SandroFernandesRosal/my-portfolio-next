@@ -31,14 +31,14 @@ export default function Project({
   return (
     <li
       key={id}
-      className={`w-[45%] max-w-[250px] h-[400px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110   hover:shadow-hover ${size === 'large' && 'w-[100%] max-w-[400px] h-[600px]  '}`}
+      className={`w-[45%] max-w-[250px] h-[400px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110   hover:shadow-hover ${size === 'large' && 'w-[101%] max-w-[400px] h-[600px]'} ${size === 'small' && 'h-[180px] w-[180px]'}`}
     >
       <Image
         src={img}
         alt=""
         width={400}
         height={400}
-        className="w-full object-cover object-top h-[60%] rounded-t-md border-b border-primary"
+        className={`w-full object-cover object-top h-[60%] rounded-t-md border-b border-primary ${size === 'small' && 'hidden'}`}
       />
       <p className="text-center">{title}</p>
 

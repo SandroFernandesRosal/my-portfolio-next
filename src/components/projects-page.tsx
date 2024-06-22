@@ -1,9 +1,9 @@
 import { api } from '@/data/api'
 
-import { SearchForm } from './search-form'
 import SizeProject from './size-project'
 import SelectDisplay from './select-display'
 import Projects from './projects'
+import Search from './search'
 
 export default async function ProjectsPage() {
   const response = await api('/products', {
@@ -19,7 +19,7 @@ export default async function ProjectsPage() {
         Meus projetos
       </h1>
       <div className="flex flex-col items-center mb-5 ">
-        <SearchForm />
+        <Search />
         <div className="flex gap-2">
           <SelectDisplay />
           <SizeProject />

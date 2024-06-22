@@ -33,6 +33,7 @@ export async function generateMetadata({
 
 export default async function ProjecttPage({ params }: SlugProps) {
   const project = await getProduct(params.slug)
+
   return (
     <div className="pt-[90px] flex flex-col items-center gap-5 min-h-screen bg-bglightsecundary dark:bg-bgdarksecundary pb-10">
       <h1 className="text-center text-2xl font-extrabold">{project.title}</h1>

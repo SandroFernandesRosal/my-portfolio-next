@@ -1,15 +1,15 @@
-import { Project } from '@/data/types/projects'
+import { ProjectProps } from '@/data/types/projects'
 import { api } from '@/data/api'
 import { Metadata } from 'next'
 import Image from 'next/image'
 
-interface ProjectProps {
+interface SlugProps {
   params: {
     slug: string
   }
 }
 
-async function getProduct(slug: string): Promise<Project> {
+async function getProduct(slug: string): Promise<ProjectProps> {
   const response = await api(`/products/${slug}`, {
     next: {
       revalidate: 60 * 60,
@@ -23,7 +23,7 @@ async function getProduct(slug: string): Promise<Project> {
 
 export async function generateMetadata({
   params,
-}: ProjectProps): Promise<Metadata> {
+}: SlugProps): Promise<Metadata> {
   const project = await getProduct(params.slug)
 
   return {
@@ -31,7 +31,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function ProjecttPage({ params }: ProjectProps) {
+export default async function ProjecttPage({ params }: SlugProps) {
   const project = await getProduct(params.slug)
   return (
     <div className="pt-[90px] flex flex-col items-center gap-5 min-h-screen bg-bglightsecundary dark:bg-bgdarksecundary pb-10">

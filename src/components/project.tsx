@@ -1,3 +1,4 @@
+'use client'
 import {
   RiHtml5Line,
   RiReactjsLine,
@@ -14,6 +15,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Github, Info, ExternalLink } from 'lucide-react'
 import { ProjectProps } from '@/data/types/projects'
+import { useSize } from '@/store/useStore'
 
 export default function Project({
   id,
@@ -24,10 +26,12 @@ export default function Project({
   page,
   tecs,
 }: ProjectProps) {
+  const { size } = useSize()
+
   return (
     <li
       key={id}
-      className="w-[45%] max-w-[250px] h-[400px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  hover:shadow-hover"
+      className={`w-[45%] max-w-[250px] h-[400px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110   hover:shadow-hover ${size === 'large' && 'w-[100%] max-w-[400px] h-[600px]  '}`}
     >
       <Image
         src={img}

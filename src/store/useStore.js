@@ -14,3 +14,13 @@ export const useDataSearch = create((set) => ({
   dataSearch: [],
   setDataSearch: (state) => set({ dataSearch: state }),
 }))
+
+export const useSize = create((set) => ({
+  size: 'normal',
+  setSize: (state) => set({ size: state }),
+}))
+
+export const useDisplay = create((set) => ({
+  display: 'destaque',
+  setDisplay: (state) => set({ display: state }),
+}))

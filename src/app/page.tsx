@@ -1,6 +1,5 @@
 import HighLight from '@/components/highlight'
-import Projects from '@/components/projects'
-
+import ProjectsPage from '@/components/projects-page'
 import Services from '@/components/services'
 import Skills from '@/components/skills'
 
@@ -10,7 +9,7 @@ export default function Home() {
       <HighLight />
       <Services />
       <Skills />
-      <Projects />
+      <ProjectsPage />
     </main>
   )
 }

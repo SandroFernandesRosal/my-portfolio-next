@@ -11,7 +11,7 @@ export default function SelectDisplay() {
   return (
     <select
       onChange={handleChange}
-      className="p-2 border-primary border-2 rounded-md bg-bglightsecundary dark:bg-bgdarksecundary h-9 flex items-center text-sm"
+      className="border-double border-4 border-primary   bg-bglightsecundary dark:bg-bgdarksecundary h-9 flex items-center rounded-md focus:ring-0 outline-none "
     >
       <option value="destaque">Destaques</option>
       <option value="todos">Todos</option>

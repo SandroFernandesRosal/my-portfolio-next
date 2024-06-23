@@ -8,7 +8,7 @@ export default function Footer() {
           href="/"
           className="md:text-2xl text-xl font-extrabold py-5 hover:text-primary"
         >
-          <p>Sandro Fernandes </p>
+          <p className="text-2xl font-medium">&lt;Sandro &#47;&gt;</p>
         </Link>
       </div>
     </footer>

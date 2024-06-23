@@ -17,11 +17,11 @@ export default function SearchForm() {
         name="search"
         type="text"
         placeholder="Buscar notícia..."
-        className=" w-full bg-transparent text-sm outline-none placeholder:text-zinc-500 focus:ring-0 border-none rounded-full px-1"
+        className=" w-full bg-transparent text-sm outline-none placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 border-none rounded-full px-1"
         value={search}
         onChange={handleSearchChange}
       />
-      <Search className="w- h-5 text-zinc-500" />
+      <Search className="w- h-5 text-textlight dark:text-textdark" />
     </form>
   )
 }

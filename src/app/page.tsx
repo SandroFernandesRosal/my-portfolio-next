@@ -2,6 +2,7 @@ import HighLight from '@/components/highlight'
 import ProjectsPage from '@/components/projects-page'
 import Services from '@/components/services'
 import Skills from '@/components/skills'
+import Contato from '@/components/contato'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Services />
       <Skills />
       <ProjectsPage />
+      <Contato />
     </main>
   )
 }

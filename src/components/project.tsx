@@ -31,7 +31,7 @@ export default function Project({
   return (
     <li
       key={id}
-      className={`max-w-[250px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110   hover:shadow-hover ${size === 'large' && 'w-[101%] max-w-[400px] h-[600px]'} ${size === 'small' && 'h-[180px] w-[180px]'} ${size === 'normal' && 'h-[400px] w-[45%]'}`}
+      className={`max-w-[250px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110   hover:shadow-hover ${size === 'large' && 'w-[100%] max-w-[400px] h-[600px]'} ${size === 'small' && 'h-[250px] w-[130px] md:w-[200px] justify-around'} ${size === 'normal' && 'h-[400px] w-[45%]'}`}
     >
       <Image
         src={img}

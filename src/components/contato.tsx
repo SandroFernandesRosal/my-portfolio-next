@@ -1,10 +1,9 @@
 'use client'
-
-import React, { useState, useRef, FormEvent } from 'react'
-
+import { useState, useRef, FormEvent } from 'react'
 import emailjs from '@emailjs/browser'
-
 import { BiHappyAlt } from 'react-icons/bi'
+import { FaWhatsapp } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Contato() {
   const form = useRef<HTMLFormElement | null>(null)
@@ -56,6 +55,14 @@ export default function Contato() {
         Entre em contato
       </h1>
 
+      <Link
+        href={'https://api.whatsapp.com/send?phone=5521969501614'}
+        target="blank"
+        className="flex items-center justify-around w-[150px] border-primary bg-bglight dark:bg-bgdark rounded-md border-2 p-2 mb-5"
+      >
+        <span>Whatsapp</span> <FaWhatsapp className="text-2xl text-primary" />
+      </Link>
+
       {alert && (
         <div className="flex items-center justify-center z-40 font-bold bg-bglightsecundary dark:bg-bgdarksecundary border-[1px] border-primary  rounded-md p-4">
           Mensagem enviada com sucesso!{' '}
@@ -69,6 +76,7 @@ export default function Contato() {
         name="form"
         className="flex flex-col w-[75%] max-w-[500px] rounded-md p-[15px]  bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark"
       >
+        <h1 className="text-center text-xl mb-5">Envie um email</h1>
         <input
           className="m-1 p-2 text-center border-[2px] border-primary rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark  focus:ring-0 outline-none bg-bglightsecundary dark:bg-bgdarksecundary "
           required={true}

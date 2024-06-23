@@ -31,18 +31,18 @@ export default function Project({
   return (
     <li
       key={id}
-      className={`max-w-[250px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110   hover:shadow-hover ${size === 'large' && 'w-[100%] max-w-[400px] h-[600px]'} ${size === 'small' && 'h-[250px] w-[130px] md:w-[200px] justify-around'} ${size === 'normal' && 'h-[400px] w-[45%]'}`}
+      className={`max-w-[250px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[100%] max-w-[400px] h-[650px]'} ${size === 'small' && 'h-[320px] min-w-[100px] w-[25%] md:max-w-[180px] justify-around'} ${size === 'normal' && 'h-[400px] w-[45%]'}`}
     >
       <Image
         src={img}
         alt=""
         width={400}
         height={400}
-        className={`w-full object-cover object-top h-[60%] rounded-t-md border-b border-primary ${size === 'small' && 'hidden'}`}
+        className={`w-full object-cover object-top h-[60%] rounded-t-md border-b border-primary ${size === 'small' && 'hidden'} ${size === 'large' && 'h-[80%]'}`}
       />
       <p className="text-center">{title}</p>
 
-      <div className="flex gap-3 justify-center">
+      <div className={`flex gap-3 justify-center w-full flex-wrap`}>
         <Link
           href={`/projetos/${slug}`}
           className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark"

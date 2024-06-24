@@ -67,7 +67,7 @@ export default function Contato() {
         ref={form}
         onSubmit={onSubmit}
         name="form"
-        className="flex flex-col w-[75%] max-w-[500px] rounded-md p-[15px]  bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark"
+        className="flex flex-col w-[75%] max-w-[500px] rounded-md p-[15px]  bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark mt-5"
       >
         <h1 className="text-center text-xl mb-5 font-bold">Envie um email</h1>
         <input

@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export default function Socials() {
   return (
-    <div className="flex gap-3 flex-wrap justify-center mb-5">
+    <div className="flex gap-3 flex-wrap justify-center">
       <Link
         href={'https://api.whatsapp.com/send?phone=5521969501614'}
         target="blank"
-        className="flex items-center justify-around w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadowdark font-bold"
+        className="flex items-center justify-around gap-2 md:gap-0 md:w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadowdark font-bold"
       >
         <span>Whatsapp</span> <FaWhatsapp className="text-2xl text-primary" />
       </Link>
@@ -15,7 +15,7 @@ export default function Socials() {
       <Link
         href={'https://github.com/SandroFernandesRosal'}
         target="blank"
-        className="flex items-center justify-around w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadowdark font-bold"
+        className="flex items-center justify-around gap-2 md:gap-0 md:w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadowdark font-bold"
       >
         <span>Github</span> <FaGithub className="text-2xl text-primary" />
       </Link>
@@ -23,7 +23,7 @@ export default function Socials() {
       <Link
         href={'https://www.linkedin.com/in/sandrofernandesrosal'}
         target="blank"
-        className="flex items-center justify-around w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadowdark font-bold"
+        className="flex items-center justify-around gap-2 md:gap-0 md:w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadowdark font-bold"
       >
         <span>Linkedin</span> <FaLinkedin className="text-2xl text-primary" />
       </Link>

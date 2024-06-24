@@ -1,6 +1,6 @@
 export default function TimeLine() {
   return (
-    <ul className="relative mx-10  w-[75%] overflow-visible border-l border-gray-700 dark:border-gray-700 md:w-[45%] my-5">
+    <ul className="relative mx-10  w-[85%] overflow-visible border-l border-gray-700 dark:border-gray-700 md:w-[45%] my-5">
       <li className="mb-5 ml-6">
         <span className="absolute  -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary ring-8 dark:ring-primary/20 ring-primary/40 ">
           <svg
@@ -19,7 +19,7 @@ export default function TimeLine() {
         </span>
         <h3 className="mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
           Análise e Desenvolvimento de Sistemas
-          <span className=" rounded px-2 py-0.5 text-sm font-bold bg-primary dark:text-black">
+          <span className=" rounded px-2 w-[150px] py-0.5 text-sm font-bold bg-primary dark:text-black">
             5° Período
           </span>
         </h3>

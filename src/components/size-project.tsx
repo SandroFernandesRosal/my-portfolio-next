@@ -1,7 +1,8 @@
 'use client'
 import { useSize } from '@/store/useStore'
-import { FaThLarge, FaSquare } from 'react-icons/fa'
+import { FaSquare } from 'react-icons/fa'
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
+import { IoGrid } from 'react-icons/io5'
 
 export default function SizeProject() {
   const { setSize, size } = useSize()
@@ -17,17 +18,17 @@ export default function SizeProject() {
           setSize('large')
           handleLocalSelection('large')
         }}
-        className={`cursor-pointer text-4xl text-primary  hover:text-primary/40 ${size === 'large' ? ' border-4 border-double rounded-md border-primary' : ''}`}
+        className={`cursor-pointer text-4xl text-primary  hover:text-primary/40 ${size === 'large' && ' border-4 border-double rounded-md border-primary '}`}
       />
 
-      <FaThLarge
+      <IoGrid
         onClick={() => setSize('normal')}
-        className={`cursor-pointer text-4xl p-[1px] text-primary  hover:text-primary/40 ${size === 'normal' ? ' border-4 border-double rounded-md border-primary' : ''}`}
+        className={`cursor-pointer text-4xl text-primary  hover:text-primary/40 ${size === 'normal' && ' border-4 border-double rounded-md border-primary  '}`}
       />
 
       <BsFillGrid3X3GapFill
         onClick={() => setSize('small')}
-        className={`cursor-pointer text-4xl text-primary  hover:text-primary/40 ${size === 'small' ? ' border-4 border-double rounded-md border-primary' : ''}`}
+        className={`cursor-pointer text-4xl text-primary  hover:text-primary/40 ${size === 'small' && ' border-4 border-double rounded-md border-primary '}`}
       />
     </div>
   )

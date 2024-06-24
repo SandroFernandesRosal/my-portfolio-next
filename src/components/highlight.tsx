@@ -14,15 +14,6 @@ export default function HighLight() {
         </p>
         <h2>Desenvolvedor Font-end</h2>
 
-        <div className="mt-5  text-left max-w-[400px] lg:max-w-[500px]">
-          <p>
-            Especialzado na criação de sites resposivos, lojas virtuais e blogs.
-            Tenho experiência com as mais recentes tecnologias de
-            desenvolvimento, garantindo que cada projeto seja moderno, eficiente
-            e escalável.
-          </p>
-        </div>
-
         <div className="flex my-5 gap-3 justify-center w-ful flex-wrap">
           <Link
             href={'https://api.whatsapp.com/send?phone=5521969501614'}

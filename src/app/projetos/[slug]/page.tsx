@@ -2,6 +2,18 @@ import { ProjectProps } from '@/data/types/projects'
 import { api } from '@/data/api'
 import { Metadata } from 'next'
 import Image from 'next/image'
+import {
+  RiHtml5Line,
+  RiReactjsLine,
+  RiNextjsLine,
+  RiAngularjsLine,
+  RiNodejsLine,
+  RiTailwindCssFill,
+  RiBearSmileLine,
+} from 'react-icons/ri'
+import { FaCss3Alt } from 'react-icons/fa'
+import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
+import { SiPrisma, SiStyledcomponents } from 'react-icons/si'
 
 interface SlugProps {
   params: {
@@ -38,17 +50,53 @@ export default async function ProjecttPage({ params }: SlugProps) {
     <div className="pt-[90px] flex flex-col items-center gap-5 min-h-screen bg-bglightsecundary dark:bg-bgdarksecundary pb-10">
       <h1 className="text-center text-2xl font-extrabold">{project.title}</h1>
 
-      <div className="flex flex-wrap gap-5 justify-evenly w-full  ">
+      <div className="flex flex-wrap gap-5 justify-evenly w-full ">
         <div className="flex flex-col gap-4">
           <p className="text-center">{project.description}</p>
-          <ul className="flex px-1 gap-2 justify-center flex-wrap mb-2 font-bold">
+          <ul className="flex px-1 gap-4 justify-center flex-wrap mb-2 font-bold">
             {project.tecs.map((tec, i) => {
               return (
                 <li
-                  className=" p-1 rounded-md bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark"
+                  className="p-2  dark:bg-bgdark bg-bglight shadow-shadowlight dark:shadow-shadowdark rounded-md flex flex-col items-center w-16 justify-center text-center h-24 border-b-4 border-primary"
                   key={i}
                 >
                   {tec}
+                  {tec === 'HTML' && (
+                    <RiHtml5Line className="text-6xl text-primary" />
+                  )}
+                  {tec === 'CSS' && (
+                    <FaCss3Alt className="text-6xl text-primary" />
+                  )}
+                  {tec === 'JS' && (
+                    <TbBrandJavascript className="text-6xl text-primary" />
+                  )}
+                  {tec === 'TS' && (
+                    <TbBrandTypescript className="text-6xl text-primary" />
+                  )}
+                  {tec === 'React' && (
+                    <RiReactjsLine className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Next' && (
+                    <RiNextjsLine className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Tailwind' && (
+                    <RiTailwindCssFill className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Zustand' && (
+                    <RiBearSmileLine className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Angular' && (
+                    <RiAngularjsLine className="text-6xl text-primary" />
+                  )}
+                  {tec === 'API' && (
+                    <RiNodejsLine className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Styled Components' && (
+                    <SiStyledcomponents className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Prisma' && (
+                    <SiPrisma className="text-6xl text-primary" />
+                  )}
                 </li>
               )
             })}

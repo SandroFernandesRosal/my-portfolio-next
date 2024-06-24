@@ -17,9 +17,9 @@ export default function TimeLine() {
             ></path>
           </svg>
         </span>
-        <h3 className="mb-1 flex items-center text-lg font-semibold text-gray-900 dark:text-white">
+        <h3 className="mb-1 flex  text-lg font-semibold text-gray-900 dark:text-white">
           Análise e Desenvolvimento de Sistemas
-          <span className=" rounded px-2 w-[150px] py-0.5 text-sm font-bold bg-primary dark:text-black">
+          <span className=" rounded px-2 w-[150px] flex justify-center items-center h-[30px] ml-2 py-0.5 text-sm font-bold bg-primary dark:text-black">
             5° Período
           </span>
         </h3>

@@ -4,6 +4,7 @@ import { AlignRight, X } from 'lucide-react'
 
 import ChangeTheme from './change-theme'
 import Opacity from './opacity'
+import ItensMenu from './itens-menu'
 
 export default function Menu() {
   const [menu, setMenu] = useState(false)
@@ -36,29 +37,7 @@ export default function Menu() {
       >
         <ChangeTheme />
 
-        <ul className="flex flex-col w-full text-xl">
-          <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
-            <p className="border-l-8  border-primary pl-2 rounded-md my-2">
-              Sobre
-            </p>
-          </li>
-
-          <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
-            <p className="border-l-8 border-primary pl-2 rounded-md my-2">
-              Serviços
-            </p>
-          </li>
-          <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
-            <p className="border-l-8  border-primary pl-2 rounded-md my-2">
-              Habilidades
-            </p>
-          </li>
-          <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
-            <p className="border-l-8  border-primary pl-2 rounded-md my-2">
-              Projetos
-            </p>
-          </li>
-        </ul>
+        <ItensMenu menu={menu} handleMenu={handleMenu} />
       </div>
     </>
   )

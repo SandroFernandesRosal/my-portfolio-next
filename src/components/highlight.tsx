@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import fotoPerfil from '../../public/perfil-1.png'
+import { FaWhatsapp } from 'react-icons/fa'
+import { IoMdDownload } from 'react-icons/io'
 
 export default function HighLight() {
   return (
-    <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10 rounded-b-3xl">
+    <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10 rounded-b-3xl mb-2 border-white shadow-shadowlight dark:shadow-shadowdark">
       <div className="flex flex-col font-bold  ">
         <h1 className="">Olá, eu sou o </h1>
         <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-1 ">
@@ -21,16 +23,17 @@ export default function HighLight() {
           </p>
         </div>
 
-        <div className="flex my-5 gap-4 justify-center">
+        <div className="flex my-5 gap-3 justify-center w-ful flex-wrap">
           <Link
-            href={'/cv.pdf'}
-            target="_blank"
+            href={'https://api.whatsapp.com/send?phone=5521969501614'}
+            target="blank"
             rel="noopener noreferrer"
             locale={false}
             download
-            className=" text-center p-3 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark bg-bglight self-center hover:shadow-primary dark:hover:shadow-primary"
+            className=" flex gap-2 text-center p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark bg-bglight  hover:shadow-primary dark:hover:shadow-primary"
           >
-            Entrar em contato
+            <span>Contato</span>{' '}
+            <FaWhatsapp className="text-2xl text-primary" />
           </Link>
 
           <Link
@@ -39,9 +42,10 @@ export default function HighLight() {
             rel="noopener noreferrer"
             locale={false}
             download
-            className=" text-center p-3 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark bg-bglight self-center hover:shadow-primary dark:hover:shadow-primary"
+            className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark bg-bglight  hover:shadow-primary dark:hover:shadow-primary"
           >
-            Currículo
+            <span>Currículo</span>{' '}
+            <IoMdDownload className="text-2xl text-primary" />
           </Link>
         </div>
       </div>

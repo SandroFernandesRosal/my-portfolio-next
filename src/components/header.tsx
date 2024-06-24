@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import Menu from './menu'
 import ChangeTheme from './change-theme'
+import ItensMenu from './itens-menu'
 
 export default function Header() {
   return (
@@ -17,6 +18,8 @@ export default function Header() {
             <p className="text-2xl font-medium ">&lt;Sandro &#47;&gt;</p>
           </Link>
         </div>
+
+        <ItensMenu menu={false} />
 
         <div className="flex items-center gap-4">
           <div className="hidden md:flex">

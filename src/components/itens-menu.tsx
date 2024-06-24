@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export interface MenuProps {
   menu: boolean
-  handleMenu: (event: React.MouseEvent<HTMLAnchorElement>) => void
+  handleMenu?: (event: React.MouseEvent<HTMLAnchorElement>) => void
 }
 
 export default function ItensMenu({ menu, handleMenu }: MenuProps) {

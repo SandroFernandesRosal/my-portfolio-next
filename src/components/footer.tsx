@@ -11,6 +11,7 @@ export default function Footer() {
         >
           <p className="text-2xl font-medium">&lt;Sandro &#47;&gt;</p>
         </Link>
+
         <Socials />
       </div>
     </footer>

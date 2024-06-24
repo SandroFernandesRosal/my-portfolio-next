@@ -5,6 +5,7 @@ import { AlignRight, X } from 'lucide-react'
 import ChangeTheme from './change-theme'
 import Opacity from './opacity'
 import ItensMenu from './itens-menu'
+import Socials from './socials'
 
 export default function Menu() {
   const [menu, setMenu] = useState(false)
@@ -38,6 +39,8 @@ export default function Menu() {
         <ChangeTheme />
 
         <ItensMenu menu={menu} handleMenu={handleMenu} />
+
+        <Socials />
       </div>
     </>
   )

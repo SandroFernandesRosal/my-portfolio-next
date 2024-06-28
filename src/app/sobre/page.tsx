@@ -14,18 +14,13 @@ export default function Sobre() {
             Sempre fui fascinado pela tecnologia, mas foi em um momento muito
             difícil que descobri que a programação era o que eu realmente queria
             para a minha vida. E esse momento difícil foi em 2020, ínicio da
-            pândemia do corona vírus. Eu trabalhava como garçon em eventos, e
+            pândemia do corona vírus. Eu trabalhava como garçom em eventos, e
             também vendia trufas nas ruas. Quando começou a pândemia, eu não
             pude mais ir trabalhar. Foi aí que eu tive mais tempo pra começar a
             estudar programação.
           </p>
 
-          <p>
-            Especialzado na criação de sites resposivos, lojas virtuais e blogs.
-            Tenho experiência com as mais recentes tecnologias de
-            desenvolvimento, garantindo que cada projeto seja moderno, eficiente
-            e escalável.
-          </p>
+      
         </div>
 
         <div className="pl-5 pb-5">

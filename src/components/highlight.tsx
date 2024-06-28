@@ -6,7 +6,7 @@ import { IoMdDownload } from 'react-icons/io'
 
 export default function HighLight() {
   return (
-    <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10 rounded-b-3xl mb-2 border-white shadow-shadowlight dark:shadow-shadowdark">
+    <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10 rounded-b-3xl mb-2 border-white shadow-shadowlight dark:shadow-none dark:border-b-[1px] dark:border-zinc-800">
       <div className="flex flex-col font-bold  ">
         <h1 className="">Olá, eu sou o </h1>
         <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-1 text-with-border pt-2 ">
@@ -21,7 +21,7 @@ export default function HighLight() {
             rel="noopener noreferrer"
             locale={false}
             download
-            className=" flex gap-2 text-center p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark bg-bglight  hover:shadow-primary dark:hover:shadow-primary"
+             className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
           >
             <span>Contato</span>{' '}
             <FaWhatsapp className="text-2xl text-primary" />
@@ -33,7 +33,7 @@ export default function HighLight() {
             rel="noopener noreferrer"
             locale={false}
             download
-            className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark bg-bglight  hover:shadow-primary dark:hover:shadow-primary"
+            className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
           >
             <span>Currículo</span>{' '}
             <IoMdDownload className="text-2xl text-primary" />

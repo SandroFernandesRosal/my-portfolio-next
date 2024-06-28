@@ -12,11 +12,11 @@ export default function SearchForm() {
   }
 
   return (
-    <form className="flex  items-center md:gap-3 rounded-full dark:bg-bgdarksecundary bg-bglightsecundary w-[250px]   p-1 shadow-shadowlight dark:shadow-shadowdark mb-5 justify-center">
+    <form className="flex  items-center md:gap-3 rounded-full dark:bg-bgdarksecundary bg-bglightsecundary w-[250px]   p-1 shadow-shadowlight dark:shadow-shadow-none mb-5 justify-center dark:border-[1px] dark:border-zinc-800">
       <input
         name="search"
         type="text"
-        placeholder="Buscar notícia..."
+        placeholder="Buscar projeto..."
         className=" w-full bg-transparent text-sm outline-none placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 border-none rounded-full px-1"
         value={search}
         onChange={handleSearchChange}

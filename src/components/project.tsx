@@ -31,7 +31,7 @@ export default function Project({
   return (
     <li
       key={id}
-      className={`max-w-[250px] flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-shadowdark transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[100%] max-w-[400px] h-[650px]'} ${size === 'small' && 'h-[320px] min-w-[100px] w-[25%] md:max-w-[180px] justify-around'} ${size === 'normal' && 'h-[500px] w-[45%]'}`}
+      className={`max-w-[250px] dark:border-[1px] dark:border-zinc-800  flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[100%] max-w-[400px] h-[650px]'} ${size === 'small' && 'h-[320px] min-w-[100px] w-[25%] md:max-w-[180px] justify-around'} ${size === 'normal' && 'h-[500px] w-[45%]'}`}
     >
       <Image
         src={img}
@@ -45,7 +45,7 @@ export default function Project({
       <div className={`flex gap-3 justify-center w-full flex-wrap`}>
         <Link
           href={`/projetos/${slug}`}
-          className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark"
+          className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark "
         >
           <Info />
         </Link>
@@ -69,7 +69,7 @@ export default function Project({
         {tecs.map((tec, i) => {
           return (
             <li
-              className=" p-1 rounded-md bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadowdark"
+              className=" p-1 rounded-md bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-none dark:border-[1px] dark:border-zinc-800"
               key={i}
             >
               {tec === 'HTML' && <RiHtml5Line className="text-2xl" />}

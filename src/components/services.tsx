@@ -1,50 +1,70 @@
-import { Monitor, ShoppingCart, Rss, Speech } from 'lucide-react'
+import { Monitor, ShoppingCart, Rss, Speech, Settings, Globe } from 'lucide-react'
 
 export default function Services() {
   return (
     <section className="z-10 px-5   dark:bg-bgdark bg-bglight py-5">
-      <h1 className="border-l-8 border-primary pl-2 rounded-md text-2xl">
+      <h1 className="border-l-8 border-primary pl-2 rounded-md text-2xl mb-5">
         Meus serviços
       </h1>
 
-      <div className="flex  gap-4  mt-5">
-        <p className="w-20 h-20  dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
-          <Monitor className="text-primary size-8" />
-        </p>
-        <div className="flex flex-col gap-2 flex-1">
+      <div className='flex flex-wrap gap-3 justify-center'>
+
+      <div className="flex justify-between  w-[45%] max-w-[400px] h-[200px] flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent bg-bglightsecundary dark:bg-bgdarksecundary rounded-md py-2 hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none">
+      
+        <div className="flex flex-col gap-2 items-center">
+        <Monitor className="text-primary size-10" />
           <h1 className="text-lg font-bold">Criação de sites responsivos</h1>
-          <p>Sites modernos e que se adaptam a qualquer dispositivo</p>
+         
         </div>
+        <p className='px-1 text-zinc-700 dark:text-zinc-400'>Sites modernos e que se adaptam a multiplos dispositivos</p>
       </div>
 
-      <div className="flex  gap-4  mt-5 ">
-        <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
-          <ShoppingCart className="text-primary size-8" />
-        </p>
-        <div className="flex flex-col gap-2 flex-1">
+      <div className="flex justify-between  w-[45%] max-w-[400px] h-[200px] flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent bg-bglightsecundary dark:bg-bgdarksecundary rounded-md py-2 hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none">
+       
+        <div className="flex flex-col gap-2 items-center">
+        <ShoppingCart className="text-primary size-10" />
           <h1 className="text-lg font-bold">Criação de loja virtual</h1>
-          <p>Loja moderna e segura</p>
+          
         </div>
+
+        <p className='px-1 text-zinc-700 dark:text-zinc-400'>Loja moderna e segura, para o seu negócio decolar</p>
       </div>
 
-      <div className="flex  gap-4  mt-5 ">
-        <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
-          <Rss className="text-primary size-8" />
-        </p>
-        <div className="flex flex-col gap-2 flex-1">
-          <h1 className="text-lg font-bold">Criação de Blog</h1>
-          <p>Blog totalmente personalizado</p>
+      <div className="flex justify-between  w-[45%] max-w-[400px] h-[200px] flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent bg-bglightsecundary dark:bg-bgdarksecundary rounded-md py-2 hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none">
+        
+        <div className="flex flex-col gap-2 items-center">
+        <Rss className="text-primary size-10" />
+          <h1 className="text-lg font-bold">Criação de Blog personalizado</h1>
         </div>
+        <p className='px-1 text-zinc-700 dark:text-zinc-400'>Blog totalmente personalizado</p>
       </div>
 
-      <div className="flex  gap-4  mt-5 ">
-        <p className="w-20 h-20 dark:bg-bgdarksecundary bg-bglightsecundary rounded-md justify-center items-center flex shadow-shadowlight dark:shadow-shadowdark">
-          <Speech className="text-primary size-8" />
-        </p>
-        <div className="flex flex-col gap-2 flex-1">
+      <div className="flex justify-between  w-[45%] max-w-[400px] h-[200px] flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent bg-bglightsecundary dark:bg-bgdarksecundary rounded-md py-2 hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none">
+       
+        <div className="flex flex-col gap-2 items-center">
+        <Speech className="text-primary size-10" />
           <h1 className="text-lg font-bold">Criação de Landing Pages</h1>
-          <p>Página de vendas, divulgação, marketing ou convites em geral.</p>
         </div>
+        <p className='px-1 text-zinc-700 dark:text-zinc-400'>Página de vendas, divulgação, marketing ou convites em geral.</p>
+      </div>
+
+      <div className="flex justify-between  w-[45%] max-w-[400px] h-[200px] flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent bg-bglightsecundary dark:bg-bgdarksecundary rounded-md py-2 hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none">
+       
+        <div className="flex flex-col gap-2 items-center">
+        <Settings className="text-primary size-10" />
+          <h1 className="text-lg font-bold">Manutenção mensal </h1>
+        </div>
+        <p className='px-1 text-zinc-700 dark:text-zinc-400'>Suporte mensal para manter seu site atualizado, seguro e otimizado.</p>
+      </div>
+
+      <div className="flex justify-between  w-[45%] max-w-[400px] h-[200px] flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent bg-bglightsecundary dark:bg-bgdarksecundary rounded-md py-2 hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none">
+       
+        <div className="flex flex-col gap-2 items-center">
+        <Globe className="text-primary size-10" />
+          <h1 className="text-lg font-bold">Hospedagem</h1>
+        </div>
+        <p className='px-1 text-zinc-700 dark:text-zinc-400'>A melhor opção de hospedagem para o seu negócio</p>
+      </div>
       </div>
     </section>
   )

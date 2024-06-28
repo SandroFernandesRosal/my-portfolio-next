@@ -24,3 +24,8 @@ export const useDisplay = create((set) => ({
   display: 'destaque',
   setDisplay: (state) => set({ display: state }),
 }))
+
+export const useLoading = create((set) => ({
+  loading: true,
+  setLoading: (state) => set({ loading: state }),
+}))

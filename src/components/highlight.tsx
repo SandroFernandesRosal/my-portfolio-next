@@ -9,7 +9,7 @@ export default function HighLight() {
     <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10 rounded-b-3xl mb-2 border-white shadow-shadowlight dark:shadow-shadowdark">
       <div className="flex flex-col font-bold  ">
         <h1 className="">Olá, eu sou o </h1>
-        <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-1 ">
+        <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-1 text-with-border pt-2 ">
           Sandro Fernandes
         </p>
         <h2>Desenvolvedor Font-end</h2>

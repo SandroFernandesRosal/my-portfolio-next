@@ -8,11 +8,12 @@ import Search from './search'
 export default async function ProjectsPage() {
   const response = await api('/products', {
     next: {
-      revalidate: 1,
+      revalidate: 60*60,
     },
   })
 
   const projects = await response.json()
+
   return (
     <section className="px-5 dark:bg-bgdark bg-bglight py-5 ">
       <h1 className="border-l-8 mb-5 border-primary pl-2 rounded-md text-2xl">

@@ -14,8 +14,9 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
         <Link
           onClick={handleMenu}
           href={'/sobre'}
-          className="border-l-8 md:border-none md:pl-0 md:my-0 border-primary pl-2 rounded-md my-2 md:hover:text-primary "
+          className="border-l-8 md:border-none md:pl-0 md:my-0 border-primary pl-2 rounded-md my-2 md:hover:text-primary"
         >
+          
           Sobre
         </Link>
       </li>

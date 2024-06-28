@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${roboto.variable} ${msmadi.variable} overflow-x-hidden`}
+        className={`${roboto.variable} ${msmadi.variable} overflow-x-hidden `}
       >
         <ThemeProviders>
           <Header />

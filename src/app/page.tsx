@@ -6,7 +6,7 @@ import Contato from '@/components/contato'
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen pt-[65px] overflow-x-hidden ">
+    <main className="flex flex-col min-h-screen pt-[65px] overflow-x-hidden">
       <HighLight />
       <Services />
       <Skills />

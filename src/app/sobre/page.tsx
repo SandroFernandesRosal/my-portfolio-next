@@ -4,12 +4,15 @@ import TimeLine from '@/components/timeline'
 
 export default function Sobre() {
   return (
-    <section className="min-h-screen ">
-      <div className="bg-bglightsecundary dark:bg-bgdarksecundary pt-[100px]">
-        <h1 className="border-l-8 mb-5 border-primary pl-2 rounded-md text-2xl mx-5">
-          Resumo
-        </h1>
-        <div className="text-left mx-5 mb-10">
+    <section className="min-h-screen flex flex-col items-center">
+      <div className="flex flex-col w-full items-center bg-bglightsecundary dark:bg-bgdarksecundary pt-[100px]">
+      <h1 className="text-3xl">
+        Resumo
+      </h1>
+      <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5">
+       
+      </span>
+        <div className="text-left mx-5 mb-10 max-w-[600px]">
           <p className="mb-5">
             Sempre fui fascinado pela tecnologia, mas foi em um momento muito
             difícil que descobri que a programação era o que eu realmente queria
@@ -33,9 +36,10 @@ export default function Sobre() {
 
       <Skills />
 
-      <h1 className="border-l-8 my-5 border-primary pl-2 rounded-md text-2xl mx-5">
+      <h1 className="text-3xl pt-5">
         Formação
       </h1>
+      <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5" />
 
       <TimeLine />
     </section>

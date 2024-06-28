@@ -50,9 +50,12 @@ export default function Contato() {
 
   return (
     <section className="flex flex-col justify-center items-center bg-bglightsecundary dark:bg-bgdarksecundary py-5">
-      <h1 className="border-l-8 mb-5 border-primary pl-2 rounded-md text-2xl w-full ml-10">
+      <h1 className="text-3xl">
         Entre em contato
       </h1>
+      <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5">
+       
+      </span>
 
       {alert && (
         <div className="flex items-center justify-center z-40 font-bold bg-bglightsecundary dark:bg-bgdarksecundary border-[1px] border-primary  rounded-md p-4">

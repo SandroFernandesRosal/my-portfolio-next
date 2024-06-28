@@ -15,10 +15,13 @@ export default async function ProjectsPage() {
   const projects = await response.json()
 
   return (
-    <section className="px-5 dark:bg-bgdark bg-bglight py-5 ">
-      <h1 className="border-l-8 mb-5 border-primary pl-2 rounded-md text-2xl">
+    <section className="px-5 lg:px-10 flex flex-col items-center dark:bg-bgdark bg-bglight py-5 ">
+      <h1 className="text-3xl">
         Meus projetos
       </h1>
+      <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5">
+       
+      </span>
       <div className="flex flex-col items-center mb-5 ">
         <Search />
         <div className="flex gap-2">

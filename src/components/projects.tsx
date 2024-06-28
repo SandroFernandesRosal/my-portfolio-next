@@ -19,7 +19,7 @@ export default function Projects({ projects }: ProjectArray) {
       : filteredProjects
 
   return (
-    <ul className="flex flex-wrap gap-5 justify-center">
+    <ul className="flex flex-wrap gap-5 justify-center w-full">
       {displayedProjects.map((project: ProjectProps) => (
         <Project
           key={project.id}

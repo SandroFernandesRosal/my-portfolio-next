@@ -8,11 +8,10 @@ export default function HighLight() {
   return (
     <div className="flex flex-wrap  items-center pt-5  justify-evenly  px-5 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10 rounded-b-3xl mb-2 border-white shadow-shadowlight dark:shadow-none dark:border-b-[1px] dark:border-zinc-800">
       <div className="flex flex-col font-bold  ">
-        <h1 className="">Olá, eu sou o </h1>
-        <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-1 text-with-border pt-2 ">
-          Sandro Fernandes
-        </p>
-        <h2>Desenvolvedor Font-end</h2>
+        <h1 className="text-3xl md:text-4xl w-[90%] max-w-[500px] flex self-center">
+          Transformo suas ideias em realidade digital, com soluções web
+          inovadoras e personalizadas.
+        </h1>
 
         <div className="flex my-5 gap-3 justify-center w-ful flex-wrap">
           <Link
@@ -21,7 +20,7 @@ export default function HighLight() {
             rel="noopener noreferrer"
             locale={false}
             download
-             className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
+            className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
           >
             <span>Contato</span>{' '}
             <FaWhatsapp className="text-2xl text-primary" />

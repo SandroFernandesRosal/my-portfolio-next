@@ -6,12 +6,14 @@ export default function Sobre() {
   return (
     <section className="min-h-screen flex flex-col items-center">
       <div className="flex flex-col w-full items-center bg-bglightsecundary dark:bg-bgdarksecundary pt-[100px]">
-      <h1 className="text-3xl">
-        Resumo
-      </h1>
-      <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5">
-       
-      </span>
+        <div></div>
+        <div className="mb-5">
+          <p className="text-xl">Olá, eu sou o</p>
+          <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-1 text-with-border pt-2 ">
+            Sandro Fernandes
+          </p>
+        </div>
+
         <div className="text-left mx-5 mb-10 max-w-[600px]">
           <p className="mb-5">
             Sempre fui fascinado pela tecnologia, mas foi em um momento muito
@@ -22,8 +24,6 @@ export default function Sobre() {
             pude mais ir trabalhar. Foi aí que eu tive mais tempo pra começar a
             estudar programação.
           </p>
-
-      
         </div>
 
         <div className="pl-5 pb-5">
@@ -36,9 +36,7 @@ export default function Sobre() {
 
       <Skills />
 
-      <h1 className="text-3xl pt-5">
-        Formação
-      </h1>
+      <h1 className="text-3xl pt-5">Formação</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5" />
 
       <TimeLine />

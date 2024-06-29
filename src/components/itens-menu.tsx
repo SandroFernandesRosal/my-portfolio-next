@@ -10,7 +10,7 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
     <ul
       className={`w-full md:w-auto text-2xl md:text-xl md:text-md ${!menu ? 'hidden' : 'flex flex-col'} md:flex md:items-center`}
     >
-      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 md:pl-0 cursor-pointer">
+      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 md:pl-0 cursor-pointer md:border-r-2 pr-2">
         <Link
           onClick={handleMenu}
           href={'/sobre'}
@@ -20,7 +20,7 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
         </Link>
       </li>
 
-      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
+      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer md:border-r-2 pr-2">
         <Link
           onClick={handleMenu}
           href={'/projetos'}
@@ -29,11 +29,11 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
           Projetos
         </Link>
       </li>
-      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
+      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer md:border-r-2 pr-2">
         <Link
           onClick={handleMenu}
           href={'/contato'}
-          className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 "
+          className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 md:hover:text-primary"
         >
           Contato
         </Link>
@@ -42,7 +42,7 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
         <Link
           onClick={handleMenu}
           href={'#faq'}
-          className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 "
+          className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 md:hover:text-primary"
         >
           Perguntas frequentes
         </Link>

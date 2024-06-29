@@ -16,7 +16,6 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
           href={'/sobre'}
           className="border-l-8 md:border-none md:pl-0 md:my-0 border-primary pl-2 rounded-md my-2 md:hover:text-primary"
         >
-          
           Sobre
         </Link>
       </li>
@@ -37,6 +36,15 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
           className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 "
         >
           Contato
+        </Link>
+      </li>
+      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
+        <Link
+          onClick={handleMenu}
+          href={'#faq'}
+          className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 "
+        >
+          Perguntas frequentes
         </Link>
       </li>
     </ul>

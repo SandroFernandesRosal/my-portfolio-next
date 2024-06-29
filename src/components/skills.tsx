@@ -14,12 +14,8 @@ import { SiPrisma, SiStyledcomponents } from 'react-icons/si'
 export default function Skills() {
   return (
     <section className="w-full flex items-center flex-col px-5 py-5 bg-bglightsecundary dark:bg-bgdarksecundary">
-      <h1 className="text-3xl">
-        Minhas habilidades
-      </h1>
-      <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5">
-       
-      </span>
+      <h1 className="text-3xl">Minhas habilidades</h1>
+      <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
 
       <ul className="flex flex-wrap gap-3 justify-center">
         <li className="p-2 dark:bg-bgdark bg-bglight shadow-shadowlight dark:shadow-shadow-none rounded-md flex flex-col items-center w-24 justify-center text-center h-32 border-b-4  dark:border-t-zinc-800  border-b-primary dark:border-t-[1px] dark:border-r-zinc-800 dark:border-x-[1px] dark:border-x-zinc-800">

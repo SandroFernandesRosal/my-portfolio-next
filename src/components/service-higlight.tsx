@@ -20,7 +20,7 @@ export default function ServiceHighLight() {
         </div>
 
         <p className="px-1 text-zinc-700 dark:text-zinc-400">
-          APIs robustas e escaláveis impulsionar seu negócio
+          APIs para integrar com o front e impulsionar seu negócio.
         </p>
       </div>
 

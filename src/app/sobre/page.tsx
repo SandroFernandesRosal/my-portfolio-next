@@ -3,6 +3,9 @@ import Skills from '@/components/skills'
 import TimeLine from '@/components/timeline'
 import Image from 'next/image'
 import fotoPerfil from '../../../public/perfil-1.png'
+import Link from 'next/link'
+import { FaWhatsapp } from 'react-icons/fa'
+import { IoMdDownload } from 'react-icons/io'
 
 export default function Sobre() {
   return (
@@ -14,6 +17,37 @@ export default function Sobre() {
             <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-3 text-with-border pt-2 ">
               Sandro Fernandes
             </p>
+
+            <div className="pl-5">
+              <p>Desenvolvedor Front-end</p>
+              <p>Freelancer - Disponível </p>
+            </div>
+
+            <div className="flex my-5 gap-3 justify-center w-ful flex-wrap">
+              <Link
+                href={'https://api.whatsapp.com/send?phone=5521969501614'}
+                target="blank"
+                rel="noopener noreferrer"
+                locale={false}
+                download
+                className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
+              >
+                <span>Contato</span>{' '}
+                <FaWhatsapp className="text-2xl text-primary" />
+              </Link>
+
+              <Link
+                href={'/cv.pdf'}
+                target="_blank"
+                rel="noopener noreferrer"
+                locale={false}
+                download
+                className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
+              >
+                <span>Currículo</span>{' '}
+                <IoMdDownload className="text-2xl text-primary" />
+              </Link>
+            </div>
           </div>
 
           <div className="text-left mx-5 mb-10 max-w-[600px]">
@@ -26,11 +60,6 @@ export default function Sobre() {
               pândemia, eu não pude mais ir trabalhar. Foi aí que eu tive mais
               tempo pra começar a estudar programação.
             </p>
-          </div>
-
-          <div className="pl-5 pb-5">
-            <p>Desenvolvedor Front-end</p>
-            <p>Freelancer - Disponível </p>
           </div>
         </div>
 

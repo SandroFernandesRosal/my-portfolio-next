@@ -2,9 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import fotoPerfil from '../../public/perfil-1.png'
 import { FaWhatsapp } from 'react-icons/fa'
-import { IoMdDownload } from 'react-icons/io'
+
 import Background from './background'
 import ServiceHighLight from './service-higlight'
+import { PiPersonArmsSpreadFill } from 'react-icons/pi'
 
 export default function HighLight() {
   return (
@@ -20,6 +21,13 @@ export default function HighLight() {
 
           <div className="flex my-5 gap-3 justify-center w-ful flex-wrap">
             <Link
+              href={'/sobre'}
+              className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
+            >
+              <span>Quem sou</span>{' '}
+              <PiPersonArmsSpreadFill className="text-2xl text-primary" />
+            </Link>
+            <Link
               href={'https://api.whatsapp.com/send?phone=5521969501614'}
               target="blank"
               rel="noopener noreferrer"
@@ -29,18 +37,6 @@ export default function HighLight() {
             >
               <span>Contato</span>{' '}
               <FaWhatsapp className="text-2xl text-primary" />
-            </Link>
-
-            <Link
-              href={'/cv.pdf'}
-              target="_blank"
-              rel="noopener noreferrer"
-              locale={false}
-              download
-              className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
-            >
-              <span>Currículo</span>{' '}
-              <IoMdDownload className="text-2xl text-primary" />
             </Link>
           </div>
         </div>

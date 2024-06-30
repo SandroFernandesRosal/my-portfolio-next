@@ -1,6 +1,6 @@
 export default function TimeLine() {
   return (
-    <ul className="relative mx-10  w-[85%] overflow-visible border-l border-gray-700 dark:border-gray-700 md:w-[45%] my-5">
+    <ul className="relative mx-10 bottom-20 w-[85%] overflow-visible border-l border-gray-700 dark:border-gray-700 md:w-[45%]  ">
       <li className="mb-5 ml-6">
         <span className="absolute  -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary ring-8 dark:ring-primary/20 ring-primary/40 ">
           <svg

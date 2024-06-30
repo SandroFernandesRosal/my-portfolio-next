@@ -13,8 +13,8 @@ export default function HighLight() {
       <Background />
 
       <section className="flex flex-wrap bg-[url(../assets/bg-stars.svg)]  items-center pt-5  justify-center md:justify-around  px-10 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10   border-white shadow-shadowlight dark:shadow-none dark:border-b-[1px] dark:border-zinc-800">
-        <div className="flex flex-col  font-bold w-[90%] max-w-[500px] z-20 mb-[120px] md:mb-0">
-          <h1 className="text-3xl md:text-4xl  flex self-center">
+        <div className="flex flex-col  font-bold w-[90%] max-w-[400px] lg:max-w-[540px] z-20 mb-[120px] md:mb-0">
+          <h1 className="text-3xl text-center font-Margarine md:text-4xl  flex self-center">
             Transformo ideias em realidade digital, com soluções web inovadoras
             e personalizadas.
           </h1>

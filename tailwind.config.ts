@@ -18,6 +18,7 @@ const config: Config = {
       fontFamily: {
         Roboto: ['var(--font-roboto)'],
         MsMadi: ['var(--font-msmadi)'],
+        Margarine: ['var(--font-margarine)'],
       },
       colors: {
         primary: '#10B981',

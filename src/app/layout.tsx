@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
-import { Roboto_Flex as Roboto, Ms_Madi as MsMadi } from 'next/font/google'
+import {
+  Roboto_Flex as Roboto,
+  Ms_Madi as MsMadi,
+  Margarine,
+} from 'next/font/google'
 
 import './globals.css'
 import { ThemeProviders } from './theme-provider'
@@ -9,6 +13,12 @@ import Footer from '@/components/footer'
 const roboto = Roboto({
   subsets: ['latin'],
   variable: '--font-roboto',
+})
+
+const margarine = Margarine({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-margarine',
 })
 
 const msmadi = MsMadi({
@@ -33,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${roboto.variable} ${msmadi.variable} overflow-x-hidden `}
+        className={`${roboto.variable} ${msmadi.variable} ${margarine.variable} overflow-x-hidden `}
       >
         <ThemeProviders>
           <Header />

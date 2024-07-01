@@ -12,7 +12,7 @@ export default function HighLight() {
       <Background />
       <section className="flex flex-wrap bg-[url(../assets/bgtopo-dark3.png)] dark:bg-[url(../assets/bgtopo-light3.png)]  bg-cover items-center pt-5  justify-center md:justify-around  px-10 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10   border-white shadow-shadowlight dark:shadow-none dark:border-b-[1px] dark:border-zinc-800">
         <div className="flex flex-col  font-bold w-[100%]  md:max-w-[60%] lg:max-w-[50%]  z-20 mb-[120px] md:mb-10">
-          <h1 className="text-3xl text-center  md:text-4xl lg:text-5xl  flex self-center">
+          <h1 className="text-3xl text-center font-Rubiki md:text-4xl lg:text-5xl  flex self-center">
             Transformo ideias em realidade digital, com soluções web inovadoras
             e personalizadas.
           </h1>

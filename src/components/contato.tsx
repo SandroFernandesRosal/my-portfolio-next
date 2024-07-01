@@ -50,7 +50,7 @@ export default function Contato() {
 
   return (
     <section className="flex flex-col justify-center items-center relative bottom-20 bg-bglightsecundary dark:bg-bgdarksecundary py-5  pb-40 dark:bg-[url(../assets/bg-dark.png)] bg-[url(../assets/bg-light.png)]   bg-bottom bg-repeat-x">
-      <h1 className="text-3xl font-Rubiki">Entre em contato</h1>
+      <h1 className="text-3xl font-Rubiki font-bold">Entre em contato</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
 
       {alert && (

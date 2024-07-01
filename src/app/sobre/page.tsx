@@ -78,7 +78,9 @@ export default function Sobre() {
 
       <Skills />
 
-      <h1 className="text-3xl relative bottom-20 pt-5 font-Rubiki">Formação</h1>
+      <h1 className="text-3xl relative bottom-20 pt-5 font-Rubiki font-bold">
+        Formação
+      </h1>
       <span className="border-b-4 pb-2 w-24 relative bottom-20  border-primary  text-3xl mb-5" />
 
       <div className="flex pb-10 w-full justify-center  dark:bg-[url(../assets/bg-darksecondary.png)] bg-[url(../assets/bg-lightsecondary.png)]   bg-bottom bg-repeat-x">

@@ -2,14 +2,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import fotoPerfil from '../../public/perfil-1.png'
 import { FaWhatsapp } from 'react-icons/fa'
-import Background from './background'
+
 import ServiceHighLight from './service-higlight'
 import { PiPersonArmsSpreadFill } from 'react-icons/pi'
 
 export default function HighLight() {
   return (
     <section className="flex flex-col">
-      <Background />
       <section className="flex flex-wrap bg-[url(../assets/bgtopo-dark3.png)] dark:bg-[url(../assets/bgtopo-light3.png)]  bg-cover items-center pt-5  justify-center md:justify-around  px-10 bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection md:pb-10   border-white shadow-shadowlight dark:shadow-none dark:border-b-[1px] dark:border-zinc-800">
         <div className="flex flex-col  font-bold w-[100%]  md:max-w-[60%] lg:max-w-[50%]  z-20 mb-[120px] md:mb-10">
           <h1 className="text-3xl text-center font-Rubiki md:text-4xl lg:text-5xl  flex self-center">

@@ -14,7 +14,7 @@ export default function Sobre() {
         <div className="">
           <div className="mb-5">
             <p className="text-xl pl-3">Olá, eu sou o</p>
-            <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-3 text-with-border pt-2 ">
+            <p className="font-MsMadi nome  text-primary text-5xl max-w-[305px] pl-3  pt-2 ">
               Sandro Fernandes
             </p>
 

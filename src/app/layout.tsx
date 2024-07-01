@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import {
   Roboto_Flex as Roboto,
   Ms_Madi as MsMadi,
-  Margarine,
+  Rubik_Doodle_Shadow as Rubiki,
 } from 'next/font/google'
 
 import './globals.css'
@@ -15,10 +15,10 @@ const roboto = Roboto({
   variable: '--font-roboto',
 })
 
-const margarine = Margarine({
+const rubiki = Rubiki({
   subsets: ['latin'],
   weight: '400',
-  variable: '--font-margarine',
+  variable: '--font-rubiki',
 })
 
 const msmadi = MsMadi({
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${roboto.variable} ${msmadi.variable} ${margarine.variable} overflow-x-hidden `}
+        className={`${roboto.variable} ${msmadi.variable} ${rubiki.variable}  overflow-x-hidden `}
       >
         <ThemeProviders>
           <Header />

@@ -8,7 +8,7 @@ import Search from './search'
 export default async function ProjectsPage() {
   const response = await api('/products', {
     next: {
-      revalidate: 60 * 60,
+      revalidate: 1 * 1,
     },
   })
 

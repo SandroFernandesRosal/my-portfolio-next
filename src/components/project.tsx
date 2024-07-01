@@ -31,18 +31,18 @@ export default function Project({
   return (
     <li
       key={id}
-      className={`max-w-[250px] dark:border-[1px] dark:border-zinc-800  flex flex-col justify-between  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[100%] max-w-[400px] h-[650px]'} ${size === 'small' && 'h-[320px] min-w-[100px] w-[25%] md:max-w-[180px] justify-around'} ${size === 'normal' && 'h-[500px] w-[45%]'}`}
+      className={`max-w-[250px] dark:border-[1px] dark:border-zinc-800  flex flex-col gap-2  bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[98%] max-w-[400px] h-[650px]'} ${size === 'small' && 'h-[150px] justify-between py-3 md:py-6 min-w-[100px] w-[25%] md:max-w-[150px] '} ${size === 'normal' && 'h-[400px] w-[45%]'}`}
     >
       <Image
         src={img}
         alt=""
         width={400}
         height={400}
-        className={`w-full object-cover object-top h-[60%] rounded-t-md border-b border-primary ${size === 'small' && 'hidden'} ${size === 'large' && 'h-[80%]'}`}
+        className={`w-full object-cover object-top h-[50%] rounded-t-md border-b border-primary ${size === 'small' && 'hidden'} ${size === 'large' && 'h-[80%]'}`}
       />
-      <p className="text-center">{title}</p>
+      <p className="text-center font-bold">{title}</p>
 
-      <div className={`flex gap-3 justify-center w-full flex-wrap`}>
+      <div className={`flex gap-2 justify-center w-full flex-wrap`}>
         <Link
           href={`/projetos/${slug}`}
           className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark "
@@ -65,7 +65,9 @@ export default function Project({
         </Link>
       </div>
 
-      <ul className="flex px-1 gap-2 justify-center flex-wrap mb-2 font-bold">
+      <ul
+        className={`flex px-1 gap-2 justify-center flex-wrap mb-2 font-bold ${size === 'small' && 'hidden'}`}
+      >
         {tecs.map((tec, i) => {
           return (
             <li

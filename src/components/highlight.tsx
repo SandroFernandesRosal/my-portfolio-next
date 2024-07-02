@@ -16,7 +16,7 @@ export default function HighLight() {
             e personalizadas.
           </h1>
 
-          <div className="flex my-5 gap-3 justify-center w-ful flex-wrap">
+          <div className="flex mt-5 gap-3 justify-center w-ful flex-wrap">
             <Link
               href={'/sobre'}
               className=" flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"

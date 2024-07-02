@@ -2,8 +2,9 @@ import { api } from '@/data/api'
 
 import SizeProject from './size-project'
 import SelectDisplay from './select-display'
-import Projects from './projects'
+
 import Search from './search'
+import ProjectsLine from './projects-line'
 
 export default async function ProjectsPage() {
   const response = await api('/products', {
@@ -26,7 +27,7 @@ export default async function ProjectsPage() {
         </div>
       </div>
 
-      <Projects projects={projects} />
+      <ProjectsLine projects={projects} />
     </section>
   )
 }

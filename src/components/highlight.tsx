@@ -8,9 +8,9 @@ import { PiPersonArmsSpreadFill } from 'react-icons/pi'
 
 export default function HighLight() {
   return (
-    <section className="flex flex-col">
-      <section className="flex flex-wrap bg-[url(../assets/bgtopo-dark3.png)] dark:bg-[url(../assets/bgtopo-light3.png)]  bg-cover items-center pt-5  justify-center md:justify-around   bg-bglightsecundary dark:bg-bgdarksecundary  dark:shadow-none dark:border-b-[1px] dark:border-none">
-        <div className="flex flex-col  font-bold w-[100%]  md:max-w-[60%] lg:max-w-[50%]  z-20 ">
+    <section className="flex flex-col relative">
+      <section className="flex flex-wrap mb-24  bg-[url(../assets/bgtopo-dark3.png)] dark:bg-[url(../assets/bgtopo-light3.png)]  bg-cover items-center pt-5  justify-center md:justify-around   bg-bglightsecundary dark:bg-bgdarksecundary  dark:shadow-none dark:border-b-[1px] dark:border-none">
+        <div className="flex flex-col mb-20 font-bold w-[100%]  md:max-w-[60%] lg:max-w-[50%]  z-20 ">
           <h1 className="text-3xl text-center font-Rubiki md:text-4xl lg:text-5xl px-5  flex self-center">
             Transformo ideias em realidade digital, com soluções web inovadoras
             e personalizadas.

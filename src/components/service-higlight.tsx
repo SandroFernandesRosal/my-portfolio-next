@@ -2,7 +2,7 @@ import { Globe, MonitorSmartphone, Database } from 'lucide-react'
 
 export default function ServiceHighLight() {
   return (
-    <div className="flex  justify-center relative -top-[115px]  z-20">
+    <div className="flex w-full justify-center bottom-10  absolute  z-20">
       <div className="flex justify-between  w-[29%] max-w-[230px] h-[230px] flex-col items-center text-center border-l-[1px] border-y-[1px] dark:border-zinc-800 border-transparent bg-bglightsecundary dark:bg-bgdarksecundary rounded-l-md py-2  shadow-shadowlight dark:shadow-none">
         <div className="flex flex-col gap-2 items-center">
           <MonitorSmartphone className="text-primary size-10 md:size-14" />

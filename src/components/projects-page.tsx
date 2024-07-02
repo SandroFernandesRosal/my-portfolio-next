@@ -16,7 +16,7 @@ export default async function ProjectsPage() {
   const projects = await response.json()
 
   return (
-    <section className="px-5 lg:px-10 relative bottom-20 flex flex-col items-center dark:bg-bgdark bg-bglight  pb-40 dark:bg-[url(../assets/bg-darksecondary.png)] bg-[url(../assets/bg-lightsecondary.png)]  w-full bg-bottom bg-repeat-x">
+    <section className="px-5 lg:px-10  flex flex-col items-center dark:bg-bgdark bg-bglight  pb-40 dark:bg-[url(../assets/bg-darksecondary.png)] bg-[url(../assets/bg-lightsecondary.png)]  w-full bg-bottom bg-repeat-x">
       <h1 className="text-3xl font-Rubiki font-bold">Meus projetos</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
       <div className="flex flex-col items-center mb-5 ">

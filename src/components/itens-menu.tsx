@@ -41,10 +41,10 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
       <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
         <Link
           onClick={handleMenu}
-          href={'#faq'}
+          href={'/#faq'}
           className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 md:hover:text-primary"
         >
-          Perguntas frequentes
+          Dúvidas
         </Link>
       </li>
     </ul>

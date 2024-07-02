@@ -9,7 +9,7 @@ import { PiPersonArmsSpreadFill } from 'react-icons/pi'
 export default function HighLight() {
   return (
     <section className="flex flex-col">
-      <section className="flex flex-wrap bg-[url(../assets/bgtopo-dark3.png)] dark:bg-[url(../assets/bgtopo-light3.png)]  bg-cover items-center pt-5  justify-center md:justify-around   bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-shadowsection   border-white shadow-shadowlight dark:shadow-none dark:border-b-[1px] dark:border-none">
+      <section className="flex flex-wrap bg-[url(../assets/bgtopo-dark3.png)] dark:bg-[url(../assets/bgtopo-light3.png)]  bg-cover items-center pt-5  justify-center md:justify-around   bg-bglightsecundary dark:bg-bgdarksecundary  dark:shadow-none dark:border-b-[1px] dark:border-none">
         <div className="flex flex-col  font-bold w-[100%]  md:max-w-[60%] lg:max-w-[50%]  z-20 ">
           <h1 className="text-3xl text-center font-Rubiki md:text-4xl lg:text-5xl px-5  flex self-center">
             Transformo ideias em realidade digital, com soluções web inovadoras
@@ -47,7 +47,7 @@ export default function HighLight() {
             className="w-[350px] h-[350px] md:w-[250px] md:h-[250px]  lg:h-[400px] lg:w-[400px] relative -bottom-5 hover:scale-105 transition-transform duration-500"
           />
         </div>
-        <div className="h-[120px]  w-full dark:bg-[url(../assets/bg-dark.png)] bg-[url(../assets/bg-lightsecondary.png)] bg-right md:bg-left  bg-repeat-x" />
+        <div className="h-[120px]  w-full bg-[url(../assets/bg-light.png)] dark:bg-[url(../assets/bg-dark.png)]  bg-right md:bg-left  bg-repeat-x" />
       </section>
       <ServiceHighLight />
     </section>

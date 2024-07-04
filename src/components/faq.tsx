@@ -50,8 +50,8 @@ export default function Faq() {
             trigger: el.current,
             scrub: true,
             markers: false,
-            start: 'top 100%',
-            end: 'bottom 30%',
+            start: 'top 70%',
+            end: 'bottom 40%',
           },
         })
         .fromTo(

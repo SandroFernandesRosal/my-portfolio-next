@@ -3,7 +3,6 @@ import { useState, useRef, FormEvent, useLayoutEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { BiHappyAlt } from 'react-icons/bi'
 import Socials from './socials'
-
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -22,27 +21,30 @@ export default function Contato() {
     e.preventDefault()
 
     if (form.current) {
-      emailjs
-        .sendForm(
-          'gmailsfr',
-          'template_mumsd62',
-          form.current,
-          'n_VePloj0wX6t-MH9',
-        )
-        .then(
-          () => {
-            setAlert(true)
-            if (timeoutRef.current) {
-              clearTimeout(timeoutRef.current)
-            }
-            timeoutRef.current = setTimeout(() => {
-              setAlert(false)
-            }, 2000)
-          },
-          (error) => {
-            setAlert(error.message)
-          },
-        )
+      const emailjsId = process.env.NEXT_PUBLIC_EMAILJS_ID as string
+      const emailjsTemplate = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE as string
+      const emailjsPublicKey = process.env.NEXT_PUBLIC_PUBLICKEY as string
+
+      if (emailjsId && emailjsTemplate && emailjsPublicKey) {
+        emailjs
+          .sendForm(emailjsId, emailjsTemplate, form.current, emailjsPublicKey)
+          .then(
+            () => {
+              setAlert(true)
+              if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current)
+              }
+              timeoutRef.current = setTimeout(() => {
+                setAlert(false)
+              }, 2000)
+            },
+            (error) => {
+              setAlert(error.message)
+            },
+          )
+      } else {
+        console.error('Environment variables are missing')
+      }
     }
 
     setNameInput('')

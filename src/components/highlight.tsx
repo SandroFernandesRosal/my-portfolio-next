@@ -38,7 +38,7 @@ export default function HighLight() {
           </div>
         </div>
 
-        <div className=" h-[315px] z-20 hidden md:mb-[110px]  md:dark:shadow-shadowdark md:shadow-shadowlight md:flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center md:rounded-perfil md:border-2px border-green md:dark:bg-bgdarksecundary overflow-hidden md:mt-5 ">
+        <div className=" h-[315px] relative bottom-10 md:bottom-0 z-20  md:mb-[110px]  md:dark:shadow-shadowdark md:shadow-shadowlight md:flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center md:rounded-perfil md:border-2px border-green md:dark:bg-bgdarksecundary overflow-hidden md:mt-5 ">
           <Image
             src={fotoPerfil}
             height={400}

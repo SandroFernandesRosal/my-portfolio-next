@@ -6,7 +6,7 @@ import { IoMdDownload } from 'react-icons/io'
 
 export default function Resume() {
   return (
-    <div className="flex flex-wrap w-full items-center px-5 mb-[100px] justify-center md:justify-around bg-bglightsecundary dark:bg-bgdarksecundary pt-[100px] dark:bg-[url(../assets/bg-dark.png)] bg-[url(../assets/bg-light.png)] bg-bottom bg-repeat-x">
+    <div className="flex  flex-wrap w-full items-center px-5 mb-5 justify-center md:justify-around bg-bglightsecundary dark:bg-bgdarksecundary pt-[100px] dark:bg-[url(../assets/bg-dark.png)] bg-[url(../assets/bg-light.png)] bg-bottom bg-repeat-x">
       <div className="">
         <div className="mb-5">
           <p className="text-xl pl-3">Olá, eu sou o</p>
@@ -47,7 +47,7 @@ export default function Resume() {
         </div>
 
         <div className="text-left mx-5 mb-10 max-w-[600px]">
-          <p className="mb-5">
+          <p className="pb-[100px]">
             Sempre fui fascinado pela tecnologia, mas foi em um momento muito
             difícil que descobri que a programação era o que eu realmente queria
             para a minha vida. E esse momento difícil foi em 2020, ínicio da
@@ -59,7 +59,7 @@ export default function Resume() {
         </div>
       </div>
 
-      <div className=" h-[315px] md:mb-5  md:dark:shadow-shadowdark md:shadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center md:rounded-perfil md:border-2px border-green md:dark:bg-bgdarksecundary overflow-hidden md:mt-5">
+      <div className=" h-[315px] md:mb-5 hidden md:dark:shadow-shadowdark md:shadow-shadowlight md:flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center md:rounded-perfil md:border-2px border-green md:dark:bg-bgdarksecundary overflow-hidden md:mt-5">
         <Image
           src={fotoPerfil}
           height={400}

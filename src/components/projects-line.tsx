@@ -3,7 +3,10 @@ import { ProjectProps, ProjectArray } from '@/data/types/projects'
 import Project from './project'
 import { useDisplay, useSearch } from '@/store/useStore'
 import { MdArrowBack, MdArrowForward } from 'react-icons/md'
-import { useState } from 'react'
+import { useState, useLayoutEffect, useRef } from 'react'
+
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default function ProjectsLine({ projects }: ProjectArray) {
   const { display } = useDisplay()
@@ -54,9 +57,45 @@ export default function ProjectsLine({ projects }: ProjectArray) {
     displayCurrentPage * projectsPerPage,
   )
 
+  const el = useRef<HTMLUListElement | null>(null)
+  const tl = useRef<gsap.core.Timeline | null>(null)
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.context(() => {
+      projectsToDisplay.forEach((project) => {
+        tl.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: `.project-${project.id}`,
+              scrub: true,
+              markers: false,
+              start: 'top 100%',
+              end: 'bottom 60%',
+            },
+          })
+          .fromTo(
+            `.project-${project.id}`,
+            {
+              opacity: 0,
+              y: 160,
+            },
+            {
+              opacity: 1,
+              y: 0,
+            },
+          )
+      })
+    }, el)
+
+    return () => {
+      gsap.killTweensOf('.project')
+    }
+  }, [projectsToDisplay])
+
   return (
     <>
-      <ul className="flex flex-wrap gap-5 justify-center w-full">
+      <ul className="flex flex-wrap gap-5 justify-center w-full" ref={el}>
         {projectsToDisplay.map((project: ProjectProps) => (
           <Project
             key={project.id}

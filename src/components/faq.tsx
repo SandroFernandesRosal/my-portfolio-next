@@ -1,6 +1,9 @@
 'use client'
-import { useState } from 'react'
+import { useState, useLayoutEffect, useRef } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
+
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -35,8 +38,43 @@ export default function Faq() {
     'Oferecemos suporte contínuo para garantir que seu site esteja sempre funcionando corretamente.',
   ]
 
+  const el = useRef<HTMLDivElement | null>(null)
+  const tl = useRef<gsap.core.Timeline | null>(null)
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.context(() => {
+      tl.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: el.current,
+            scrub: true,
+            markers: false,
+            start: 'top 100%',
+            end: 'bottom 30%',
+          },
+        })
+        .fromTo(
+          '.faq',
+          {
+            opacity: 0,
+            y: 160,
+          },
+          {
+            opacity: 1,
+            y: 0,
+          },
+        )
+    }, el)
+
+    return () => {
+      gsap.killTweensOf('.faq')
+    }
+  }, [])
+
   return (
     <section
+      ref={el}
       className="z-10 px-5   flex flex-col items-center  dark:bg-bgdark bg-bglight py-5  pb-40 dark:bg-[url(../assets/bg-darksecondary.png)] bg-[url(../assets/bg-lightsecondary.png)]   bg-bottom bg-repeat-x"
       id="faq"
     >
@@ -45,7 +83,7 @@ export default function Faq() {
 
       <ul className="w-[90%] px-5 max-w-[500px] flex flex-col gap-3">
         {faqItems.map((item, index) => (
-          <li key={index} onClick={() => handleOpen(index)} className={``}>
+          <li key={index} onClick={() => handleOpen(index)} className="faq">
             <h1 className="bg-primary h-20 items-center text-black rounded-md p-5 font-bold cursor-pointer flex justify-between">
               {`${index + 1} - ${item}`}
               {openIndex === index ? <ChevronUp /> : <ChevronDown />}

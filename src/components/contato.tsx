@@ -1,8 +1,11 @@
 'use client'
-import { useState, useRef, FormEvent } from 'react'
+import { useState, useRef, FormEvent, useLayoutEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { BiHappyAlt } from 'react-icons/bi'
 import Socials from './socials'
+
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default function Contato() {
   const form = useRef<HTMLFormElement | null>(null)
@@ -48,8 +51,45 @@ export default function Contato() {
     setTextInput('')
   }
 
+  const el = useRef<HTMLDivElement | null>(null)
+  const tl = useRef<gsap.core.Timeline | null>(null)
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+    gsap.context(() => {
+      tl.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: el.current,
+            scrub: true,
+            markers: false,
+            start: 'top 60%',
+            end: 'bottom 80%',
+          },
+        })
+        .fromTo(
+          '.contato',
+          {
+            opacity: 0,
+            y: 160,
+          },
+          {
+            opacity: 1,
+            y: 0,
+          },
+        )
+    }, el)
+
+    return () => {
+      gsap.killTweensOf('.contato')
+    }
+  }, [])
+
   return (
-    <section className="flex flex-col justify-center items-center bg-bglightsecundary dark:bg-bgdarksecundary py-5  pb-40 dark:bg-[url(../assets/bg-dark.png)] bg-[url(../assets/bg-light.png)]   bg-bottom bg-repeat-x">
+    <section
+      ref={el}
+      className="flex flex-col justify-center items-center bg-bglightsecundary dark:bg-bgdarksecundary py-5  pb-40 dark:bg-[url(../assets/bg-dark.png)] bg-[url(../assets/bg-light.png)]   bg-bottom bg-repeat-x"
+    >
       <h1 className="text-3xl font-Rubiki font-bold">Entre em contato</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
 
@@ -66,7 +106,7 @@ export default function Contato() {
         ref={form}
         onSubmit={onSubmit}
         name="form"
-        className="flex flex-col w-[75%] max-w-[500px] rounded-md p-[15px]  bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadow-none mt-5 dark:border-[1px] dark:border-zinc-800"
+        className="flex contato  flex-col w-[75%] max-w-[500px] rounded-md p-[15px]  bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadow-none mt-5 dark:border-[1px] dark:border-zinc-800"
       >
         <h1 className="text-center text-xl mb-5 font-bold">Envie um email</h1>
         <input

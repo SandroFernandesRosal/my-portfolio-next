@@ -15,7 +15,7 @@ export default function Header() {
             href="/"
             className="md:text-2xl text-xl font-extrabold hover:text-primary"
           >
-            <p className="text-2xl font-medium">&lt;SF&#47;&gt;</p>
+            <p className="text-2xl font-medium">&lt;Sandro &#47;&gt;</p>
           </Link>
         </div>
 

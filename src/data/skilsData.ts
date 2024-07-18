@@ -31,33 +31,29 @@ export const skillsData = [
     name: 'Next',
     icon: 'Next',
   },
+
   {
     id: 7,
-    name: 'Angular',
-    icon: 'Angular',
-  },
-  {
-    id: 8,
     name: 'Node',
     icon: 'Node',
   },
   {
-    id: 9,
+    id: 8,
     name: 'Prisma',
     icon: 'Prisma',
   },
   {
-    id: 10,
+    id: 9,
     name: 'Tailwind',
     icon: 'Tailwind',
   },
   {
-    id: 11,
+    id: 10,
     name: 'Styled Components',
     icon: 'StyledComponents',
   },
   {
-    id: 12,
+    id: 11,
     name: 'Zustand',
     icon: 'Zustand',
   },

@@ -109,11 +109,12 @@ export default async function ProjecttPage({ params }: SlugProps) {
             height="240"
             controls
             preload="none"
-            className="flex self-center w-full  max-w-[900px]"
+            className="flex self-center w-full max-w-[900px] min-h-[240px] md:min-h-[400px] shadow-shadowlight dark:shadow-shadowdark rounded-md"
+            poster="/img-video.png"
           >
             <source src={project.video} type="video/mp4" />
             <track
-              src={project.img}
+              src={project.video}
               kind="subtitles"
               srcLang="pt-br"
               label="Portuguese"

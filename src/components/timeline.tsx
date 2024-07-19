@@ -18,19 +18,19 @@ export default function TimeLine() {
             trigger: el.current,
             scrub: true,
             markers: false,
-            start: 'top 80%',
-            end: 'bottom 50%',
+            start: 'top 100%',
+            end: 'bottom 100%',
           },
         })
         .fromTo(
           '.timeline',
           {
             opacity: 0,
-            y: 160,
+            x: 360,
           },
           {
             opacity: 1,
-            y: 0,
+            x: 0,
           },
         )
     }, el)

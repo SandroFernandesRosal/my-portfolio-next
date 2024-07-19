@@ -47,13 +47,13 @@ export default async function ProjecttPage({ params }: SlugProps) {
   const project = await getProduct(params.slug)
 
   return (
-    <div className="pt-[90px] flex flex-col items-center gap-5 min-h-screen bg-bglightsecundary dark:bg-bgdarksecundary pb-10">
+    <div className="pt-[90px] flex flex-col items-center gap-5 min-h-screen bg-bglightsecundary dark:bg-bgdarksecundary pb-10 px-5">
       <h1 className="text-center text-2xl font-extrabold">{project.title}</h1>
 
-      <div className="flex flex-wrap gap-5 justify-evenly w-full ">
+      <div className="flex flex-col gap-5 justify-center items-center w-full ">
         <div className="flex flex-col gap-4">
           <p className="text-center">{project.description}</p>
-          <ul className="flex px-1 gap-4 justify-center flex-wrap mb-2 font-bold">
+          <ul className="flex  gap-4 justify-center flex-wrap mb-2 font-bold">
             {project.tecs.map((tec, i) => {
               return (
                 <li
@@ -109,7 +109,7 @@ export default async function ProjecttPage({ params }: SlugProps) {
             height="240"
             controls
             preload="none"
-            className="flex self-center w-full px-5 max-w-[900px]"
+            className="flex self-center w-full  max-w-[900px]"
           >
             <source src={project.video} type="video/mp4" />
             <track
@@ -121,7 +121,7 @@ export default async function ProjecttPage({ params }: SlugProps) {
             Your browser does not support the video tag.
           </video>
         )}
-        <div className="flex flex-wrap justify-center gap-5">
+        <div className="grid md:grid-cols-2  gap-5 justify-center">
           {project.imgs.map((img, i) => {
             return (
               <Image
@@ -131,7 +131,7 @@ export default async function ProjecttPage({ params }: SlugProps) {
                 height={900}
                 width={900}
                 quality={100}
-                className="rounded-lg max-w-[400px] shadow-shadowlight dark:shadow-shadowdark object-contain  object-top"
+                className="rounded-lg max-w-[500px] w-[100%]  shadow-shadowlight dark:shadow-shadowdark object-contain  object-top"
               />
             )
           })}

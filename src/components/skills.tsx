@@ -31,19 +31,19 @@ export default function Skills() {
               trigger: `.skill-${skill.id}`,
               scrub: true,
               markers: false,
-              start: 'top 90%',
-              end: 'bottom 60%',
+              start: 'top 100%',
+              end: 'bottom 100%',
             },
           })
           .fromTo(
             `.skill-${skill.id}`,
             {
               opacity: 0,
-              y: 160,
+              x: 360,
             },
             {
               opacity: 1,
-              y: 0,
+              x: 0,
             },
           )
       })

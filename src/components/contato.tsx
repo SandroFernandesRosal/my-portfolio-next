@@ -65,19 +65,19 @@ export default function Contato() {
             trigger: el.current,
             scrub: true,
             markers: false,
-            start: 'top 60%',
-            end: 'bottom 80%',
+            start: 'top 100%',
+            end: 'bottom 100%',
           },
         })
         .fromTo(
           '.contato',
           {
             opacity: 0,
-            y: 160,
+            x: 360,
           },
           {
             opacity: 1,
-            y: 0,
+            x: 0,
           },
         )
     }, el)

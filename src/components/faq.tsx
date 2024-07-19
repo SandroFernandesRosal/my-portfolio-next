@@ -50,19 +50,19 @@ export default function Faq() {
             trigger: el.current,
             scrub: true,
             markers: false,
-            start: 'top 70%',
-            end: 'bottom 40%',
+            start: 'top 100%',
+            end: 'bottom 100%',
           },
         })
         .fromTo(
           '.faq',
           {
             opacity: 0,
-            y: 160,
+            x: 360,
           },
           {
             opacity: 1,
-            y: 0,
+            x: 0,
           },
         )
     }, el)

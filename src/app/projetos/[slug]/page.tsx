@@ -24,7 +24,7 @@ interface SlugProps {
 async function getProduct(slug: string): Promise<ProjectProps> {
   const response = await api(`/products/${slug}`, {
     next: {
-      revalidate: 60 * 60,
+      revalidate: 1 * 1,
     },
   })
 
@@ -102,7 +102,26 @@ export default async function ProjecttPage({ params }: SlugProps) {
             })}
           </ul>
         </div>
-        <div className="flex flex-col justify-center gap-5">
+
+        {project.video && (
+          <video
+            width="320"
+            height="240"
+            controls
+            preload="none"
+            className="flex self-center w-full px-5 max-w-[900px]"
+          >
+            <source src={project.video} type="video/mp4" />
+            <track
+              src={project.img}
+              kind="subtitles"
+              srcLang="pt-br"
+              label="Portuguese"
+            />
+            Your browser does not support the video tag.
+          </video>
+        )}
+        <div className="flex flex-wrap justify-center gap-5">
           {project.imgs.map((img, i) => {
             return (
               <Image

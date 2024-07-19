@@ -102,6 +102,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
             id={project.id}
             title={project.title}
             img={project.img}
+            video={project.video}
             repo={project.repo}
             page={project.page}
             tecs={project.tecs}

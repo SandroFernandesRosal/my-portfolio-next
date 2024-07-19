@@ -2,6 +2,7 @@ export interface ProjectProps {
   id: number
   title: string
   img: string
+  video: string | null
   repo: string
   page: string
   tecs: string[]

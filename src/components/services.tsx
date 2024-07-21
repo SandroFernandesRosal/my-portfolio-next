@@ -28,7 +28,7 @@ export default function Services() {
               trigger: `.service-${service.id}`,
               scrub: true,
               markers: false,
-              start: 'top 100%',
+              start: 'top 80%',
               end: 'bottom 100%',
             },
           })

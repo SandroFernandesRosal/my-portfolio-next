@@ -20,11 +20,11 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'white',
-          borderRadius: '100%',
+          color: '#10B981',
+          fontWeight: 'bold',
         }}
       >
-        SF
+        &#x0007B; &#41;
       </div>
     ),
     {

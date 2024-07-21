@@ -9,7 +9,17 @@ export default function Footer() {
           href="/"
           className="md:text-2xl text-xl font-extrabold  hover:text-primary mb-2"
         >
-          <p className="text-2xl font-medium">&lt;Sandro &#47;&gt;</p>
+          <p className="text-3xl font-medium flex items-center">
+            San
+            <span className="text-primary text-xl font-bold">
+              &#x0007B; &#41;
+            </span>
+            ro
+            <span className="text-primary text-xl font-bold">
+              &#x0007B; &#41;
+            </span>
+            ev
+          </p>
         </Link>
 
         <Socials />

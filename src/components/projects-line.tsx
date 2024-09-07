@@ -119,6 +119,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
           {' '}
           <div className="flex mt-5">
             <button
+              aria-label="Voltar página"
               onClick={loadPreviousPage}
               disabled={isDisabledPrev}
               className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl  p-2 font-bold text-white shadow-light  hover:from-blue-900 hover:to-slate-900 dark:border-[1px] border-zinc-800 shadow-shadowlight dark:shadow-none${
@@ -130,6 +131,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
               <MdArrowBack className="text-3xl font-bold text-primary" />
             </button>
             <button
+              aria-label="Próxima página"
               onClick={loadNextPage}
               disabled={isDisabledNext}
               className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl  p-2 font-bold  shadow-light  hover:from-blue-900 hover:to-slate-900 dark:border-[1px] border-zinc-800 shadow-shadowlight dark:shadow-none ${

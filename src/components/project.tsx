@@ -44,12 +44,16 @@ export default function Project({
 
       <div className={`flex gap-2 justify-center w-full flex-wrap`}>
         <Link
+          aria-label="abrir projeto"
+          aria-description="abrir projeto"
           href={`/projetos/${slug}`}
           className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark "
         >
           <Info />
         </Link>
         <Link
+          aria-label="abrir respositório"
+          aria-description="abrir repositório"
           href={repo}
           target="_blank"
           className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark"
@@ -57,6 +61,8 @@ export default function Project({
           <Github />
         </Link>
         <Link
+          aria-label="abrir site do projeto"
+          aria-description="abrir site do projeto"
           href={page}
           target="_blank"
           className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark"

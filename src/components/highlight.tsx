@@ -60,7 +60,7 @@ export default function HighLight() {
             </Link>
           </div>
         </div>
-        <div className="h-[120px]  w-full bg-[url(../assets/bg-light.png)] dark:bg-[url(../assets/bg-dark.png)]  bg-right md:bg-left  bg-repeat-x" />
+        <div className="h-[120px]  w-full bg-[url(../assets/bg-light.png)] dark:bg-[url(../assets/bg-dark.png)]  bg-right md:bg-left  " />
       </section>
       <ServiceHighLight />
     </section>

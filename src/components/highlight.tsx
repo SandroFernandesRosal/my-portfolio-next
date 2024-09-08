@@ -9,7 +9,7 @@ export default function HighLight() {
   return (
     <section className="flex flex-col relative">
       <section className="flex flex-wrap mb-24 md:mb-36   items-center pt-5  justify-center md:justify-around   bg-bglightsecundary dark:bg-bgdarksecundary  dark:shadow-none dark:border-b-[1px] dark:border-none">
-        <div className="flex  justify-center   items-center mb-10 font-bold w-[100%]  md:max-w-[50%]  z-20 md:py-12">
+        <div className="flex  justify-center   items-center mb-10 font-bold w-[100%]  md:max-w-[50%] lg:max-w-[40%] z-20 md:py-12">
           <h1 className="text-3xl text-center  font-Rubiki md:text-4xl lg:text-5xl px-5 md:px-0    ">
             Transformo ideias em realidade digital, com soluções web inovadoras
             e personalizadas.

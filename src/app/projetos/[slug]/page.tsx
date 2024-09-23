@@ -1,7 +1,7 @@
 import { ProjectProps } from '@/data/types/projects'
 import { api } from '@/data/api'
 import { Metadata } from 'next'
-import Image from 'next/image'
+
 import {
   RiHtml5Line,
   RiReactjsLine,
@@ -14,6 +14,7 @@ import {
 import { FaCss3Alt } from 'react-icons/fa'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
 import { SiPrisma, SiStyledcomponents } from 'react-icons/si'
+import CarouselProject from '@/components/carousel-project'
 
 interface SlugProps {
   params: {
@@ -121,20 +122,10 @@ export default async function ProjecttPage({ params }: SlugProps) {
             Your browser does not support the video tag.
           </video>
         )}
-        <div className="grid md:grid-cols-2  gap-5 justify-center">
-          {project.imgs.map((img, i) => {
-            return (
-              <Image
-                key={i}
-                src={img}
-                alt=""
-                height={900}
-                width={900}
-                quality={100}
-                className="rounded-lg max-w-[500px] w-[100%]  shadow-shadowlight dark:shadow-shadowdark object-contain  object-top"
-              />
-            )
-          })}
+        <div className="w-[100vw] flex justify-center">
+          <div className=" w-[85vw] md:w-[50vw] lg:w-[50vw] pt-10">
+            <CarouselProject imgs={project.imgs} />
+          </div>
         </div>
       </div>
     </div>

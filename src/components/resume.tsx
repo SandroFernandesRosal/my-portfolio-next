@@ -48,13 +48,14 @@ export default function Resume() {
 
         <div className="text-left mx-5 lg:mb-10 max-w-[600px]">
           <p className="pb-[100px]">
-            Sempre fui fascinado pela tecnologia, mas foi em um momento muito
-            difícil que descobri que a programação era o que eu realmente queria
-            para a minha vida. E esse momento difícil foi em 2020, ínicio da
-            pândemia do corona vírus. Eu trabalhava como garçom em eventos, e
-            também vendia trufas nas ruas. Quando começou a pândemia, eu não
-            pude mais ir trabalhar. Foi aí que eu tive mais tempo pra começar a
-            estudar programação.
+            Recem formado em Análise e Desenvolvimento de Sistemas. Sempre fui
+            fascinado pela tecnologia, mas foi em um momento muito difícil que
+            descobri que a programação era o que eu realmente queria para a
+            minha vida. E esse momento difícil foi em 2020, ínicio da pândemia
+            do corona vírus. Eu trabalhava como garçom em eventos, e também
+            vendia trufas nas ruas. Quando começou a pândemia, eu não pude mais
+            ir trabalhar. Foi aí que eu tive mais tempo pra começar a estudar
+            programação.
           </p>
         </div>
       </div>

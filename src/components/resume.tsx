@@ -48,7 +48,7 @@ export default function Resume() {
 
         <div className="text-left mx-5 lg:mb-10 max-w-[600px]">
           <p className="pb-[100px]">
-            Recem formado em Análise e Desenvolvimento de Sistemas. Sempre fui
+            Recem graduado em Análise e Desenvolvimento de Sistemas. Sempre fui
             fascinado pela tecnologia, mas foi em um momento muito difícil que
             descobri que a programação era o que eu realmente queria para a
             minha vida. E esse momento difícil foi em 2020, ínicio da pândemia

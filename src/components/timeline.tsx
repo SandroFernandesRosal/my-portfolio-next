@@ -12,6 +12,9 @@ export interface certificateProps {
   mobile: string
   escalaveis: string
   sistemas: string
+  nlw: string
+  especializar: string
+  fundamentar: string
 }
 
 export default function TimeLine() {
@@ -55,7 +58,10 @@ export default function TimeLine() {
     internet: '/internet.png',
     mobile: '/mobile.png',
     escalaveis: '/escalaveis.png',
-    sistemas: 'sistemas.png',
+    sistemas: '/sistemas.png',
+    nlw: '/nlw.png',
+    especializar: '/especializar.png',
+    fundamentar: '/fundamentar.png',
   }
   return (
     <>
@@ -249,6 +255,116 @@ export default function TimeLine() {
               com UML e Programação orientada a objetos em Java
               <button
                 onClick={() => setOpen('sistemas')}
+                className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+              >
+                Certificado
+              </button>
+            </p>
+          </li>
+
+          <li className="ml-6 mb-5">
+            <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary ring-8 dark:ring-primary/20 ring-primary/40">
+              <svg
+                aria-hidden="true"
+                className="h-3 w-3 text-black"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              NLW Pocket: Javascript - Full-stack Intermediário
+            </h3>
+            <time className="mb-2 block overflow-hidden text-sm font-bold leading-none text-textlight dark:text-textdark">
+              Rocketseat
+            </time>
+            <p className="overflow-hidden text-base font-normal text-gray-500 dark:text-gray-400">
+              Desenvolvimento de uma aplicação back-end em Node.js, aplicação
+              dos conceitos de API REST, utilizando TypeScript, Fastify como
+              framework, integração do DrizzleORM + PostgreSQL, Docker e Zod
+              para validação de dados. Desenvolvimento de uma aplicação
+              front-end em ReactJS, aplicação dos conceitos de Propriedades,
+              Estados e Componentes, tipagem com Typescript, tooling com Vite,
+              interface responsiva com TailwindCSS, consumo de API Node.js,
+              gerenciamento de dados assíncronos com TanStack Query.
+              <button
+                onClick={() => setOpen('nlw')}
+                className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+              >
+                Certificado
+              </button>
+            </p>
+          </li>
+
+          <li className="ml-6 mb-5">
+            <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary ring-8 dark:ring-primary/20 ring-primary/40">
+              <svg
+                aria-hidden="true"
+                className="h-3 w-3 text-black"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              Especializar
+            </h3>
+            <time className="mb-2 block overflow-hidden text-sm font-bold leading-none text-textlight dark:text-textdark">
+              Rocketseat
+            </time>
+            <p className="overflow-hidden text-base font-normal text-gray-500 dark:text-gray-400">
+              javaScript Assíncrono e Promises, APIs, Fundamentos de ReactJS e
+              TypeScript, GitHub para times, CSS Transition e Animation, SQL
+              Avançado.
+              <button
+                onClick={() => setOpen('especializar')}
+                className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+              >
+                Certificado
+              </button>
+            </p>
+          </li>
+
+          <li className="ml-6 mb-5">
+            <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary ring-8 dark:ring-primary/20 ring-primary/40">
+              <svg
+                aria-hidden="true"
+                className="h-3 w-3 text-black"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+              Fundamentar
+            </h3>
+            <time className="mb-2 block overflow-hidden text-sm font-bold leading-none text-textlight dark:text-textdark">
+              Rocketseat
+            </time>
+            <p className="overflow-hidden text-base font-normal text-gray-500 dark:text-gray-400">
+              fundamentos de HTML, CSS, JavaScript, DOM, Terminal, NodeJS, EJS,
+              SQL, Estrutura de Dados, Programação Orientada a Objetos,
+              Programação Funcional, Git, GitHub e HTTP.
+              <button
+                onClick={() => setOpen('fundamentar')}
                 className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
               >
                 Certificado

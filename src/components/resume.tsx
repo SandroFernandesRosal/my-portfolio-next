@@ -47,7 +47,7 @@ export default function Resume() {
         </div>
 
         <div className="text-left mx-5 lg:mb-10 max-w-[600px]">
-          <p className="pb-[100px]">
+          <p className="pb-[20px] md:pb-[100px]">
             Recem graduado em Análise e Desenvolvimento de Sistemas. Sempre fui
             fascinado pela tecnologia, mas foi em um momento muito difícil que
             descobri que a programação era o que eu realmente queria para a
@@ -60,7 +60,7 @@ export default function Resume() {
         </div>
       </div>
 
-      <div className=" h-[325px] md:mb-5 md:dark:shadow-shadowdark md:shadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center rounded-perfil border-2px border-green dark:bg-bgdarksecundary overflow-hidden md:mt-5">
+      <div className=" h-[325px] md:mb-5 dark:shadow-shadowdark hadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center rounded-perfil border-2px border-green dark:bg-bgdarksecundary overflow-hidden md:mt-5">
         <Image
           src={fotoPerfil}
           height={400}

@@ -5,7 +5,7 @@ import TimeLine from '@/components/timeline'
 
 export default function Sobre() {
   return (
-    <section className="min-h-screen flex flex-col items-center">
+    <section className="min-h-screen flex flex-col items-center w-[100vw]">
       <Resume />
       <Services />
       <Skills />

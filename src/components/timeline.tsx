@@ -88,7 +88,7 @@ export default function TimeLine() {
         ref={el}
         className="relative  mx-10  w-[85%] overflow-visible border-l border-gray-700 dark:border-gray-700 md:w-[45%] mb-20 "
       >
-        <div className="timeline relative  ">
+        <div className="timeline relative">
           <li className="mb-5 ml-6">
             <span className="absolute  -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary ring-8 dark:ring-primary/20 ring-primary/40 ">
               <svg

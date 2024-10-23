@@ -1,14 +1,11 @@
 import Resume from '@/components/resume'
-import Services from '@/components/services'
-import Skills from '@/components/skills'
+
 import TimeLine from '@/components/timeline'
 
 export default function Sobre() {
   return (
     <section className="min-h-screen flex flex-col items-center w-[100vw]">
       <Resume />
-      <Services />
-      <Skills />
 
       <h1 className="text-3xl  pt-5 font-Rubiki font-bold">Formação</h1>
       <span className="border-b-4 pb-2 w-24   border-primary  text-3xl mb-5" />

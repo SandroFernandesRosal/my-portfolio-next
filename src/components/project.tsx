@@ -31,7 +31,7 @@ export default function Project({
   return (
     <li
       key={id}
-      className={`max-w-[250px] dark:border-[1px] dark:border-zinc-800 project project-${id} flex flex-col   bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight  dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[98%] max-w-[400px] h-[650px] justify-between'} ${size === 'small' && 'h-[150px] justify-between py-3 md:py-6 min-w-[100px] w-[25%] md:max-w-[150px] '} ${size === 'normal' && 'h-[400px] w-[45%] gap-2 md:gap-5'}`}
+      className={`max-w-[250px] dark:border-[1px] dark:border-zinc-800 project project-${id} flex flex-col   bg-bglightsecundary dark:bg-bgdarksecundary rounded-md shadow-shadowlight  dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[98%] max-w-[400px] h-[650px] justify-between'} ${size === 'small' && 'h-[230px] justify-between py-3 md:py-6 min-w-[100px] w-[25%] md:max-w-[150px] '} ${size === 'normal' && 'h-[480px] w-[45%] gap-2 md:gap-5 justify-between'}`}
     >
       <Image
         src={img}
@@ -47,27 +47,27 @@ export default function Project({
           aria-label="abrir projeto"
           aria-description="abrir projeto"
           href={`/projetos/${slug}`}
-          className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark "
+          className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2 "
         >
-          <Info />
+          <Info /> Infos
         </Link>
         <Link
           aria-label="abrir respositório"
           aria-description="abrir repositório"
           href={repo}
           target="_blank"
-          className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark"
+          className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2"
         >
-          <Github />
+          <Github /> Code
         </Link>
         <Link
           aria-label="abrir site do projeto"
           aria-description="abrir site do projeto"
           href={page}
           target="_blank"
-          className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark"
+          className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2"
         >
-          <ExternalLink />
+          <ExternalLink /> Acessar
         </Link>
       </div>
 

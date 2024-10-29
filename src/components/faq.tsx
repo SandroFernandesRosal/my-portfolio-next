@@ -17,24 +17,24 @@ export default function Faq() {
     'Quanto custa pra fazer um site?',
     'Qual é o prazo de entrega?',
     'Como funciona o processo de criação de um site?',
-
     'Como é feita a entrega?',
-
-    'Como vou saber se o site está sendo feito?',
     'Quais são as formas de pagamento?',
     'Como funciona o suporte?',
   ]
 
   const faqAnswers: string[] = [
     'O site é aquele composto por diversas páginas, com o objetivo de informar sobre um negócio, produto, pessoa etc. Já a Landing Page é composta por uma única página, que visa transformar o seu visitante em lead (contatos que demonstraram interesse por seu produto ou serviço).',
+
     'Os projetos são sob medida, de acordo com sua necessidade. Logo o investimento para criar um site depende da necessidade do seu negócio.',
+
     'O prazo de entrega varia conforme o escopo do projeto, mas geralmente leva de 4 a 6 semanas. Caso seja uma Landing page, até 1 semana.',
+
     'O cliente, junto com o desenvolvedor, definirão quais serão as funcionalidades, links e páginas do site. Também será definido o Layout. Após essas definições, o layout será convertido em código. Ou seja, o site ganhará vida.',
 
     'Após a finalização projeto, a pasta será enviada para a nuvem com seu projeto e com as instruções de uso. Caso queira, também será disponibilizado acesso ao respositório do Github. Caso não entenda nada disso, não se preocupe, pois também tenho o serviço de hospedagem e manutenção do seu site.',
 
-    'Durante o processo de produção, será disponibilizado um link temporário, onde poderá acompanhar a produção do site em tempo real.',
     'Aceito diversas formas de pagamento, incluindo pix, cartão de crédito, boleto e transferência bancária.',
+
     'Oferecemos suporte contínuo para garantir que seu site esteja sempre funcionando corretamente.',
   ]
 

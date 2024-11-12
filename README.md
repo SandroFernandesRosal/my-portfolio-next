@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Portfólio de Sandro Fernandes
 
-First, run the development server:
+Meu site pessoal, onde coloco meus prjetos desenvolvidos, e ofereço meus serviços como Desenvolvedor Web.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Temas dark e light
+- Campo de busca de projetos
+- Filtragem de projetos por Destaques ou todos
+- Botões para escolher exibir projetos em diferentes tamanhos
+- Animações de scroll
+- Carousel de imagens
+- Formulário de enviar email.
+- Multiplataforma
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Stack utilizada
 
-To learn more about Next.js, take a look at the following resources:
+**Front-end:** Javascript, Typescript, React, Next, TailwindCSS, Zustand, gsap, react-slick, emailjs e axios.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Back-end:** Node e NextAPI.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Demonstração
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+https://sandrofernandesdev.vercel.app/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Autor
+
+- [Sandro Fernandes Rosal](https://github.com/SandroFernandesRosal)
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sandrofernandesdev.vercel.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sandrofernandesrosal/)
+
+

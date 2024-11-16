@@ -78,12 +78,12 @@ export default function SkillScroll() {
   return (
     <Slider
       {...settings}
-      className="slider-container flex self-center  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] w-[100vw]"
+      className="slider-container flex self-center  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] w-[100vw]  h-[200px]"
     >
       {skillsData.map((skill: SkilsProps) => (
         <div
           key={skill.id}
-          className="p-2  flex flex-col items-center text-zinc-400 bg-transparent dark:text-bgdark   justify-center text-center h-[170px] justify-items-center content-center    rounded-md    my-2"
+          className="p-2  flex flex-col items-center text-zinc-400 bg-transparent dark:text-bgdark  justify-center text-center h-[170px] justify-items-center content-center rounded-md  my-2"
         >
           {skill.name}
           {skill.icon === 'HTML' && <RiHtml5Line className="text-9xl  " />}

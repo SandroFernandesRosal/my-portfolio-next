@@ -40,66 +40,70 @@ export default function Project({
         height={400}
         className={`w-full object-cover object-top h-[40%] md:h-[60%] rounded-t-md border-b border-primary ${size === 'small' && 'hidden'} ${size === 'large' && 'h-[70%]'}`}
       />
-  <div className={`bg-[url(../assets/bg-dot.svg)] m-2  flex flex-col gap-2 justify-between h-[60%] ${size === 'small' && 'h-[100%] py-2  justify-between '}`}>
-      <p className="text-center font-bold">{title}</p>
-
-<div className={`flex gap-2 justify-center w-full flex-wrap`}>
-  <Link
-    aria-label="abrir projeto"
-    aria-description="abrir projeto"
-    href={`/projetos/${slug}`}
-    className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2 "
-  >
-    <Info />
-  </Link>
-  <Link
-    aria-label="abrir respositório"
-    aria-description="abrir repositório"
-    href={repo}
-    target="_blank"
-    className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2"
-  >
-    <Github />
-  </Link>
-  <Link
-    aria-label="abrir site do projeto"
-    aria-description="abrir site do projeto"
-    href={page}
-    target="_blank"
-    className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2"
-  >
-    <ExternalLink />
-  </Link>
-</div>
-
-<ul
-  className={`flex px-1 gap-2 justify-center flex-wrap mb-2 font-bold ${size === 'small' && 'hidden'}`}
->
-  {tecs.map((tec, i) => {
-    return (
-      <li
-        className=" p-1 rounded-md bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-none dark:border-[1px] dark:border-zinc-800"
-        key={i}
+      <div
+        className={`bg-[url(../assets/bg-dot.svg)] m-2  flex flex-col gap-2 justify-between h-[60%] ${size === 'small' && 'h-[100%] py-2  justify-between '}`}
       >
-        {tec === 'HTML' && <RiHtml5Line className="text-2xl" />}
-        {tec === 'CSS' && <FaCss3Alt className="text-2xl" />}
-        {tec === 'JS' && <TbBrandJavascript className="text-2xl" />}
-        {tec === 'TS' && <TbBrandTypescript className="text-2xl" />}
-        {tec === 'React' && <RiReactjsLine className="text-2xl" />}
-        {tec === 'Next' && <RiNextjsLine className="text-2xl" />}
-        {tec === 'Tailwind' && <RiTailwindCssFill className="text-2xl" />}
-        {tec === 'Zustand' && <RiBearSmileLine className="text-2xl" />}
-        {tec === 'Angular' && <RiAngularjsLine className="text-2xl" />}
-        {tec === 'API' && <RiNodejsLine className="text-2xl" />}
-        {tec === 'Styled Components' && (
-          <SiStyledcomponents className="text-2xl" />
-        )}
-        {tec === 'Prisma' && <SiPrisma className="text-2xl" />}
-      </li>
-    )
-  })}
-</ul></div>
-      
+        <p className="text-center font-bold">{title}</p>
+
+        <div className={`flex gap-2 justify-center w-full flex-wrap`}>
+          <Link
+            aria-label="abrir projeto"
+            aria-description="abrir projeto"
+            href={`/projetos/${slug}`}
+            className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2 "
+          >
+            <Info />
+          </Link>
+          <Link
+            aria-label="abrir respositório"
+            aria-description="abrir repositório"
+            href={repo}
+            target="_blank"
+            className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2"
+          >
+            <Github />
+          </Link>
+          <Link
+            aria-label="abrir site do projeto"
+            aria-description="abrir site do projeto"
+            href={page}
+            target="_blank"
+            className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2"
+          >
+            <ExternalLink />
+          </Link>
+        </div>
+
+        <ul
+          className={`flex px-1 gap-2 justify-center flex-wrap mb-2 font-bold ${size === 'small' && 'hidden'}`}
+        >
+          {tecs.map((tec, i) => {
+            return (
+              <li
+                className=" p-1 rounded-md bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-none dark:border-[1px] dark:border-zinc-800"
+                key={i}
+              >
+                {tec === 'HTML' && <RiHtml5Line className="text-2xl" />}
+                {tec === 'CSS' && <FaCss3Alt className="text-2xl" />}
+                {tec === 'JS' && <TbBrandJavascript className="text-2xl" />}
+                {tec === 'TS' && <TbBrandTypescript className="text-2xl" />}
+                {tec === 'React' && <RiReactjsLine className="text-2xl" />}
+                {tec === 'Next' && <RiNextjsLine className="text-2xl" />}
+                {tec === 'Tailwind' && (
+                  <RiTailwindCssFill className="text-2xl" />
+                )}
+                {tec === 'Zustand' && <RiBearSmileLine className="text-2xl" />}
+                {tec === 'Angular' && <RiAngularjsLine className="text-2xl" />}
+                {tec === 'API' && <RiNodejsLine className="text-2xl" />}
+                {tec === 'Styled Components' && (
+                  <SiStyledcomponents className="text-2xl" />
+                )}
+                {tec === 'Prisma' && <SiPrisma className="text-2xl" />}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     </li>
   )
 }

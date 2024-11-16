@@ -22,29 +22,32 @@ export default function Services() {
 
     gsap.context(() => {
       servicesData.forEach((service, index) => {
-        const direction = index % 2 === 0 ? -window.innerWidth : window.innerWidth 
+        const direction =
+          index % 2 === 0 ? -window.innerWidth : window.innerWidth
 
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: `.service-${service.id}`,
-            scrub: true,
-            markers: false,
-            start: 'top 80%',
-            end: 'bottom 100%',
-          },
-        }).fromTo(
-          `.service-${service.id}`,
-          {
-            opacity: 0,
-            x: direction, 
-          },
-          {
-            opacity: 1,
-            x: 0, 
-            duration: 2,
-            ease: 'power2.out',
-          },
-        )
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: `.service-${service.id}`,
+              scrub: true,
+              markers: false,
+              start: 'top 80%',
+              end: 'bottom 100%',
+            },
+          })
+          .fromTo(
+            `.service-${service.id}`,
+            {
+              opacity: 0,
+              x: direction,
+            },
+            {
+              opacity: 1,
+              x: 0,
+              duration: 2,
+              ease: 'power2.out',
+            },
+          )
       })
     }, el)
 

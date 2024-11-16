@@ -25,29 +25,32 @@ export default function Skills() {
 
     gsap.context(() => {
       skillsData.forEach((skill, index) => {
-        const direction = index % 2 === 0 ? -window.innerWidth : window.innerWidth 
+        const direction =
+          index % 2 === 0 ? -window.innerWidth : window.innerWidth
 
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: `.skill-${skill.id}`,
-            scrub: true,
-            markers: false,
-            start: 'top 100%',
-            end: 'bottom 100%',
-          },
-        }).fromTo(
-          `.skill-${skill.id}`,
-          {
-            opacity: 0,
-            x: direction, 
-          },
-          {
-            opacity: 1,
-            x: 0, 
-            duration: 2,
-            ease: 'power2.out',
-          },
-        )
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: `.skill-${skill.id}`,
+              scrub: true,
+              markers: false,
+              start: 'top 100%',
+              end: 'bottom 100%',
+            },
+          })
+          .fromTo(
+            `.skill-${skill.id}`,
+            {
+              opacity: 0,
+              x: direction,
+            },
+            {
+              opacity: 1,
+              x: 0,
+              duration: 2,
+              ease: 'power2.out',
+            },
+          )
       })
     }, el)
 

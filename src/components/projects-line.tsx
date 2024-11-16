@@ -64,29 +64,32 @@ export default function ProjectsLine({ projects }: ProjectArray) {
 
     gsap.context(() => {
       projectsToDisplay.forEach((project, index) => {
-        const direction = index % 2 === 0 ? -window.innerWidth : window.innerWidth 
+        const direction =
+          index % 2 === 0 ? -window.innerWidth : window.innerWidth
 
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: `.project-${project.id}`,
-            scrub: true,
-            markers: false,
-            start: 'top 100%',
-            end: 'bottom 100%',
-          },
-        }).fromTo(
-          `.project-${project.id}`,
-          {
-            opacity: 0,
-            x: direction, 
-          },
-          {
-            opacity: 1,
-            x: 0, 
-            duration: 2,
-            ease: 'power2.out',
-          },
-        )
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: `.project-${project.id}`,
+              scrub: true,
+              markers: false,
+              start: 'top 100%',
+              end: 'bottom 100%',
+            },
+          })
+          .fromTo(
+            `.project-${project.id}`,
+            {
+              opacity: 0,
+              x: direction,
+            },
+            {
+              opacity: 1,
+              x: 0,
+              duration: 2,
+              ease: 'power2.out',
+            },
+          )
       })
     }, el)
 
@@ -98,7 +101,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
   return (
     <>
       <ul className="flex flex-wrap gap-5 justify-center w-full" ref={el}>
-        {projectsToDisplay.map((project: ProjectProps, index) => (
+        {projectsToDisplay.map((project: ProjectProps) => (
           <Project
             key={project.id}
             id={project.id}
@@ -112,7 +115,6 @@ export default function ProjectsLine({ projects }: ProjectArray) {
             imgs={project.imgs}
             featured={project.featured}
             description={project.description}
-            
           />
         ))}
       </ul>

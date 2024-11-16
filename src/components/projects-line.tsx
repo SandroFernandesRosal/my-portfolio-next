@@ -58,33 +58,35 @@ export default function ProjectsLine({ projects }: ProjectArray) {
   )
 
   const el = useRef<HTMLUListElement | null>(null)
-  const tl = useRef<gsap.core.Timeline | null>(null)
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
+
     gsap.context(() => {
-      projectsToDisplay.forEach((project) => {
-        tl.current = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: `.project-${project.id}`,
-              scrub: true,
-              markers: false,
-              start: 'top 100%',
-              end: 'bottom 100%',
-            },
-          })
-          .fromTo(
-            `.project-${project.id}`,
-            {
-              opacity: 0,
-              x: 360,
-            },
-            {
-              opacity: 1,
-              x: 0,
-            },
-          )
+      projectsToDisplay.forEach((project, index) => {
+        const direction = index % 2 === 0 ? -window.innerWidth : window.innerWidth 
+
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: `.project-${project.id}`,
+            scrub: true,
+            markers: false,
+            start: 'top 100%',
+            end: 'bottom 100%',
+          },
+        }).fromTo(
+          `.project-${project.id}`,
+          {
+            opacity: 0,
+            x: direction, 
+          },
+          {
+            opacity: 1,
+            x: 0, 
+            duration: 2,
+            ease: 'power2.out',
+          },
+        )
       })
     }, el)
 
@@ -96,7 +98,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
   return (
     <>
       <ul className="flex flex-wrap gap-5 justify-center w-full" ref={el}>
-        {projectsToDisplay.map((project: ProjectProps) => (
+        {projectsToDisplay.map((project: ProjectProps, index) => (
           <Project
             key={project.id}
             id={project.id}
@@ -110,23 +112,23 @@ export default function ProjectsLine({ projects }: ProjectArray) {
             imgs={project.imgs}
             featured={project.featured}
             description={project.description}
+            
           />
         ))}
       </ul>
 
       {projectsToDisplay.length > 0 && (
         <>
-          {' '}
           <div className="flex mt-5">
             <button
               aria-label="Voltar página"
               onClick={loadPreviousPage}
               disabled={isDisabledPrev}
-              className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl  p-2 font-bold text-white shadow-light  hover:from-blue-900 hover:to-slate-900 dark:border-[1px] border-zinc-800 shadow-shadowlight dark:shadow-none${
+              className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl p-2 font-bold text-white shadow-light hover:from-blue-900 hover:to-slate-900 dark:border-[1px] border-zinc-800 shadow-shadowlight dark:shadow-none${
                 isDisabledPrev
-                  ? 'bg-bglightsecundary/20 dark:bg-bgdarksecundary/20'
-                  : 'bg-bglightsecundary dark:bg-bgdarksecundary'
-              } `}
+                  ? ' bg-bglightsecundary/20 dark:bg-bgdarksecundary/20'
+                  : ' bg-bglightsecundary dark:bg-bgdarksecundary'
+              }`}
             >
               <MdArrowBack className="text-3xl font-bold text-primary" />
             </button>
@@ -134,18 +136,18 @@ export default function ProjectsLine({ projects }: ProjectArray) {
               aria-label="Próxima página"
               onClick={loadNextPage}
               disabled={isDisabledNext}
-              className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl  p-2 font-bold  shadow-light  hover:from-blue-900 hover:to-slate-900 dark:border-[1px] border-zinc-800 shadow-shadowlight dark:shadow-none ${
+              className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl p-2 font-bold shadow-light hover:from-blue-900 hover:to-slate-900 dark:border-[1px] border-zinc-800 shadow-shadowlight dark:shadow-none${
                 isDisabledNext
-                  ? 'bg-bglightsecundary/20 dark:bg-bgdarksecundary/20'
-                  : 'bg-bglightsecundary dark:bg-bgdarksecundary'
-              } `}
+                  ? ' bg-bglightsecundary/20 dark:bg-bgdarksecundary/20'
+                  : ' bg-bglightsecundary dark:bg-bgdarksecundary'
+              }`}
             >
               <MdArrowForward className="text-3xl font-bold text-primary" />
             </button>
-          </div>{' '}
-          <p className=" font-bold">
+          </div>
+          <p className="font-bold">
             Página {displayCurrentPage} de {totalPages}
-          </p>{' '}
+          </p>
         </>
       )}
     </>

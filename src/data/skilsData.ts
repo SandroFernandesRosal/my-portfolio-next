@@ -57,4 +57,14 @@ export const skillsData = [
     name: 'Zustand',
     icon: 'Zustand',
   },
+  {
+    id: 12,
+    name: 'Git',
+    icon: 'Git',
+  },
+  {
+    id: 13,
+    name: 'Github',
+    icon: 'Github',
+  },
 ]

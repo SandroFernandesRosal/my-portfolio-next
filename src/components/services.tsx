@@ -21,10 +21,7 @@ export default function Services() {
     gsap.registerPlugin(ScrollTrigger)
 
     gsap.context(() => {
-      servicesData.forEach((service, index) => {
-        const direction =
-          index % 2 === 0 ? -window.innerWidth : window.innerWidth
-
+      servicesData.forEach((service) => {
         gsap
           .timeline({
             scrollTrigger: {
@@ -39,12 +36,12 @@ export default function Services() {
             `.service-${service.id}`,
             {
               opacity: 0,
-              x: direction,
+              y: -50,
             },
             {
               opacity: 1,
-              x: 0,
-              duration: 2,
+              y: 0,
+              duration: 2.5,
               ease: 'power2.out',
             },
           )
@@ -61,12 +58,20 @@ export default function Services() {
       <h1 className="text-3xl font-Rubiki font-bold">Meus serviços</h1>
       <span className="border-b-4 pb-2 w-24 border-primary text-3xl mb-5"></span>
 
-      <div className="flex flex-wrap gap-3 justify-center" ref={el}>
-        {servicesData.map((service: ServicesProps) => {
+      <div
+        className="grid w-full md:grid-cols-3 md:grid-rows-2 gap-3 justify-center lg:w-[70vw]"
+        ref={el}
+      >
+        {servicesData.map((service: ServicesProps, index) => {
+          const isLargeItem = index === 0
           return (
             <div
               key={service.id}
-              className={`service service-${service.id} flex justify-between p-4 w-[100%] md:max-w-[330px] h-[230px] flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent rounded-md hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none`}
+              className={`service service-${service.id} flex justify-between p-4 ${
+                isLargeItem
+                  ? 'md:col-span-2 md:row-span-2'
+                  : 'md:col-span-1 md:row-span-1'
+              } w-full h-[230px] md:h-auto flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent rounded-md hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none`}
             >
               <div className="flex h-[50%] justify-between mx-2 flex-col gap-2 items-center bg-[url(../assets/bg-dot.svg)] w-full">
                 {service.icon === 'site' && (

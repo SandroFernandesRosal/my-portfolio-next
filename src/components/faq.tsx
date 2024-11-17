@@ -50,19 +50,21 @@ export default function Faq() {
             trigger: el.current,
             scrub: true,
             markers: false,
-            start: 'top 100%',
-            end: 'bottom 100%',
+            start: 'top 90%',
+            end: 'bottom 90%',
           },
         })
         .fromTo(
           '.faq',
           {
             opacity: 0,
-            x: 360,
+            y: -50,
           },
           {
             opacity: 1,
-            x: 0,
+            y: 0,
+            duration: 2.5,
+            ease: 'power2.out',
           },
         )
     }, el)
@@ -74,28 +76,29 @@ export default function Faq() {
 
   return (
     <section
-      ref={el}
       className="z-10 px-5   flex flex-col items-center  dark:bg-bgdark bg-bglight py-5  pb-40 dark:bg-[url(../assets/bg-darksecondary.png)] bg-[url(../assets/bg-lightsecondary.png)]   bg-bottom bg-repeat-x"
       id="faq"
     >
       <h1 className="text-3xl font-Rubiki font-bold">Perguntas frequentes</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
 
-      <ul className="w-[90%] px-5 max-w-[500px] flex flex-col gap-3">
-        {faqItems.map((item, index) => (
-          <li key={index} onClick={() => handleOpen(index)} className="faq">
-            <h1 className="bg-primary h-20 items-center text-black rounded-md p-5 font-bold cursor-pointer flex justify-between">
-              {`${index + 1} - ${item}`}
-              {openIndex === index ? <ChevronUp /> : <ChevronDown />}
-            </h1>
-            <div
-              className={`p-1 border-x-[1px] rounded-md bg-bglightsecundary dark:bg-bgdarksecundary border-b-[1px] dark:border-zinc-800 border-zinc-400 transition ease-in-out duration-300 delay-150 ${openIndex === index ? 'flex' : 'hidden'}`}
-            >
-              {faqAnswers[index]}
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div ref={el} className="flex justify-center">
+        <ul className="w-[90%] px-5 max-w-[500px] flex flex-col gap-3">
+          {faqItems.map((item, index) => (
+            <li key={index} onClick={() => handleOpen(index)} className="faq">
+              <h1 className="bg-primary h-20 items-center text-black rounded-md p-5 font-bold cursor-pointer flex justify-between">
+                {`${index + 1} - ${item}`}
+                {openIndex === index ? <ChevronUp /> : <ChevronDown />}
+              </h1>
+              <div
+                className={`p-1 border-x-[1px] rounded-md bg-bglightsecundary dark:bg-bgdarksecundary border-b-[1px] dark:border-zinc-800 border-zinc-400 transition ease-in-out duration-300 delay-150 ${openIndex === index ? 'flex' : 'hidden'}`}
+              >
+                {faqAnswers[index]}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   )
 }

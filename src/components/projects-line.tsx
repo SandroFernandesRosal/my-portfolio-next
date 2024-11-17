@@ -63,10 +63,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
     gsap.registerPlugin(ScrollTrigger)
 
     gsap.context(() => {
-      projectsToDisplay.forEach((project, index) => {
-        const direction =
-          index % 2 === 0 ? -window.innerWidth : window.innerWidth
-
+      projectsToDisplay.forEach((project) => {
         gsap
           .timeline({
             scrollTrigger: {
@@ -81,12 +78,12 @@ export default function ProjectsLine({ projects }: ProjectArray) {
             `.project-${project.id}`,
             {
               opacity: 0,
-              x: direction,
+              y: -50,
             },
             {
               opacity: 1,
-              x: 0,
-              duration: 2,
+              y: 0,
+              duration: 2.5,
               ease: 'power2.out',
             },
           )
@@ -100,7 +97,10 @@ export default function ProjectsLine({ projects }: ProjectArray) {
 
   return (
     <>
-      <ul className="flex flex-wrap gap-5 justify-center w-full" ref={el}>
+      <ul
+        className="flex flex-wrap gap-5 justify-center w-full lg:w-[70vw]"
+        ref={el}
+      >
         {projectsToDisplay.map((project: ProjectProps) => (
           <Project
             key={project.id}

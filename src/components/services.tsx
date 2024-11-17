@@ -73,7 +73,7 @@ export default function Services() {
                   : 'md:col-span-1 md:row-span-1'
               } w-full h-[230px] md:h-auto flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent rounded-md hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none`}
             >
-              <div className="flex h-[50%] justify-between mx-2 flex-col gap-2 items-center bg-[url(../assets/bg-dot.svg)] w-full">
+              <div className="flex h-[50%] justify-center mx-2 flex-col gap-2 items-center bg-[url(../assets/bg-dot.svg)] w-full">
                 {service.icon === 'site' && (
                   <Monitor className="text-primary size-20 " />
                 )}
@@ -92,11 +92,11 @@ export default function Services() {
                 {service.icon === 'hospedagem' && (
                   <Globe className="text-primary size-20" />
                 )}
-                <h1 className="text-lg font-bold">{service.title}</h1>
               </div>
-              <p className="px-1 text-zinc-700 dark:text-zinc-400">
+              <div className=" h-full text-zinc-700 dark:text-zinc-400 flex flex-col justify-center gap-4 ">
+                <h1 className="text-lg font-bold">{service.title}</h1>
                 {service.description}
-              </p>
+              </div>
             </div>
           )
         })}

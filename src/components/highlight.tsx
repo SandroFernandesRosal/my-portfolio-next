@@ -12,7 +12,7 @@ export default function HighLight() {
         <div className="absolute  top-0  w-[50%] h-36 md:h-20 bg-green-500/30 blur-[100px]" />
 
         <div className="flex justify-center items-center md:items-start mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5">
-          <h1 className="text-3xl px-10 md:px-5 text-center lg:w-[70%]  md:text-4xl">
+          <h1 className="text-3xl px-10 md:px-5 text-center  lg:w-[70%]  md:text-4xl">
             Quer ficar visível para o seu público na internet e lucrar ainda
             mais? Eu tenho a solução ideal para você.
           </h1>

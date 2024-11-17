@@ -5,7 +5,6 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Image from 'next/image'
 
-// Tipagem correta para o array de imagens
 export interface ImgProps {
   imgs: string[]
 }

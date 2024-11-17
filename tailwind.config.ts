@@ -18,7 +18,6 @@ const config: Config = {
       fontFamily: {
         Roboto: ['var(--font-roboto)'],
         MsMadi: ['var(--font-msmadi)'],
-        Rubiki: ['var(--font-rubiki)'],
       },
       colors: {
         primary: '#10B981',

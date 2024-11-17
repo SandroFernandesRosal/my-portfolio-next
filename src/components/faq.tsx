@@ -86,7 +86,7 @@ export default function Faq() {
         <ul className="w-[90%] px-5 max-w-[500px] flex flex-col gap-3">
           {faqItems.map((item, index) => (
             <li key={index} onClick={() => handleOpen(index)} className="faq">
-              <h1 className="bg-primary h-20 items-center text-black rounded-md p-5 font-bold cursor-pointer flex justify-between">
+              <h1 className="bg-bglightsecundary  dark:border-[1px] shadow-shadowlight  dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary dark:border-zinc-800 rounded-md dark:bg-bgdarksecundary text-textlight dark:text-textdark h-20 items-center   p-5 font-bold cursor-pointer flex justify-between">
                 {`${index + 1} - ${item}`}
                 {openIndex === index ? <ChevronUp /> : <ChevronDown />}
               </h1>

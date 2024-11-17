@@ -55,7 +55,7 @@ export default function Services() {
 
   return (
     <section className="z-10 px-5 flex flex-col items-center dark:bg-bgdark bg-bglight pb-40 bg-[url(../assets/bg-lightsecondary.png)] dark:bg-[url(../assets/bg-darksecondary.png)] w-full bg-bottom bg-repeat-x">
-      <h1 className="text-3xl font-Rubiki font-bold">Meus serviços</h1>
+      <h1 className="text-3xl font-bold">Meus serviços</h1>
       <span className="border-b-4 pb-2 w-24 border-primary text-3xl mb-5"></span>
 
       <div

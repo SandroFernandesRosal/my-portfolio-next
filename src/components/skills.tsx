@@ -56,7 +56,7 @@ export default function Skills() {
 
   return (
     <section className="w-full flex items-center flex-col px-5 lg:px-0 bg-bglightsecundary dark:bg-bgdarksecundary pb-40 dark:bg-[url(../assets/bg-dark.png)] bg-[url(../assets/bg-light.png)] bg-bottom bg-repeat-x">
-      <h1 className="text-3xl font-Rubiki font-bold">Minhas habilidades</h1>
+      <h1 className="text-3xl font-bold">Minhas habilidades</h1>
       <span className="border-b-4 pb-2 w-24 border-primary text-3xl mb-5"></span>
 
       <ul

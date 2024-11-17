@@ -31,17 +31,17 @@ export default function Project({
   return (
     <li
       key={id}
-      className={` max-w-[250px] dark:border-[1px] dark:border-zinc-800 project project-${id} flex flex-col  rounded-md shadow-shadowlight  dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[100%] mx-5 md:mx-0 max-w-[500px] h-[650px] justify-between'} ${size === 'small' && 'h-[230px] justify-between py-3 md:py-6 min-w-[100px] w-[25%] md:max-w-[150px] '} ${size === 'normal' && 'h-[500px] w-[45%] justify-between'}`}
+      className={` max-w-[250px] dark:border-[1px] dark:border-zinc-800 project project-${id} flex flex-col  rounded-md shadow-shadowlight  dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[100%] mx-5 md:mx-0 max-w-[500px] h-[650px] justify-between'} ${size === 'small' && 'h-[230px] justify-between py-3 md:py-6 min-w-[100px] w-[25%] md:max-w-[150px] '} ${size === 'normal' && 'h-[400px] md:h-[500px] w-[45%] justify-between'}`}
     >
       <Image
         src={img}
-        alt=""
+        alt={title}
         width={400}
         height={400}
         className={`w-full object-cover object-top h-[40%] md:h-[60%] rounded-t-md border-b border-primary ${size === 'small' && 'hidden'} ${size === 'large' && 'h-[70%]'}`}
       />
       <div
-        className={`bg-[url(../assets/bg-dot.svg)] m-2  flex flex-col gap-2 justify-between h-[60%] ${size === 'small' && 'h-[100%] py-2  justify-between '}`}
+        className={`bg-[url(../assets/bg-dot.svg)] m-2  flex flex-col gap-2 justify-between h-[60%] ${size === 'small' && ' h-full   justify-between '}`}
       >
         <p className="text-center font-bold">{title}</p>
 

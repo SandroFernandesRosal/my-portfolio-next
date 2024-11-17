@@ -8,6 +8,7 @@ export default function Socials() {
         href={'https://api.whatsapp.com/send?phone=5521969501614'}
         target="blank"
         className="flex items-center justify-around gap-2 md:gap-0 md:w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadow-none dark:border-[1px] dark:border-zinc-800 font-bold border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
+        aria-label="Meu whatsapp"
       >
         <span>Whatsapp</span> <FaWhatsapp className="text-2xl text-primary" />
       </Link>
@@ -16,6 +17,7 @@ export default function Socials() {
         href={'https://github.com/SandroFernandesRosal'}
         target="blank"
         className="flex items-center justify-around gap-2 md:gap-0 md:w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadow-none dark:border-[1px] dark:border-zinc-800 font-bold border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
+        aria-label="Meu github"
       >
         <span>Github</span> <FaGithub className="text-2xl text-primary" />
       </Link>
@@ -24,6 +26,7 @@ export default function Socials() {
         href={'https://www.linkedin.com/in/sandrofernandesrosal'}
         target="blank"
         className="flex items-center justify-around gap-2 md:gap-0 md:w-[150px]  bg-bglight dark:bg-bgdark rounded-md  p-2  shadow-shadowlight dark:shadow-shadow-none dark:border-[1px] dark:border-zinc-800 font-bold border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
+        aria-label="Meu linkedin"
       >
         <span>Linkedin</span> <FaLinkedin className="text-2xl text-primary" />
       </Link>

@@ -13,15 +13,15 @@ export default function HighLight() {
 
         <div className="flex justify-center items-center md:items-start mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5">
           <h1 className="text-3xl px-10 md:px-5 text-center  lg:w-[70%]  md:text-4xl">
-            Quer ficar visível para o seu público na internet e lucrar ainda
-            mais? Eu tenho a solução ideal para você.
+            Transforme sua presença online em lucro: soluções personalizadas
+            para destacar seu negócio.
           </h1>
         </div>
 
         <div className="my-5 flex px-10 md:px-5 flex-col items-center justify-center w-[100%] md:w-[50%]">
-          <div className="border-l-[3px] border-primary px-[5px] ">
+          <div className="">
             <h1 className="text-xl">
-              Eu sou o <span className="text-primary">Sandro Fernandes</span> e
+              Eu sou o <span className="text-primary">Sandro Fernandes</span>, e
               vou te ajudar a ter visibilidade com um site incrível e totalmente
               personalizado.
             </h1>
@@ -52,6 +52,7 @@ export default function HighLight() {
             <Link
               href={'/sobre'}
               className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none dark:border-zinc-800 bg-bglight border-[1px] border-transparent hover:border-primary dark:hover:border-primary"
+              aria-label="Saiba mais sobre mim"
             >
               <span>Quem sou</span>{' '}
               <PiPersonArmsSpreadFill className="text-2xl text-primary" />
@@ -63,6 +64,7 @@ export default function HighLight() {
               locale={false}
               download
               className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none dark:border-zinc-800 bg-bglight border-[1px] border-transparent hover:border-primary dark:hover:border-primary"
+              aria-label="Entre em contato"
             >
               <span>Contato</span>{' '}
               <FaWhatsapp className="text-2xl text-primary" />

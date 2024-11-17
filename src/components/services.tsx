@@ -67,7 +67,7 @@ export default function Services() {
           return (
             <div
               key={service.id}
-              className={`service service-${service.id} flex justify-between p-4 ${
+              className={`service service-${service.id} group flex justify-between p-4 ${
                 isLargeItem
                   ? 'md:col-span-2 md:row-span-2'
                   : 'md:col-span-1 md:row-span-1'
@@ -75,22 +75,22 @@ export default function Services() {
             >
               <div className="flex h-[50%] justify-center mx-2 flex-col gap-2 items-center bg-[url(../assets/bg-dot.svg)] w-full">
                 {service.icon === 'site' && (
-                  <Monitor className="text-primary size-20 " />
+                  <Monitor className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}
                 {service.icon === 'loja' && (
-                  <ShoppingCart className="text-primary size-20" />
+                  <ShoppingCart className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}
                 {service.icon === 'blog' && (
-                  <Rss className="text-primary size-20" />
+                  <Rss className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}
                 {service.icon === 'landing' && (
-                  <Speech className="text-primary size-20" />
+                  <Speech className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}
                 {service.icon === 'suporte' && (
-                  <Settings className="text-primary size-20" />
+                  <Settings className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}
                 {service.icon === 'hospedagem' && (
-                  <Globe className="text-primary size-20" />
+                  <Globe className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}
               </div>
               <div className=" h-full text-zinc-700 dark:text-zinc-400 flex flex-col justify-center gap-4 ">

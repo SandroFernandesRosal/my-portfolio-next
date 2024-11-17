@@ -15,7 +15,7 @@ export default function Resume() {
           </p>
 
           <div className="pl-5">
-            <p>Desenvolvedor Front-end</p>
+            <p>Desenvolvedor Web</p>
             <p>Freelancer - Disponível </p>
           </div>
 

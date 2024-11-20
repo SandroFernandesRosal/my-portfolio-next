@@ -9,7 +9,7 @@ export const servicesData = [
     id: 2,
     title: 'Criação de Landing Pages',
     description:
-      'Página de vendas, divulgação, marketing ou convites em geral.',
+      'Páginas de vendas, captação de leads, lançamentos de produtos e eventos, promoções e campanhas de marketing.',
     icon: 'landing',
   },
 

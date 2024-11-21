@@ -20,7 +20,7 @@ export default function HighLight() {
 
         <div className="my-5 flex px-10 md:px-5 flex-col items-center justify-center w-[100%] md:w-[50%]">
           <div className="">
-            <h1 className="text-xl">
+            <h1 className="text-xl max-w-[550px]">
               Eu sou o <span className="text-primary">Sandro Fernandes</span>, e
               vou te ajudar a ter visibilidade com um site incrível e totalmente
               personalizado.

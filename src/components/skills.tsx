@@ -66,7 +66,7 @@ export default function Skills() {
         {skillsData.map((skill: SkilsProps) => (
           <li
             key={skill.id}
-            className={`p-2 skill skill-${skill.id} shadow-shadowlight dark:shadow-shadow-none rounded-md flex flex-col items-center w-24 justify-center text-center h-32 border-b-4 dark:border-t-zinc-800 border-b-primary dark:border-t-[1px] dark:border-r-zinc-800 dark:border-x-[1px] dark:border-x-zinc-800 bg-bgdark`}
+            className={`p-2 skill skill-${skill.id} shadow-shadowlight dark:shadow-shadow-none rounded-md flex flex-col items-center w-24 justify-center text-center h-32 border-b-4 dark:border-t-zinc-800 border-b-primary dark:border-t-[1px] dark:border-r-zinc-800 dark:border-x-[1px] dark:border-x-zinc-800 bg-bglight dark:bg-bgdark`}
           >
             {skill.name}
             {skill.icon === 'HTML' && (

@@ -73,7 +73,7 @@ export default function Services() {
                   : 'md:col-span-1 md:row-span-1'
               } w-full h-[230px] md:h-auto flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent rounded-md hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none`}
             >
-              <div className="flex h-[50%] justify-center mx-2 flex-col gap-2 items-center bg-[url(../assets/bg-dot.svg)] w-full">
+              <div className="flex h-[50%] justify-center mx-2 py-4 flex-col gap-2 items-center bg-[url(../assets/bg-dot.svg)] w-full">
                 {service.icon === 'site' && (
                   <Monitor className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}

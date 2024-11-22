@@ -92,7 +92,7 @@ export default function Skills() {
   }
 
   return (
-    <section className="z-10 px-5 flex flex-col items-center dark:bg-bgdarksecundary bg-bglight pb-40 bg-[url(../assets/bg-lightsecondary.png)] dark:bg-[url(../assets/bg-dark.png)] w-full bg-bottom bg-repeat-x">
+    <section className="z-10 px-5 flex flex-col items-center dark:bg-bgdarksecundary bg-bglightsecundary pb-40 bg-[url(../assets/bg-light.png)] dark:bg-[url(../assets/bg-dark.png)] w-full bg-bottom bg-repeat-x">
       <h1 className="text-3xl font-bold">Minhas Habilidades</h1>
       <span className="border-b-4 pb-2 w-24 border-primary text-3xl mb-5"></span>
 

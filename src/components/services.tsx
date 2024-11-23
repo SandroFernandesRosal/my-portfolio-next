@@ -54,7 +54,7 @@ export default function Services() {
   }, [])
 
   return (
-    <section className="z-10 px-5 flex flex-col items-center dark:bg-bgdark bg-bglight pb-40 bg-[url(../assets/bg-lightsecondary.png)] dark:bg-[url(../assets/bg-darksecondary.png)] w-full bg-bottom bg-repeat-x">
+    <section className="z-10 px-5 flex flex-col items-center dark:bg-bgdarksecundary bg-bglightsecundary pb-40 bg-[url(../assets/bg-light2.png)] dark:bg-[url(../assets/bg-dark2.png)] w-full bg-bottom bg-repeat-x">
       <h1 className="text-3xl font-bold">Meus serviços</h1>
       <span className="border-b-4 pb-2 w-24 border-primary text-3xl mb-5"></span>
 
@@ -93,7 +93,7 @@ export default function Services() {
                   <Globe className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}
               </div>
-              <div className=" h-full text-zinc-700 dark:text-zinc-400 flex flex-col justify-center gap-4 ">
+              <div className=" h-full flex flex-col justify-center gap-4 ">
                 <h1 className="text-lg font-bold">{service.title}</h1>
                 {service.description}
               </div>

@@ -6,7 +6,7 @@ import { IoMdDownload } from 'react-icons/io'
 
 export default function Resume() {
   return (
-    <div className="flex  flex-wrap w-full items-center px-5 mb-5 justify-center md:justify-around bg-bglightsecundary dark:bg-bgdarksecundary pt-[100px] dark:bg-[url(../assets/bg-dark.png)] bg-[url(../assets/bg-light.png)] bg-bottom bg-repeat-x">
+    <div className="flex  flex-wrap w-full items-center px-5 mb-5 justify-center md:justify-around bg-bglightsecundary dark:bg-bgdarksecundary pt-[100px] dark:bg-[url(../assets/bg-dark2.png)] bg-[url(../assets/bg-light2.png)] bg-bottom bg-repeat-x">
       <div className="">
         <div className="mb-5">
           <p className="text-xl pl-3">Olá, eu sou o</p>
@@ -60,7 +60,7 @@ export default function Resume() {
         </div>
       </div>
 
-      <div className=" h-[325px] md:mb-5 dark:shadow-shadowdark hadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center rounded-perfil border-2px border-green dark:bg-bgdarksecundary overflow-hidden md:mt-5">
+      <div className=" h-[325px] md:mb-5 dark:shadow-shadowdark hadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center rounded-perfil border-2px border-green dark:bg-bgdarksecundary overflow-hidden ">
         <Image
           src={fotoPerfil}
           height={400}

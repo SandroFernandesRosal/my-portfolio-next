@@ -8,7 +8,7 @@ import SkillScroll from './skills-scroll'
 export default function HighLight() {
   return (
     <section className="flex flex-col relative w-[100vw]">
-      <section className="relative flex flex-wrap items-center pt-5  justify-center md:justify-around bg-bglightsecundary dark:bg-bgdarksecundary dark:shadow-none dark:border-b-[1px] dark:border-none md:items-start ">
+      <section className="relative flex flex-wrap items-center pt-5  justify-center md:justify-around bg-bglight dark:bg-bgdark dark:shadow-none dark:border-b-[1px] dark:border-none md:items-start ">
         <div className="absolute  top-0  w-[50%] h-36 md:h-20 bg-green-500/30 blur-[100px]" />
 
         <div className="flex justify-center items-center md:items-start mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5 md:border-r-[1px] md:border-bglight dark:md:border-bgdarksecundary">
@@ -72,7 +72,7 @@ export default function HighLight() {
           </div>
         </div>
         <SkillScroll />
-        <div className="h-[120px] w-full bg-[url(../assets/bg-light.png)] dark:bg-[url(../assets/bg-dark.png)]   bg-bottom bg-repeat-x" />
+        <div className="h-[120px] w-full bg-[url(../assets/bg-lightsecondary2.png)] dark:bg-[url(../assets/bg-darksecondary2.png)]   bg-bottom bg-repeat-x" />
       </section>
     </section>
   )

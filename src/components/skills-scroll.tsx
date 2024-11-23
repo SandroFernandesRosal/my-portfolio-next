@@ -1,7 +1,7 @@
 'use client'
 import { skillsData } from '@/data/skilsData'
 import { SkilsProps } from '@/data/types/skils'
-import { FaCss3Alt, FaGitAlt, FaGithub } from 'react-icons/fa'
+import { FaCss3Alt, FaGitAlt, FaGithub, FaDatabase } from 'react-icons/fa'
 import {
   RiAngularjsLine,
   RiBearSmileLine,
@@ -11,7 +11,7 @@ import {
   RiReactjsLine,
   RiTailwindCssFill,
 } from 'react-icons/ri'
-import { SiPrisma, SiStyledcomponents } from 'react-icons/si'
+import { SiPrisma, SiStyledcomponents, SiFastify, SiExpress, SiInsomnia } from 'react-icons/si'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
 import React from 'react'
 import Slider from 'react-slick'
@@ -108,6 +108,10 @@ export default function SkillScroll() {
           {skill.icon === 'Prisma' && <SiPrisma className="text-9xl " />}
           {skill.icon === 'Git' && <FaGitAlt className="text-9xl " />}
           {skill.icon === 'Github' && <FaGithub className="text-9xl " />}
+          {skill.icon === 'Db' && <FaDatabase className="text-9xl " />}
+          {skill.icon === 'Fastify' && <SiFastify className="text-9xl " />}
+          {skill.icon === 'Express' && <SiExpress className="text-9xl " />}
+          {skill.icon === 'Insomnia' && <SiInsomnia className="text-9xl " />}
         </div>
       ))}
     </Slider>

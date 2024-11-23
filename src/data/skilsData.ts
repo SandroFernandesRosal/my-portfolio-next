@@ -92,4 +92,16 @@ export const skillsData = [
     icon: 'Db',
     type: 'backend'
   },
+  {
+    id: 15,
+    name: 'Fastify',
+    icon: 'Fastify',
+    type: 'backend'
+  },
+  {
+    id: 16,
+    name: 'Express',
+    icon: 'Express',
+    type: 'backend'
+  },
 ]

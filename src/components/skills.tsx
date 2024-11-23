@@ -9,7 +9,7 @@ import {
 } from 'react-icons/ri'
 import { FaCss3Alt, FaGitAlt, FaGithub, FaDatabase } from 'react-icons/fa'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
-import { SiInsomnia, SiPrisma, SiStyledcomponents } from 'react-icons/si'
+import { SiInsomnia, SiPrisma, SiStyledcomponents, SiFastify, SiExpress } from 'react-icons/si'
 
 import { skillsData } from '@/data/skilsData'
 import { gsap } from 'gsap'
@@ -80,6 +80,10 @@ export default function Skills() {
         return <SiInsomnia className="text-6xl text-primary" />
         case 'Db':
         return <FaDatabase className="text-6xl text-primary" />
+        case 'Fastify':
+        return <SiFastify className="text-6xl text-primary" />
+        case 'Express':
+        return <SiExpress className="text-6xl text-primary" />
       default:
         return null
     }

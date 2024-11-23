@@ -21,7 +21,7 @@ const config: Config = {
       },
       colors: {
         primary: '#10B981',
-        secundary: '#1fb6ff',
+        secundary: '#121214',
         bgdark: '#09090B',
         bgdarksecundary: '#18181B',
         textdark: '#EEEEEE',

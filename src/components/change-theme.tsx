@@ -13,7 +13,7 @@ export default function ChangeTheme() {
 
   return (
     <ReactSwitch
-      className="flex items-center justify-center shadow-shadowlight dark:shadow-shadowdark "
+      className="flex items-center justify-center border-[1px] dark:border-zinc-700 border-zinc-400"
       aria-label="Tema light ou dark"
       onChange={changeTheme}
       checked={theme === 'light'}

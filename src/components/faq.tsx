@@ -86,12 +86,12 @@ export default function Faq() {
         <ul className="w-[90%] px-5 max-w-[500px] flex flex-col gap-3">
           {faqItems.map((item, index) => (
             <li key={index} onClick={() => handleOpen(index)} className="faq">
-              <h1 className="dark:border-[1px] shadow-shadowlight  dark:shadow-none hover:border-primary hover:border-[1px] border-transparent dark:hover:border-primary dark:border-zinc-800 rounded-md  h-20 items-center   p-5 font-bold cursor-pointer flex justify-between">
+              <h1 className="border-[1px] hover:border-primary hover:border-[1px] border-zinc-400 dark:hover:border-primary dark:border-zinc-700 rounded-md  h-20 items-center p-5 font-bold cursor-pointer flex justify-between">
                 {`${index + 1} - ${item}`}
                 {openIndex === index ? <ChevronUp /> : <ChevronDown />}
               </h1>
               <div
-                className={`p-1 border-x-[1px] rounded-md bg-bglightsecundary dark:bg-bgdarksecundary border-b-[1px] dark:border-zinc-800 border-zinc-400 transition ease-in-out duration-300 delay-150 ${openIndex === index ? 'flex' : 'hidden'}`}
+                className={`p-1 border-x-[1px] rounded-md bg-bglightsecundary dark:bg-bgdarksecundary border-b-[1px] dark:border-zinc-700 border-zinc-400 transition ease-in-out duration-300 delay-150 ${openIndex === index ? 'flex' : 'hidden'}`}
               >
                 {faqAnswers[index]}
               </div>

@@ -106,14 +106,14 @@ export default function Contato() {
           ref={form}
           onSubmit={onSubmit}
           name="form"
-          className="flex contato  flex-col w-[100%] max-w-[500px] rounded-md p-[15px]  bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-shadow-none  dark:border-[1px] dark:border-zinc-800"
+          className="flex contato  flex-col w-[100%] max-w-[500px] rounded-md p-[15px]  bg-bglight dark:bg-bgdark border-zinc-400 border-[1px] dark:border-zinc-700"
         >
           <Socials />
           <h1 className="text-center text-xl my-5 font-bold">
             Ou envie um email
           </h1>
           <input
-            className="m-1 p-2 text-center border-[2px] border-primary rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark  focus:ring-0 outline-none bg-bglight dark:bg-bgdark "
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark  focus:ring-0 outline-none bg-bglight dark:bg-bgdark "
             required={true}
             type="text"
             name="nome"
@@ -124,7 +124,7 @@ export default function Contato() {
           />
 
           <input
-            className="m-1 p-2 text-center border-[2px] border-primary rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
             required={true}
             type="email"
             name="email"
@@ -135,7 +135,7 @@ export default function Contato() {
           />
 
           <input
-            className="m-1 p-2 text-center border-[2px] border-primary rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
             required={true}
             type="text"
             name="assunto"
@@ -146,7 +146,7 @@ export default function Contato() {
           />
 
           <textarea
-            className="m-1 p-2 text-center border-[2px] border-primary rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
             required={true}
             name="mensagem"
             id="mensagem"
@@ -160,7 +160,7 @@ export default function Contato() {
           <button
             type="submit"
             name="submit"
-            className="p-2 bg-primary w-[25%] rounded-md self-center mt-2 text-black font-bold hover:bg-primary/40"
+            className="p-2 w-[25%] rounded-md self-center mt-2 border-[1px] border-zinc-400 dark:border-zinc-700 font-bold hover:bg-primary"
           >
             Enviar
           </button>

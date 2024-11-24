@@ -51,7 +51,7 @@ export default function HighLight() {
           <div className="flex mt-5 gap-3 justify-center w-ful flex-wrap">
             <Link
               href={'/sobre'}
-              className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none dark:border-zinc-800 bg-bglight border-[1px] border-transparent hover:border-primary dark:hover:border-primary"
+              className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark dark:border-zinc-700 bg-bglight border-[1px] border-zinc-400 hover:border-primary dark:hover:border-primary"
               aria-label="Saiba mais sobre mim"
             >
               <span>Quem sou</span>{' '}
@@ -63,7 +63,7 @@ export default function HighLight() {
               rel="noopener noreferrer"
               locale={false}
               download
-              className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark shadow-shadowlight dark:shadow-none dark:border-zinc-800 bg-bglight border-[1px] border-transparent hover:border-primary dark:hover:border-primary"
+              className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark dark:border-zinc-700 bg-bglight border-[1px] border-zinc-400 hover:border-primary dark:hover:border-primary"
               aria-label="Entre em contato"
             >
               <span>Contato</span>{' '}

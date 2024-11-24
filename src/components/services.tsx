@@ -71,7 +71,7 @@ export default function Services() {
                 isLargeItem
                   ? 'md:col-span-2 md:row-span-2'
                   : 'md:col-span-1 md:row-span-1'
-              } w-full h-[230px] md:h-auto flex-col items-center text-center border-[1px] dark:border-zinc-800 border-transparent rounded-md hover:border-primary dark:hover:border-primary shadow-shadowlight dark:shadow-none`}
+              } w-full h-[230px] md:h-auto flex-col items-center text-center border-[1px] dark:border-zinc-700 border-transparent rounded-md hover:border-primary dark:hover:border-primary border-zinc-400`}
             >
               <div className="flex h-[50%] justify-center mx-2 py-4 flex-col gap-2 items-center bg-[url(../assets/bg-dot.svg)] w-full">
                 {service.icon === 'site' && (

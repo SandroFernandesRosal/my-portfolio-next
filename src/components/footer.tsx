@@ -4,7 +4,7 @@ import Socials from './socials'
 export default function Footer() {
   return (
     <footer className="flex flex-col justify-center items-center">
-      <div className="shadow-shadowlight dark:shadow-none  py-2 min-h-24 w-full flex flex-col justify-around items-center dark:border-t-[1px] dark:border-zinc-800">
+      <div className="py-2 min-h-24 w-full flex flex-col justify-around items-center border-t-[1px] border-zinc-400 dark:border-zinc-700">
         <Link
           href="/"
           className="md:text-2xl text-xl font-extrabold  hover:text-primary mb-2"

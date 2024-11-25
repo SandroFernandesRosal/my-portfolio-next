@@ -32,7 +32,7 @@ export default function TimeLine() {
     <>
       {open && (
         <div className="fixed  inset-0 z-50 flex items-center justify-center bg-black dark:bg-white dark:bg-opacity-20  bg-opacity-50">
-          <div className="bg-white dark:bg-bgdarksecundary  flex  flex-col items-center justify-center gap-5  p-5 rounded-md shadow-md w-[90%] md:w-[50%]">
+          <div className="bg-bglightsecondary dark:bg-bgdarksecondary  flex  flex-col items-center justify-center gap-5  p-5 rounded-md shadow-md w-[90%] md:w-[50%]">
             <Image
               src={certificados[open]}
               alt=""
@@ -49,7 +49,7 @@ export default function TimeLine() {
           </div>
         </div>
       )}
-      <ul className="relative  mx-10  w-[85%] overflow-visible border-l border-gray-700 dark:border-gray-700 md:w-[45%] mb-20 ">
+      <ul className="relative  mx-10  w-[85%] overflow-visible border-l border-zinc-700 dark:border-zinc-700 md:w-[45%] mb-20 ">
         <li className="mb-5 ml-6">
           <span className="absolute  -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary ring-8 dark:ring-primary/20 ring-primary/40 ">
             <svg
@@ -66,9 +66,9 @@ export default function TimeLine() {
               ></path>
             </svg>
           </span>
-          <h3 className="mb-1 flex  text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="mb-1 flex  text-lg font-semibold">
             Análise e Desenvolvimento de Sistemas
-            <span className=" rounded px-2 w-[150px] flex justify-center items-center h-[30px] ml-2 py-0.5 text-sm font-bold bg-primary dark:text-black">
+            <span className=" rounded px-2 w-[150px] flex justify-center items-center h-[30px] ml-2 py-0.5 text-sm font-bold bg-primary dark:text-black dark:border-zinc-700 border-zinc-400 border-[1px]">
               Formado
             </span>
           </h3>{' '}
@@ -79,7 +79,7 @@ export default function TimeLine() {
             04/22 - 10/24.{' '}
             <button
               onClick={() => setOpen('ads')}
-              className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary"
+              className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -114,7 +114,7 @@ export default function TimeLine() {
             em Python.{' '}
             <button
               onClick={() => setOpen('internet')}
-              className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+              className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -149,7 +149,7 @@ export default function TimeLine() {
             android e React Native.{' '}
             <button
               onClick={() => setOpen('mobile')}
-              className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -182,7 +182,7 @@ export default function TimeLine() {
             programação em Python.
             <button
               onClick={() => setOpen('escalaveis')}
-              className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+              className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -216,7 +216,7 @@ export default function TimeLine() {
             UML e Programação orientada a objetos em Java
             <button
               onClick={() => setOpen('sistemas')}
-              className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -256,7 +256,7 @@ export default function TimeLine() {
             dados assíncronos com TanStack Query.
             <button
               onClick={() => setOpen('nlw')}
-              className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -291,7 +291,7 @@ export default function TimeLine() {
             Avançado.
             <button
               onClick={() => setOpen('especializar')}
-              className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -326,7 +326,7 @@ export default function TimeLine() {
             Programação Funcional, Git, GitHub e HTTP.
             <button
               onClick={() => setOpen('fundamentar')}
-              className="p-1 px-2 mx-2 dark:bg-bgdarksecundary rounded-md text-textlight dark:text-textdark font-bold shadow-shadowlight dark:shadow-none  dark:border-zinc-800 bg-bglight border-[1px]  border-transparent hover:border-primary dark:hover:border-primary mb-1"
+               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>

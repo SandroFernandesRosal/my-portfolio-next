@@ -91,7 +91,10 @@ export default function Contato() {
 
   return (
     <section className="flex flex-col justify-center items-center bg-bglight dark:bg-bgdark py-5  pb-40 dark:bg-[url(../assets/bg-darksecondary2.png)] bg-[url(../assets/bg-lightsecondary2.png)]   bg-bottom bg-repeat-x px-5">
-      <h1 className="text-3xl font-bold">Entre em contato</h1>
+      <h1 className="text-3xl font-bold" style={{
+    WebkitTextStroke: '2px',
+    WebkitTextFillColor: 'transparent',
+  }}>Entre em contato</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
 
       {alert && (

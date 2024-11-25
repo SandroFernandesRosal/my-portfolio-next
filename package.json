@@ -23,6 +23,7 @@
     "react-slick": "^0.30.2",
     "react-switch": "^7.0.0",
     "slick-carousel": "^1.8.1",
+    "tailwindcss-text-fill-stroke": "^1.1.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {

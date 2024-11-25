@@ -28,7 +28,10 @@ export default function HighLight() {
           </div>
           <div className="flex justify-center gap-3 mt-5">
             <div className="flex items-center gap-1">
-              <span className="text-5xl lg:text-7xl font-bold text-primary">
+              <span className="text-5xl lg:text-7xl font-bold text-primary" style={{
+    WebkitTextStroke: '2px',
+    WebkitTextFillColor: 'transparent',
+  }}>
                 +3
               </span>{' '}
               <div className="flex flex-col text-sm">
@@ -38,7 +41,10 @@ export default function HighLight() {
             </div>
 
             <div className="flex items-center gap-1">
-              <span className="font-bold text-5xl lg:text-7xl text-primary ">
+              <span className="font-bold text-5xl lg:text-7xl text-primary" style={{
+    WebkitTextStroke: '2px',
+    WebkitTextFillColor: 'transparent',
+  }}>
                 +15
               </span>{' '}
               <div className="flex flex-col text-sm">

@@ -23,11 +23,11 @@ export default function ChangeTheme() {
       uncheckedIcon={
         <BsFillSunFill color="yellow" fontSize="28" className="p-[4px]" />
       }
-      onColor={'#E4E4E7'}
-      offColor={'#262626'}
+      onColor={'#F4F4F5'}
+      offColor={'#121214'}
       onHandleColor={'#10B981'}
       offHandleColor={'#10B981'}
-      activeBoxShadow={'0 0 1px 2px #70a1e0'}
+      activeBoxShadow={'0 0 0px 0px #3f3f46'}
     />
   )
 }

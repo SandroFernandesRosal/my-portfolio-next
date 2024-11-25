@@ -59,6 +59,7 @@ export default function Project({
             aria-description="abrir repositório"
             href={repo}
             target="_blank"
+            rel="noopener noreferrer"
             className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 px-2"
           >
             <Github />
@@ -68,6 +69,7 @@ export default function Project({
             aria-description="abrir site do projeto"
             href={page}
             target="_blank"
+            rel="noopener noreferrer"
             className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 px-2"
           >
             <ExternalLink />

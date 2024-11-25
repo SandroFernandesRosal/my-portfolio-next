@@ -61,8 +61,6 @@ export default function HighLight() {
               href={'https://api.whatsapp.com/send?phone=5521969501614'}
               target="blank"
               rel="noopener noreferrer"
-              locale={false}
-              download
               className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark dark:border-zinc-700 bg-bglight border-[1px] border-zinc-400 hover:border-primary dark:hover:border-primary"
               aria-label="Entre em contato"
             >

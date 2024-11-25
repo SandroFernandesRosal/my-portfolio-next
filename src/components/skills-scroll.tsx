@@ -83,7 +83,7 @@ export default function SkillScroll() {
       {skillsData.map((skill: SkilsProps) => (
         <div
           key={skill.id}
-          className="p-2  flex flex-col items-center text-zinc-400 bg-transparent dark:text-zinc-700  justify-center text-center h-[170px] justify-items-center content-center rounded-md  my-2"
+          className="p-2  flex flex-col items-center text-zinc-400 dark:text-zinc-700  justify-center text-center h-[170px] justify-items-center content-center rounded-md  my-2"
         >
           {skill.name}
           {skill.icon === 'HTML' && <RiHtml5Line className="text-9xl  " />}

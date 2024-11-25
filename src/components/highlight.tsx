@@ -8,10 +8,10 @@ import SkillScroll from './skills-scroll'
 export default function HighLight() {
   return (
     <section className="flex flex-col relative w-[100vw]">
-      <section className="relative flex flex-wrap items-center pt-5  justify-center md:justify-around bg-bglight dark:bg-bgdark dark:shadow-none dark:border-b-[1px] dark:border-none md:items-start ">
+      <section className="relative flex flex-wrap items-center pt-5  justify-center md:justify-around bg-bglight dark:bg-bgdark md:items-start">
         <div className="absolute  top-0  w-[50%] h-36 md:h-20 bg-green-500/30 blur-[100px]" />
 
-        <div className="flex justify-center items-center md:items-start mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5 md:border-r-[1px] md:border-bglight dark:md:border-bgdarksecundary">
+        <div className="flex justify-center items-center md:items-start mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5 md:border-r-[1px] md:border-zinc-400 dark:md:border-zinc-700">
           <h1 className="text-3xl px-10 md:px-5 text-center  lg:w-[70%]  md:text-4xl">
             Transforme sua presença online em lucro: soluções personalizadas
             para destacar seu negócio.

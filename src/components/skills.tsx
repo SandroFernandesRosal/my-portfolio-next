@@ -115,7 +115,7 @@ export default function Skills() {
             {groupedSkills.frontend.map((skill) => (
               <div
                 key={skill.id}
-                className="p-2 bg-bglightsecundary dark:bg-bgdarksecundary shadow-md rounded-md flex flex-col items-center justify-center w-20 h-28  border-b-4 border-b-primary"
+                className="p-2 bg-bglightsecondary dark:bg-bgdarksecondary shadow-md rounded-md flex flex-col items-center justify-center w-20 h-28  border-b-4 border-b-primary"
               >
                 {renderIcon(skill.icon)}
                 <span className="text-sm mt-2">{skill.name}</span>
@@ -131,7 +131,7 @@ export default function Skills() {
             {groupedSkills.backend.map((skill) => (
               <div
                 key={skill.id}
-                className="p-2 bg-bglightsecundary dark:bg-bgdarksecundary shadow-md rounded-md flex flex-col items-center justify-center w-20 h-28  border-b-4 border-b-primary"
+                className="p-2 bg-bglightsecondary dark:bg-bgdarksecondary shadow-md rounded-md flex flex-col items-center justify-center w-20 h-28  border-b-4 border-b-primary"
               >
                 {renderIcon(skill.icon)}
                 <span className="text-sm mt-2">{skill.name}</span>
@@ -150,7 +150,7 @@ export default function Skills() {
             {groupedSkills.tools.map((skill) => (
               <div
                 key={skill.id}
-                className="p-2 bg-bglightsecundary dark:bg-bgdarksecundary shadow-md rounded-md flex flex-col items-center justify-center w-20 h-28  border-b-4 border-b-primary"
+                className="p-2 bg-bglightsecondary dark:bg-bgdarksecondary shadow-md rounded-md flex flex-col items-center justify-center w-20 h-28  border-b-4 border-b-primary"
               >
                 {renderIcon(skill.icon)}
                 <span className="text-sm mt-2">{skill.name}</span>

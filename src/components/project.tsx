@@ -50,7 +50,7 @@ export default function Project({
             aria-label="abrir projeto"
             aria-description="abrir projeto"
             href={`/projetos/${slug}`}
-            className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2 "
+            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 px-2 "
           >
             <Info />
           </Link>
@@ -59,7 +59,7 @@ export default function Project({
             aria-description="abrir repositório"
             href={repo}
             target="_blank"
-            className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2"
+            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 px-2"
           >
             <Github />
           </Link>
@@ -68,7 +68,7 @@ export default function Project({
             aria-description="abrir site do projeto"
             href={page}
             target="_blank"
-            className=" p-1 rounded-md bg-primary text-black shadow-shadowlight dark:shadow-shadowdark font-bold flex  items-center gap-1 px-2"
+            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 px-2"
           >
             <ExternalLink />
           </Link>
@@ -80,7 +80,7 @@ export default function Project({
           {tecs.map((tec, i) => {
             return (
               <li
-                className=" p-1 rounded-md bg-bglight dark:bg-bgdark shadow-shadowlight dark:shadow-none dark:border-[1px] dark:border-zinc-800"
+                className=" p-1 rounded-md bg-bglight dark:bg-bgdark border-[1px] border-zinc-400 dark:border-zinc-700"
                 key={i}
               >
                 {tec === 'HTML' && <RiHtml5Line className="text-2xl" />}

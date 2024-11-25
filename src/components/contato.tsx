@@ -113,7 +113,7 @@ export default function Contato() {
             Ou envie um email
           </h1>
           <input
-            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark  focus:ring-0 outline-none bg-bglight dark:bg-bgdark "
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark  focus:ring-0 outline-none bg-bglight dark:bg-bgdark hover:border-primary dark:hover:border-primary"
             required={true}
             type="text"
             name="nome"
@@ -124,7 +124,7 @@ export default function Contato() {
           />
 
           <input
-            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark hover:border-primary dark:hover:border-primary"
             required={true}
             type="email"
             name="email"
@@ -135,7 +135,7 @@ export default function Contato() {
           />
 
           <input
-            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark hover:border-primary dark:hover:border-primary"
             required={true}
             type="text"
             name="assunto"
@@ -146,7 +146,7 @@ export default function Contato() {
           />
 
           <textarea
-            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark hover:border-primary dark:hover:border-primary"
             required={true}
             name="mensagem"
             id="mensagem"
@@ -160,7 +160,7 @@ export default function Contato() {
           <button
             type="submit"
             name="submit"
-            className="p-2 w-[25%] rounded-md self-center mt-2 border-[1px] border-zinc-400 dark:border-zinc-700 font-bold hover:bg-primary"
+            className="p-2 w-[25%] rounded-md self-center mt-2 border-[1px] border-zinc-400 dark:border-zinc-700 font-bold hover:border-primary dark:hover:border-primary"
           >
             Enviar
           </button>

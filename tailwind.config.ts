@@ -23,10 +23,10 @@ const config: Config = {
         primary: '#10B981',
         secundary: '#121214',
         bgdark: '#121214',
-        bgdarksecundary: '#1a1a1e',
+        bgdarksecondary: '#1a1a1e',
         textdark: '#EEEEEE',
         bglight: '#F4F4F5',
-        bglightsecundary: '#E4E4E7',
+        bglightsecondary: '#E4E4E7',
         textlight: '#262626',
       },
       boxShadow: {

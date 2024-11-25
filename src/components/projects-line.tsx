@@ -126,7 +126,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
               aria-label="Voltar página"
               onClick={loadPreviousPage}
               disabled={isDisabledPrev}
-              className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl p-2 font-bold text-white border-[1px] border-zinc-400 dark:border-zinc-700 ${
+              className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl p-2 font-bold text-white border-[1px] border-zinc-400 dark:border-zinc-700 hover:border-primary dark:hover:border-primary ${
                 isDisabledPrev
                   ? ' bg-bglightsecundary/20 dark:bg-bgdarksecundary/20'
                   : ' bg-bglightsecundary dark:bg-bgdarksecundary'
@@ -138,7 +138,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
               aria-label="Próxima página"
               onClick={loadNextPage}
               disabled={isDisabledNext}
-              className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl p-2 font-bold  border-[1px] border-zinc-400 dark:border-zinc-700 ${
+              className={`m-2 mb-4 flex h-full w-[50px] cursor-pointer items-center justify-center rounded-xl p-2 font-bold  border-[1px] border-zinc-400 dark:border-zinc-700 hover:border-primary dark:hover:border-primary ${
                 isDisabledNext
                   ? ' bg-bglightsecundary/20 dark:bg-bgdarksecundary/20'
                   : ' bg-bglightsecundary dark:bg-bgdarksecundary'

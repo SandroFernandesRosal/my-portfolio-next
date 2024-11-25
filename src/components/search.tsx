@@ -12,7 +12,7 @@ export default function SearchForm() {
   }
 
   return (
-    <form className="flex  items-center md:gap-3 rounded-full  w-[250px]  p-1 mb-5 justify-center border-zinc-400 border-[1px] dark:border-zinc-800">
+    <form className="flex  items-center md:gap-3 rounded-full  w-[250px]  p-1 mb-5 justify-center border-zinc-400 border-[1px] dark:border-zinc-700 hover:border-primary dark:hover:border-primary">
       <input
         name="search"
         type="text"

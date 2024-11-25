@@ -2,7 +2,7 @@ export const servicesData = [
   {
     id: 1,
     title: 'Criação de sites responsivos',
-    description: 'Sites modernos e que se adaptam a múltiplos dispositivos',
+    description: 'Crie uma conexão marcante com seu público através de sites elegantes e funcionais, otimizados para todos os tamanhos de tela. Oferecemos soluções personalizadas que combinam design moderno, desempenho eficiente e compatibilidade com qualquer dispositivo.',
     icon: 'site',
   },
   {

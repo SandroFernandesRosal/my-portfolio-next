@@ -79,10 +79,7 @@ export default function Faq() {
       className="z-10 px-5   flex flex-col items-center  dark:bg-bgdarksecondary bg-bglightsecondary py-5 pb-[160px] dark:bg-[url(../assets/bg-dark2.png)] bg-[url(../assets/bg-light2.png)]   bg-bottom bg-repeat-x"
       id="faq"
     >
-      <h1 className="text-3xl font-bold" style={{
-    WebkitTextStroke: '2px',
-    WebkitTextFillColor: 'transparent',
-  }}>Perguntas frequentes</h1>
+      <h1 className="text-3xl font-bold">Perguntas frequentes</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
 
       <div ref={el} className="flex justify-center">

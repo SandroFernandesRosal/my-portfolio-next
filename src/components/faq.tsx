@@ -76,7 +76,7 @@ export default function Faq() {
 
   return (
     <section
-      className="z-10 px-5   flex flex-col items-center  dark:bg-bgdarksecondary bg-bglightsecondary py-5 pb-10"
+      className="z-10 px-5   flex flex-col items-center  dark:bg-bgdarksecondary bg-bglightsecondary py-5 pb-[160px] dark:bg-[url(../assets/bg-dark2.png)] bg-[url(../assets/bg-light2.png)]   bg-bottom bg-repeat-x"
       id="faq"
     >
       <h1 className="text-3xl font-bold" style={{

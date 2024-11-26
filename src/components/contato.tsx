@@ -90,7 +90,7 @@ export default function Contato() {
   }, [])
 
   return (
-    <section className="flex flex-col justify-center items-center bg-bglight dark:bg-bgdark py-5  pb-40 dark:bg-[url(../assets/bg-darksecondary2.png)] bg-[url(../assets/bg-lightsecondary2.png)]   bg-bottom bg-repeat-x px-5">
+    <section className="flex flex-col justify-center items-center  py-5  pb-40 dark:bg-[url(../assets/bg-darksecondary2.png)] bg-[url(../assets/bg-lightsecondary2.png)]   bg-bottom bg-repeat-x px-5">
       <h1 className="text-3xl font-bold" style={{
     WebkitTextStroke: '2px',
     WebkitTextFillColor: 'transparent',
@@ -109,14 +109,14 @@ export default function Contato() {
           ref={form}
           onSubmit={onSubmit}
           name="form"
-          className="flex contato  flex-col w-[100%] max-w-[500px] rounded-md p-[15px]  bg-bglight dark:bg-bgdark border-zinc-400 border-[1px] dark:border-zinc-700"
+          className="flex contato  flex-col w-[100%] max-w-[500px] rounded-md p-[15px]   border-zinc-400 border-[1px] dark:border-zinc-700"
         >
           <Socials />
           <h1 className="text-center text-xl my-5 font-bold">
             Ou envie um email
           </h1>
           <input
-            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark  focus:ring-0 outline-none bg-bglight dark:bg-bgdark hover:border-primary dark:hover:border-primary"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark  focus:ring-0 outline-none  hover:border-primary dark:hover:border-primary bg-transparent"
             required={true}
             type="text"
             name="nome"
@@ -127,7 +127,7 @@ export default function Contato() {
           />
 
           <input
-            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark hover:border-primary dark:hover:border-primary"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none  hover:border-primary dark:hover:border-primary bg-transparent"
             required={true}
             type="email"
             name="email"
@@ -138,7 +138,7 @@ export default function Contato() {
           />
 
           <input
-            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark hover:border-primary dark:hover:border-primary"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none  hover:border-primary dark:hover:border-primary bg-transparent"
             required={true}
             type="text"
             name="assunto"
@@ -149,7 +149,7 @@ export default function Contato() {
           />
 
           <textarea
-            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none bg-bglight dark:bg-bgdark hover:border-primary dark:hover:border-primary"
+            className="m-1 p-2 text-center border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md cursor-pointer font-bold placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 outline-none  hover:border-primary dark:hover:border-primary bg-transparent"
             required={true}
             name="mensagem"
             id="mensagem"

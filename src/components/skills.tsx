@@ -16,9 +16,9 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
 import Image from 'next/image'
-import frontend from '../../public/frontend.png'
-import backend from '../../public/backend.png'
-import tolls from '../../public/tolls.png'
+import frontend from '../../public/frontend.webp'
+import backend from '../../public/backend.webp'
+import tolls from '../../public/tolls.webp'
 
 export default function Skills() {
   const el = useRef<HTMLDivElement | null>(null)
@@ -100,7 +100,7 @@ export default function Skills() {
   }
 
   return (
-    <section className="z-10  px-5 flex flex-col items-center dark:bg-bgdark bg-bglight pb-40 bg-[url(../assets/bg-lightsecondary2.png)] dark:bg-[url(../assets/bg-darksecondary2.png)] w-full bg-bottom bg-repeat-x">
+    <section className="z-10  px-5 flex flex-col items-center dark:bg-bgdark bg-bglight pb-40 bg-[url(../assets/bg-lightsecondary2.webp)] dark:bg-[url(../assets/bg-darksecondary2.webp)] w-full bg-bottom bg-repeat-x">
       <h1 className="text-3xl font-bold">Minhas Habilidades</h1>
       <span className="border-b-4 pb-2 w-24 border-primary text-3xl mb-5"></span>
 

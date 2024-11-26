@@ -20,10 +20,20 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
         </Link>
       </li>
 
+      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 md:pl-0 cursor-pointer  pr-2 ">
+        <Link
+          onClick={handleMenu}
+          href={'/#serviços'}
+          className="border-l-8 md:border-none md:pl-0 md:my-0 border-primary pl-2 rounded-md my-2 md:hover:text-primary"
+        >
+          Serviços
+        </Link>
+      </li>
+
       <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer  pr-2">
         <Link
           onClick={handleMenu}
-          href={'/projetos'}
+          href={'/#projetos'}
           className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 md:hover:text-primary"
         >
           Projetos
@@ -32,7 +42,7 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
       <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer  pr-2">
         <Link
           onClick={handleMenu}
-          href={'/contato'}
+          href={'/#contato'}
           className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 md:hover:text-primary"
         >
           Contato

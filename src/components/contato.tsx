@@ -90,7 +90,7 @@ export default function Contato() {
   }, [])
 
   return (
-    <section className="flex flex-col justify-center items-center  py-5  pb-40 dark:bg-[url(../assets/bg-darksecondary2.png)] bg-[url(../assets/bg-lightsecondary2.png)]   bg-bottom bg-repeat-x px-5">
+    <section id="contato" className="flex flex-col justify-center items-center  py-5  pb-40 dark:bg-[url(../assets/bg-darksecondary2.png)] bg-[url(../assets/bg-lightsecondary2.png)]   bg-bottom bg-repeat-x px-5 relative pt-[68px] -mt-[68px]">
       <h1 className="text-3xl font-bold">Entre em contato</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
 
@@ -166,6 +166,7 @@ export default function Contato() {
           </button>
         </form>
       </div>
+      <div id='faq'/>
     </section>
   )
 }

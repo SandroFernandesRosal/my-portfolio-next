@@ -3,7 +3,7 @@ name: Deploy via FTP
 on:
   push:
     branches:
-      - main # Altere para o branch que você usa para deploy
+      - main # Ajuste para o branch correto
 
 jobs:
   deploy:
@@ -17,7 +17,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 18.17.0 # Ou uma versão mais recente, como 20
+        node-version: 18.17.0 # Certifique-se de usar uma versão compatível com o Next.js
 
     - name: Install Dependencies
       run: npm install

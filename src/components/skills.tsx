@@ -9,7 +9,13 @@ import {
 } from 'react-icons/ri'
 import { FaCss3Alt, FaGitAlt, FaGithub, FaDatabase } from 'react-icons/fa'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
-import { SiInsomnia, SiPrisma, SiStyledcomponents, SiFastify, SiExpress } from 'react-icons/si'
+import {
+  SiInsomnia,
+  SiPrisma,
+  SiStyledcomponents,
+  SiFastify,
+  SiExpress,
+} from 'react-icons/si'
 
 import { skillsData } from '@/data/skilsData'
 import { gsap } from 'gsap'
@@ -42,7 +48,7 @@ export default function Skills() {
           .fromTo(
             `.skill-${section}`,
             { opacity: 0, y: -50 },
-            { opacity: 1, y: 0, duration: 2.5, ease: 'power2.out' }
+            { opacity: 1, y: 0, duration: 2.5, ease: 'power2.out' },
           )
       })
     }, el)
@@ -82,11 +88,11 @@ export default function Skills() {
         return <FaGithub className="text-6xl text-primary" />
       case 'Insomnia':
         return <SiInsomnia className="text-6xl text-primary" />
-        case 'Db':
+      case 'Db':
         return <FaDatabase className="text-6xl text-primary" />
-        case 'Fastify':
+      case 'Fastify':
         return <SiFastify className="text-6xl text-primary" />
-        case 'Express':
+      case 'Express':
         return <SiExpress className="text-6xl text-primary" />
       default:
         return null
@@ -108,9 +114,11 @@ export default function Skills() {
         ref={el}
         className="skills grid grid-cols-1 gap-3 md:grid-cols-2 lg:w-[70vw] "
       >
-       
         <div className="skill skill-frontend group flex flex-col items-center justify-between text-center p-4  md:col-span-1 md:row-span-2 border-[1px] dark:border-zinc-700 border-zinc-400 rounded-md hover:border-primary dark:hover:border-primary ">
-          <div className="text-2xl md:h-[50%] gap-2 py-6 flex flex-col items-center justify-center font-bold mb-4  w-full bg-[url(../assets/bg-dot.svg)]"><h1>Frontend</h1> <Image src={frontend} height={100} width={100} alt='frontend' /></div>
+          <div className="text-2xl md:h-[50%] gap-2 py-6 flex flex-col items-center justify-center font-bold mb-4  w-full bg-[url(../assets/bg-dot.svg)]">
+            <h1>Frontend</h1>{' '}
+            <Image src={frontend} height={100} width={100} alt="frontend" />
+          </div>
           <div className="flex flex-wrap gap-2 justify-center items-center">
             {groupedSkills.frontend.map((skill) => (
               <div
@@ -124,9 +132,11 @@ export default function Skills() {
           </div>
         </div>
 
-       
         <div className="skill skill-backend group flex flex-col items-center text-center p-4   md:col-span-1 border-[1px] dark:border-zinc-700 border-zinc-400 rounded-md hover:border-primary dark:hover:border-primary   justify-between">
-          <div className="text-2xl py-6 gap-2 flex flex-col items-center justify-center font-bold mb-4  w-full bg-[url(../assets/bg-dot.svg)]"><h1>Backend</h1>  <Image src={backend} height={100} width={100} alt='frontend' /></div>
+          <div className="text-2xl py-6 gap-2 flex flex-col items-center justify-center font-bold mb-4  w-full bg-[url(../assets/bg-dot.svg)]">
+            <h1>Backend</h1>{' '}
+            <Image src={backend} height={100} width={100} alt="frontend" />
+          </div>
           <div className="flex flex-wrap gap-2 justify-center">
             {groupedSkills.backend.map((skill) => (
               <div
@@ -140,11 +150,10 @@ export default function Skills() {
           </div>
         </div>
 
-       
         <div className="skill skill-tools group flex flex-col items-center text-center p-4 md:col-span-1 border-[1px] dark:border-zinc-700 border-zinc-400 rounded-md hover:border-primary dark:hover:border-primary justify-between">
           <div className="text-2xl py-6 gap-2 flex flex-col items-center justify-center font-bold mb-4  w-full bg-[url(../assets/bg-dot.svg)]">
-          <h1>Ferramentas</h1> 
-          <Image src={tolls} height={100} width={100} alt='frontend' />
+            <h1>Ferramentas</h1>
+            <Image src={tolls} height={100} width={100} alt="frontend" />
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
             {groupedSkills.tools.map((skill) => (
@@ -159,7 +168,7 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div id='projetos'/>
+      <div id="projetos" />
     </section>
   )
 }

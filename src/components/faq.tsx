@@ -75,10 +75,7 @@ export default function Faq() {
   }, [])
 
   return (
-    <section
-      className="z-10 px-5   flex flex-col items-center  dark:bg-bgdarksecondary bg-bglightsecondary py-5 pb-[160px] dark:bg-[url(../assets/bg-dark2.webp)] bg-[url(../assets/bg-light2.webp)]   bg-bottom bg-repeat-x relative pt-[68px] -mt-[68px]"
-      
-    >
+    <section className="z-10 px-5   flex flex-col items-center  dark:bg-bgdarksecondary bg-bglightsecondary py-5 pb-[160px] dark:bg-[url(../assets/bg-dark2.webp)] bg-[url(../assets/bg-light2.webp)]   bg-bottom bg-repeat-x relative pt-[68px] -mt-[68px]">
       <h1 className="text-3xl font-bold">Perguntas frequentes</h1>
       <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
 

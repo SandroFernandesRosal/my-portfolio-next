@@ -11,7 +11,13 @@ import {
   RiReactjsLine,
   RiTailwindCssFill,
 } from 'react-icons/ri'
-import { SiPrisma, SiStyledcomponents, SiFastify, SiExpress, SiInsomnia } from 'react-icons/si'
+import {
+  SiPrisma,
+  SiStyledcomponents,
+  SiFastify,
+  SiExpress,
+  SiInsomnia,
+} from 'react-icons/si'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
 import React from 'react'
 import Slider from 'react-slick'

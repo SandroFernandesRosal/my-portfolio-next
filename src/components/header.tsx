@@ -7,7 +7,7 @@ import ItensMenu from './itens-menu'
 export default function Header() {
   return (
     <div
-    id='highlight'
+      id="highlight"
       className={` w-[100vw] z-40  flex items-center   dark:shadow-none border-b-[1px] dark:border-zinc-700 border-zinc-400 py-4 dark:bg-bgdark bg-bglight fixed '} `}
     >
       <div className="flex items-center justify-around gap-2 w-full ">

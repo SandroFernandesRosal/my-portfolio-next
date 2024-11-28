@@ -149,7 +149,7 @@ export default function TimeLine() {
             android e React Native.{' '}
             <button
               onClick={() => setOpen('mobile')}
-               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
+              className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -216,7 +216,7 @@ export default function TimeLine() {
             UML e Programação orientada a objetos em Java
             <button
               onClick={() => setOpen('sistemas')}
-               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
+              className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -256,7 +256,7 @@ export default function TimeLine() {
             dados assíncronos com TanStack Query.
             <button
               onClick={() => setOpen('nlw')}
-               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
+              className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -291,7 +291,7 @@ export default function TimeLine() {
             Avançado.
             <button
               onClick={() => setOpen('especializar')}
-               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
+              className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>
@@ -326,7 +326,7 @@ export default function TimeLine() {
             Programação Funcional, Git, GitHub e HTTP.
             <button
               onClick={() => setOpen('fundamentar')}
-               className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
+              className="p-1 px-2 mx-2  rounded-md  font-bold  dark:border-zinc-700 border-zinc-400 border-[1px]   hover:border-primary dark:hover:border-primary text-black dark:text-white"
             >
               Certificado
             </button>

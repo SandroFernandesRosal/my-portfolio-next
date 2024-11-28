@@ -17,14 +17,18 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 20 # Versão LTS atual em 2024
-    
+        node-version: 18.17.0 # Ou uma versão mais recente, como 20
 
     - name: Install Dependencies
       run: npm install
 
     - name: Build Project
       run: npm run build
+      env:
+        NEXT_PUBLIC_API_BASE_URL: ${{ secrets.NEXT_PUBLIC_API_BASE_URL }}
+        NEXT_PUBLIC_EMAILJS_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_ID }}
+        NEXT_PUBLIC_EMAILJS_TEMPLATE: ${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE }}
+        NEXT_PUBLIC_PUBLICKEY: ${{ secrets.NEXT_PUBLIC_PUBLICKEY }}
 
     - name: FTP Deploy Locaweb
       uses: locaweb/ftp-deploy@1.0.0

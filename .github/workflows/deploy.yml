@@ -38,4 +38,4 @@ jobs:
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASS }}
         localDir: ".next"
-        remoteDir: "/home/sandrodev1/public_html"
+       

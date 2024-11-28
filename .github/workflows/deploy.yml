@@ -3,7 +3,7 @@ name: Deploy via FTP
 on:
   push:
     branches:
-      - main # Ou o branch que você usa para deploy
+      - main # Altere para o branch que você usa para deploy
 
 jobs:
   deploy:
@@ -17,9 +17,10 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 16 # Altere para a versão do Node.js que você está usando
+        node-version: 20 # Versão LTS atual em 2024
+    
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: npm install
 
     - name: Build Project
@@ -31,5 +32,5 @@ jobs:
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASS }}
-        localDir: ".next" # Diretório onde o Next.js gera os arquivos de build
-        remoteDir: "public_html" # Diretório remoto no servidor FTP
+        localDir: ".next"
+        remoteDir: "public_html"

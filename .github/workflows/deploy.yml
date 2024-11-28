@@ -1,32 +1,41 @@
-name: Deploy to Locaweb FTP
+name: Deploy via FTP
 
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout Code
+      uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: |
-          npm install
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 18.17.0 # Certifique-se de usar uma versão compatível com o Next.js
 
-      - name: Build the project
-        run: |
-          npm run build
+    - name: Install Dependencies
+      run: npm install
 
-      - name: FTP Deploy to Locaweb
-        uses: locaweb/ftp-deploy@1.0.0
-        with:
-          host: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./next  # Aqui define a pasta local para o upload
-          remote-dir: /home/sandrodev1/public_html  # Defina o diretório correto aqui
-          force-ssl: true  # Caso necessário
+    - name: Build Project
+      run: npm run build
+      env:
+        NEXT_PUBLIC_API_BASE_URL: ${{ secrets.NEXT_PUBLIC_API_BASE_URL }}
+        NEXT_PUBLIC_EMAILJS_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_ID }}
+        NEXT_PUBLIC_EMAILJS_TEMPLATE: ${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE }}
+        NEXT_PUBLIC_PUBLICKEY: ${{ secrets.NEXT_PUBLIC_PUBLICKEY }}
+        APP_URL: ${{ secrets.APP_URL }}
+
+    - name: FTP Deploy Locaweb
+      uses: locaweb/ftp-deploy@1.0.0
+      with:
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USER }}
+        password: ${{ secrets.PASS }}
+        localDir: ".next"
+        remoteDir: "/home/sandrodev1/public_html"

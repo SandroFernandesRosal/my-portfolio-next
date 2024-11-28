@@ -29,6 +29,7 @@ jobs:
         NEXT_PUBLIC_EMAILJS_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_ID }}
         NEXT_PUBLIC_EMAILJS_TEMPLATE: ${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE }}
         NEXT_PUBLIC_PUBLICKEY: ${{ secrets.NEXT_PUBLIC_PUBLICKEY }}
+        APP_URL: ${{ secrets.APP_URL }}
 
     - name: FTP Deploy Locaweb
       uses: locaweb/ftp-deploy@1.0.0

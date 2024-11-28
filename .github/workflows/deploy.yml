@@ -17,7 +17,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 18.17.0 # Certifique-se de usar uma versão compatível com o Next.js
+        node-version: 18.17.0 
 
     - name: Install Dependencies
       run: npm install

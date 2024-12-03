@@ -34,6 +34,18 @@ async function getProduct(slug: string): Promise<ProjectProps> {
   return project
 }
 
+export async function generateStaticParams() {
+  const response = await api('/products', {
+    next: { revalidate: 60 },
+  })
+
+  const products = await response.json()
+
+  return products.map((product: { slug: string }) => ({
+    slug: product.slug,
+  }))
+}
+
 export async function generateMetadata({
   params,
 }: SlugProps): Promise<Metadata> {
@@ -44,7 +56,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function ProjecttPage({ params }: SlugProps) {
+export default async function ProjectPage({ params }: SlugProps) {
   const project = await getProduct(params.slug)
 
   return (

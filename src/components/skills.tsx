@@ -22,9 +22,6 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
 import Image from 'next/image'
-import frontend from '../../public/frontend.webp'
-import backend from '../../public/backend.webp'
-import tolls from '../../public/tolls.webp'
 
 export default function Skills() {
   const el = useRef<HTMLDivElement | null>(null)
@@ -117,7 +114,12 @@ export default function Skills() {
         <div className="skill skill-frontend group flex flex-col items-center justify-between text-center p-4  md:col-span-1 md:row-span-2 border-[1px] dark:border-zinc-700 border-zinc-400 rounded-md hover:border-primary dark:hover:border-primary ">
           <div className="text-2xl md:h-[50%] gap-2 py-6 flex flex-col items-center justify-center font-bold mb-4  w-full bg-[url(../assets/bg-dot.svg)]">
             <h1>Frontend</h1>{' '}
-            <Image src={frontend} height={100} width={100} alt="frontend" />
+            <Image
+              src={'/frontend.webp'}
+              height={100}
+              width={100}
+              alt="frontend"
+            />
           </div>
           <div className="flex flex-wrap gap-2 justify-center items-center">
             {groupedSkills.frontend.map((skill) => (
@@ -135,7 +137,12 @@ export default function Skills() {
         <div className="skill skill-backend group flex flex-col items-center text-center p-4   md:col-span-1 border-[1px] dark:border-zinc-700 border-zinc-400 rounded-md hover:border-primary dark:hover:border-primary   justify-between">
           <div className="text-2xl py-6 gap-2 flex flex-col items-center justify-center font-bold mb-4  w-full bg-[url(../assets/bg-dot.svg)]">
             <h1>Backend</h1>{' '}
-            <Image src={backend} height={100} width={100} alt="frontend" />
+            <Image
+              src={'/backend.webp'}
+              height={100}
+              width={100}
+              alt="frontend"
+            />
           </div>
           <div className="flex flex-wrap gap-2 justify-center">
             {groupedSkills.backend.map((skill) => (
@@ -153,7 +160,12 @@ export default function Skills() {
         <div className="skill skill-tools group flex flex-col items-center text-center p-4 md:col-span-1 border-[1px] dark:border-zinc-700 border-zinc-400 rounded-md hover:border-primary dark:hover:border-primary justify-between">
           <div className="text-2xl py-6 gap-2 flex flex-col items-center justify-center font-bold mb-4  w-full bg-[url(../assets/bg-dot.svg)]">
             <h1>Ferramentas</h1>
-            <Image src={tolls} height={100} width={100} alt="frontend" />
+            <Image
+              src={'/tolls.webp'}
+              height={100}
+              width={100}
+              alt="frontend"
+            />
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
             {groupedSkills.tools.map((skill) => (

@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  assetPrefix: '/',
   images: {
     remotePatterns: [
       {
@@ -10,6 +12,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'firebaseapp.com',
         pathname: '**',
       },
     ],

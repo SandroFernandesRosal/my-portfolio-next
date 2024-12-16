@@ -12,6 +12,17 @@ export default function HighLight() {
       <section className="relative flex flex-wrap items-center pt-5  justify-center md:justify-around bg-bglight dark:bg-bgdark md:items-start">
         <div className="absolute  top-0  w-[50%] h-36 md:h-20 bg-green-500/30 blur-[100px]" />
 
+        <div className="my-5 flex px-10 md:px-5 flex-col items-center justify-center w-[100%] md:w-[50%]">
+          <Image
+            src={'/highlight.png'}
+            alt=""
+            priority
+            width={300}
+            height={300}
+            className="w-[100%] max-w-[300px]"
+          />
+        </div>
+
         <div className="flex flex-col justify-center items-center  mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5 dark:md:border-zinc-700">
           <h1 className="text-3xl px-10 md:px-5 text-center  lg:w-[70%]  md:text-4xl">
             Transforme sua presença online em lucro: soluções personalizadas
@@ -74,15 +85,6 @@ export default function HighLight() {
           </div>
         </div>
 
-        <div className="my-5 flex px-10 md:px-5 flex-col items-center justify-center w-[100%] md:w-[50%]">
-          <Image
-            src={'/highlight.png'}
-            alt=""
-            width={300}
-            height={300}
-            className="w-[100%] max-w-[300px]"
-          />
-        </div>
         <SkillScroll />
         <div
           id="serviços"

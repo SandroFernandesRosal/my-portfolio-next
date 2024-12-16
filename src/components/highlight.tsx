@@ -4,6 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 
 import { PiPersonArmsSpreadFill } from 'react-icons/pi'
 import SkillScroll from './skills-scroll'
+import Image from 'next/image'
 
 export default function HighLight() {
   return (
@@ -11,25 +12,16 @@ export default function HighLight() {
       <section className="relative flex flex-wrap items-center pt-5  justify-center md:justify-around bg-bglight dark:bg-bgdark md:items-start">
         <div className="absolute  top-0  w-[50%] h-36 md:h-20 bg-green-500/30 blur-[100px]" />
 
-        <div className="flex justify-center items-center md:items-start mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5 md:border-r-[1px] md:border-zinc-400 dark:md:border-zinc-700">
+        <div className="flex flex-col justify-center items-center  mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5 dark:md:border-zinc-700">
           <h1 className="text-3xl px-10 md:px-5 text-center  lg:w-[70%]  md:text-4xl">
             Transforme sua presença online em lucro: soluções personalizadas
             para destacar seu negócio.
           </h1>
-        </div>
 
-        <div className="my-5 flex px-10 md:px-5 flex-col items-center justify-center w-[100%] md:w-[50%]">
-          <div className="">
-            <h1 className="text-xl max-w-[550px]">
-              Eu sou o <span className="text-primary">Sandro Fernandes</span>, e
-              vou te ajudar a ter visibilidade com um site incrível e totalmente
-              personalizado.
-            </h1>
-          </div>
           <div className="flex justify-center gap-3 mt-5">
             <div className="flex items-center gap-1">
               <span
-                className="text-5xl lg:text-7xl font-bold text-primary"
+                className="text-5xl  font-bold text-primary"
                 style={{
                   WebkitTextStroke: '2px',
                   WebkitTextFillColor: 'transparent',
@@ -45,7 +37,7 @@ export default function HighLight() {
 
             <div className="flex items-center gap-1">
               <span
-                className="font-bold text-5xl lg:text-7xl text-primary"
+                className="font-bold text-5xl  text-primary"
                 style={{
                   WebkitTextStroke: '2px',
                   WebkitTextFillColor: 'transparent',
@@ -80,6 +72,16 @@ export default function HighLight() {
               <FaWhatsapp className="text-2xl text-primary" />
             </Link>
           </div>
+        </div>
+
+        <div className="my-5 flex px-10 md:px-5 flex-col items-center justify-center w-[100%] md:w-[50%]">
+          <Image
+            src={'/highlight.png'}
+            alt=""
+            width={300}
+            height={300}
+            className="w-[100%] max-w-[300px]"
+          />
         </div>
         <SkillScroll />
         <div

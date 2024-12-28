@@ -41,7 +41,7 @@ export default function Project({
         className={`w-full object-cover object-top  rounded-t-md border-b border-primary ${size === 'small' && 'hidden'} ${size === 'large' && 'h-[100%] md:h-[100%] border-b-0 border-r  rounded-r-0 rounded-t-none rounded-l-md'} ${size === 'normal' && 'h-[40%] md:h-[60%]'}`}
       />
       <div
-        className={`bg-[url(../assets/bg-dot.svg)] m-2  flex flex-col gap-2 justify-between h-[60%] ${size === 'small' && ' h-full   justify-between '} ${size === 'large' && ' h-full   justify-evenly '}`}
+        className={`bg-[url(../assets/bg-dot.svg)]  m-2  flex flex-col gap-2 justify-between h-[60%] ${size === 'small' && ' h-full   justify-between '} ${size === 'large' && ' h-full m-3 justify-evenly w-full '}`}
       >
         <p className="text-center font-bold">{title}</p>
 

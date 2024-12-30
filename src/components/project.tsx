@@ -31,17 +31,21 @@ export default function Project({
   return (
     <li
       key={id}
-      className={` max-w-[250px] border-[1px] dark:border-zinc-700 project project-${id} flex   rounded-md  hover:border-primary hover:border-[1px] border-zinc-400 dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[100%] mx-5 md:mx-0 max-w-[500px] h-[400px] justify-between'} ${size === 'small' && 'h-[230px] flex-col justify-between py-3 md:py-6 min-w-[100px] w-[25%] md:max-w-[150px] '} ${size === 'normal' && 'h-[400px] flex-col md:h-[500px] w-[45%] justify-between'}`}
+      className={` max-w-[250px] border-[1px]  dark:border-zinc-700 project project-${id} flex p-2 gap-1 rounded-md  hover:border-primary hover:border-[1px] border-zinc-400 dark:hover:border-primary transition  delay-150 duration-300  ease-in-out hover:-translate-y-1 hover:scale-110  ${size === 'large' && 'w-[100%] mx-5 md:mx-0 max-w-[400px] h-[400px] justify-between'} ${size === 'small' && 'h-[230px] flex-col justify-between py-3 md:py-6 min-w-[100px] w-[25%] md:max-w-[150px] '} ${size === 'normal' && 'h-[400px] flex-col md:h-[500px] w-[45%] justify-between'}`}
     >
       <Image
         src={img}
         alt={title}
         width={400}
         height={400}
-        className={`w-full   object-cover object-top   border-b border-primary ${size === 'small' && 'hidden'} ${size === 'large' && 'h-[100%] md:h-[100%] border-b-0 border-r    rounded-l-md '} ${size === 'normal' && 'h-[40%] md:h-[60%] rounded-t-md'}`}
+        quality={100}
+        className={`object-cover w-full object-top rounded-md  ${size === 'small' && 'hidden'} ${
+          size === 'large' && 'h-[100%] md:h-[100%] '
+        } ${size === 'normal' && 'h-[40%] md:h-[60%] rounded-t-md'}`}
       />
+
       <div
-        className={`bg-[url(../assets/bg-dot.svg)]  m-2  flex flex-col gap-2 justify-between h-[60%] ${size === 'small' && ' h-full   justify-between '} ${size === 'large' && ' h-full m-3 justify-evenly w-full '}`}
+        className={`bg-[url(../assets/bg-dot.svg)] bg-[100%] pt-3 md:pt-0  md:w-full flex flex-col gap-2 justify-between h-[60%] ${size === 'small' && ' h-full   justify-between '} ${size === 'large' && ' h-full  justify-evenly ml-2'}`}
       >
         <p className="text-center font-bold">{title}</p>
 
@@ -50,7 +54,7 @@ export default function Project({
             aria-label="abrir projeto"
             aria-description="abrir projeto"
             href={`/projetos/${slug}`}
-            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 px-2 "
+            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1  "
           >
             <Info />
           </Link>
@@ -60,7 +64,7 @@ export default function Project({
             href={repo}
             target="_blank"
             rel="noopener noreferrer"
-            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 px-2"
+            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 "
           >
             <Github />
           </Link>
@@ -70,14 +74,14 @@ export default function Project({
             href={page}
             target="_blank"
             rel="noopener noreferrer"
-            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 px-2"
+            className=" p-1 rounded-md bg-primary text-black border-[1px] border-zinc-400 dark:border-zinc-700 font-bold flex  items-center gap-1 "
           >
             <ExternalLink />
           </Link>
         </div>
 
         <ul
-          className={`flex px-1 gap-2 justify-center flex-wrap mb-2 font-bold ${size === 'small' && 'hidden'}`}
+          className={`flex  gap-2 justify-center flex-wrap  font-bold ${size === 'small' && 'hidden'}`}
         >
           {tecs.map((tec, i) => {
             return (

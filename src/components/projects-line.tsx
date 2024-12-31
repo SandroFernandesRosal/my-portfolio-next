@@ -15,6 +15,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
   const [offset, setOffset] = useState(0)
   const [isDisabledNext, setIsDisabledNext] = useState(false)
   const [isDisabledPrev, setIsDisabledPrev] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const projectsPerPage = 6
 
@@ -29,22 +30,28 @@ export default function ProjectsLine({ projects }: ProjectArray) {
         )
       : filteredProjects
 
-  const loadNextPage = () => {
+  const loadNextPage = async () => {
+    setLoading(true)
+    await new Promise((resolve) => setTimeout(resolve, 500))
     if (displayedProjects.length < offset + projectsPerPage) {
       setIsDisabledNext(true)
-      return
+    } else {
+      setOffset(offset + projectsPerPage)
+      setIsDisabledPrev(false)
     }
-    setOffset(offset + projectsPerPage)
-    setIsDisabledPrev(false)
+    setLoading(false)
   }
 
-  const loadPreviousPage = () => {
+  const loadPreviousPage = async () => {
+    setLoading(true)
+    await new Promise((resolve) => setTimeout(resolve, 500))
     if (offset <= 0) {
       setIsDisabledPrev(true)
-      return
+    } else {
+      setOffset(offset - projectsPerPage)
+      setIsDisabledNext(false)
     }
-    setOffset(offset - projectsPerPage)
-    setIsDisabledNext(false)
+    setLoading(false)
   }
 
   const totalNews = displayedProjects.length
@@ -97,27 +104,35 @@ export default function ProjectsLine({ projects }: ProjectArray) {
 
   return (
     <>
-      <ul
-        className="flex flex-wrap gap-5 justify-center w-full lg:w-[70vw]"
-        ref={el}
-      >
-        {projectsToDisplay.map((project: ProjectProps) => (
-          <Project
-            key={project.id}
-            id={project.id}
-            title={project.title}
-            img={project.img}
-            video={project.video}
-            repo={project.repo}
-            page={project.page}
-            tecs={project.tecs}
-            slug={project.slug}
-            imgs={project.imgs}
-            featured={project.featured}
-            description={project.description}
-          />
-        ))}
-      </ul>
+      {!loading ? (
+        projectsToDisplay.length > 0 ? (
+          <ul
+            className="flex flex-wrap gap-5 justify-center w-full lg:w-[70vw]"
+            ref={el}
+          >
+            {projectsToDisplay.map((project: ProjectProps) => (
+              <Project
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                img={project.img}
+                video={project.video}
+                repo={project.repo}
+                page={project.page}
+                tecs={project.tecs}
+                slug={project.slug}
+                imgs={project.imgs}
+                featured={project.featured}
+                description={project.description}
+              />
+            ))}
+          </ul>
+        ) : (
+          <p>Nenhum projeto encontrado.</p>
+        )
+      ) : (
+        <p>Carregando...</p>
+      )}
 
       {projectsToDisplay.length > 0 && (
         <>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Roboto_Flex as Roboto, Ms_Madi as MsMadi } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
 import './globals.css'
 import { ThemeProviders } from './theme-provider'
@@ -39,6 +40,7 @@ export default function RootLayout({
           <Header />
 
           {children}
+          <Analytics />
           <Footer />
         </ThemeProviders>
       </body>

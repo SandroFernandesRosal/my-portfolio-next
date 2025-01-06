@@ -19,7 +19,7 @@ export default function HighLight() {
             width={300}
             height={300}
             priority
-            className="md:w-[300px] w-full"
+            className="md:max-w-[300px] w-full"
           />
         </div>
 

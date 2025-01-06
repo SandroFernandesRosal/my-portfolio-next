@@ -70,7 +70,7 @@ export default async function ProjectPage({ params }: SlugProps) {
             {project.tecs.map((tec, i) => {
               return (
                 <li
-                  className="p-2  dark:bg-bgdark bg-bglight shadow-shadowlight dark:shadow-shadowdark rounded-md flex flex-col items-center w-16 justify-center text-center h-24 border-b-4 border-primary"
+                  className="p-2   bg-bglightsecondary dark:bg-bgdarksecondary rounded-md flex flex-col items-center w-16 justify-center text-center h-24 border-b-4 border-primary"
                   key={i}
                 >
                   {tec}
@@ -122,7 +122,7 @@ export default async function ProjectPage({ params }: SlugProps) {
             height="240"
             controls
             preload="none"
-            className="flex self-center w-full max-w-[900px] min-h-[240px] md:min-h-[400px] shadow-shadowlight dark:shadow-shadowdark rounded-md"
+            className="flex self-center w-full max-w-[900px] min-h-[240px] md:min-h-[400px] border-[1px] border-zinc-400 dark:border-xinc-700 rounded-md"
           >
             <source src={project.video} type="video/mp4" />
             <track

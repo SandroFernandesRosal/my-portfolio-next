@@ -59,7 +59,8 @@ export default function CarouselProject({ imgs }: ImgProps) {
           height={1200}
           width={1200}
           quality={100}
-          className=" object-contain  object-top "
+          loading="lazy"
+          className=" object-cover aspect-[100/150] object-top "
         />
       ))}
     </Slider>

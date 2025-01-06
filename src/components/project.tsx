@@ -39,6 +39,7 @@ export default function Project({
         width={400}
         height={400}
         quality={100}
+        loading="lazy"
         className={`object-cover w-full object-top rounded-md  ${size === 'small' && 'hidden'} ${
           size === 'large' && 'h-[100%] md:h-[100%] '
         } ${size === 'normal' && 'h-[40%] md:h-[60%] rounded-t-md'}`}

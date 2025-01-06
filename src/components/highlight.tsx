@@ -16,9 +16,9 @@ export default function HighLight() {
           <Image
             src={'/highlight.webp'}
             alt="imagem de um notebook"
-            priority
             width={300}
             height={300}
+            loading="lazy"
             className="w-[250px] md:w-[300px]"
           />
         </div>

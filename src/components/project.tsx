@@ -35,7 +35,7 @@ export default function Project({
     >
       <Image
         src={img}
-        alt={title}
+        alt={`imagem de ${title}`}
         width={400}
         height={400}
         quality={100}

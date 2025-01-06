@@ -18,7 +18,7 @@ export default function HighLight() {
             alt="imagem de um notebook"
             width={300}
             height={300}
-            loading="lazy"
+            priority
             className="w-[250px] md:w-[300px]"
           />
         </div>

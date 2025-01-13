@@ -50,7 +50,6 @@ export default function HighLight() {
           </div>
         </div>
 
-        <SkillScroll />
         <div
           id="serviços"
           className="h-[120px] w-full bg-[url(../assets/bg-lightsecondary2.webp)] dark:bg-[url(../assets/bg-darksecondary2.webp)]   bg-bottom bg-repeat-x"

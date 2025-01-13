@@ -14,7 +14,7 @@ export default function HighLight() {
 
         <div className="my-5 flex px-10 md:px-5 flex-col items-center justify-center w-[100%] md:w-[50%]">
           <Image
-            src={'/highlight.webp'}
+            src={'/highlight2.webp'}
             alt="imagem de um notebook"
             width={300}
             height={300}

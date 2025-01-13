@@ -18,13 +18,13 @@ export default function Menu() {
       {!menu ? (
         <AlignRight
           onClick={handleMenu}
-          size={40}
+          size={60}
           className="md:hidden cursor-pointer hover:text-primary"
         />
       ) : (
         <X
           onClick={handleMenu}
-          size={40}
+          size={60}
           className="md:hidden cursor-pointer hover:text-primary"
         />
       )}

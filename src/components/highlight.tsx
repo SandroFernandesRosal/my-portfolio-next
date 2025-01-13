@@ -14,7 +14,7 @@ export default function HighLight() {
 
         <div className="my-5 flex px-10 md:px-5 flex-col items-center justify-center w-[100%] md:w-[50%]">
           <Image
-            src={'/highlight.webp'}
+            src={'/highlight2.webp'}
             alt="imagem de um notebook"
             width={300}
             height={300}
@@ -23,45 +23,10 @@ export default function HighLight() {
           />
         </div>
 
-        <div className="flex flex-col justify-center items-center  mb-10 font-bold w-[100%] md:max-w-[50%]  z-20 md:py-5 dark:md:border-zinc-700">
+        <div className="flex flex-col justify-center items-center self-center  mb-10  w-[100%] md:max-w-[50%]  z-20 md:py-5 dark:md:border-zinc-700">
           <h1 className="text-3xl px-10 md:px-5 text-center  lg:w-[70%]  md:text-4xl">
-            Transforme sua presença online em lucro: soluções personalizadas
-            para destacar seu negócio.
+            Sites modernos e personalizados para impulsionar seu negócio.
           </h1>
-
-          <div className="flex justify-center gap-3 mt-5">
-            <div className="flex items-center gap-1">
-              <span
-                className="text-5xl  font-bold text-primary"
-                style={{
-                  WebkitTextStroke: '2px',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                +3
-              </span>{' '}
-              <div className="flex flex-col text-sm">
-                <span className="lg:text-lg">anos de</span>
-                <span className="lg:text-lg">experiência</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-1">
-              <span
-                className="font-bold text-5xl  text-primary"
-                style={{
-                  WebkitTextStroke: '2px',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                +15
-              </span>{' '}
-              <div className="flex flex-col text-sm">
-                <span className="lg:text-lg">projetos</span>
-                <span className="lg:text-lg">concluídos</span>
-              </div>
-            </div>
-          </div>
 
           <div className="flex mt-5 gap-3 justify-center w-ful flex-wrap">
             <Link

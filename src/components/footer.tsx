@@ -1,25 +1,16 @@
 import Link from 'next/link'
 import Socials from './socials'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-center">
-      <div className="py-2 min-h-24 w-full flex flex-col justify-around items-center border-t-[1px] border-zinc-400 dark:border-zinc-700">
+    <footer className="flex flex-col justify-center items-center ">
+      <div className="py-2 min-h-24 w-full flex flex-col justify-around items-center border-t-[1px] border-zinc-400 dark:border-zinc-700 gap-2">
         <Link
-          href="/"
-          className="md:text-2xl text-xl font-extrabold  hover:text-primary mb-2"
+          href="/#highlight"
+          className="md:text-2xl text-xl font-extrabold hover:text-primary"
         >
-          <p className="text-3xl font-medium flex items-center">
-            San
-            <span className="text-primary text-xl font-bold">
-              &#x0007B; &#41;
-            </span>
-            ro
-            <span className="text-primary text-xl font-bold">
-              &#x0007B; &#41;
-            </span>
-            ev
-          </p>
+          <Image src="/logo1.png" alt="" width={70} height={70} />
         </Link>
 
         <Socials />

@@ -5,7 +5,7 @@ type OpacityProps = {
 const Opacity: React.FC<OpacityProps> = ({ menu }) => {
   return (
     <div
-      className={`${menu ? 'flex' : 'hidden'} md:hidden left-0 top-[73px] absolute w-[100vw] h-[100vh] backdrop-blur-md dark:shadow-shadowdark shadow-shadowlight`}
+      className={`${menu ? 'flex' : 'hidden'} md:hidden left-0 top-[69px] absolute w-[100vw] h-[100vh] backdrop-blur-md`}
     ></div>
   )
 }

@@ -28,40 +28,6 @@ export default function HighLight() {
             Sites modernos e personalizados para impulsionar seu negócio.
           </h1>
 
-          <div className="flex justify-center gap-3 mt-5">
-            <div className="flex items-center gap-1">
-              <span
-                className="text-5xl  font-bold text-primary"
-                style={{
-                  WebkitTextStroke: '2px',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                +3
-              </span>{' '}
-              <div className="flex flex-col text-sm">
-                <span className="lg:text-lg">anos de</span>
-                <span className="lg:text-lg">experiência</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-1">
-              <span
-                className="font-bold text-5xl  text-primary"
-                style={{
-                  WebkitTextStroke: '2px',
-                  WebkitTextFillColor: 'transparent',
-                }}
-              >
-                +15
-              </span>{' '}
-              <div className="flex flex-col text-sm">
-                <span className="lg:text-lg">projetos</span>
-                <span className="lg:text-lg">concluídos</span>
-              </div>
-            </div>
-          </div>
-
           <div className="flex mt-5 gap-3 justify-center w-ful flex-wrap">
             <Link
               href={'/sobre'}

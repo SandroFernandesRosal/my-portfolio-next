@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FaWhatsapp } from 'react-icons/fa'
 
 import { PiPersonArmsSpreadFill } from 'react-icons/pi'
-import SkillScroll from './skills-scroll'
+
 import Image from 'next/image'
 
 export default function HighLight() {

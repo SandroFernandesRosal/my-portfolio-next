@@ -84,7 +84,7 @@ export default function SkillScroll() {
   return (
     <Slider
       {...settings}
-      className="slider-container flex self-center  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] w-[100vw]  h-[200px]"
+      className="slider-container flex self-center  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] w-[100vw]  h-[170px]"
     >
       {skillsData.map((skill: SkilsProps) => (
         <div

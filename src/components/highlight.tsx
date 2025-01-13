@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import { FaWhatsapp } from 'react-icons/fa'
 
-import { PiPersonArmsSpreadFill } from 'react-icons/pi'
 import SkillScroll from './skills-scroll'
 import Image from 'next/image'
 
@@ -30,21 +29,13 @@ export default function HighLight() {
 
           <div className="flex mt-5 gap-3 justify-center w-ful flex-wrap">
             <Link
-              href={'/sobre'}
-              className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark dark:border-zinc-700 bg-bglight border-[1px] border-zinc-400 hover:border-primary dark:hover:border-primary"
-              aria-label="Saiba mais sobre mim"
-            >
-              <span>Quem sou</span>
-              <PiPersonArmsSpreadFill className="text-2xl text-primary" />
-            </Link>
-            <Link
               href={'https://api.whatsapp.com/send?phone=5521969501614'}
               target="blank"
               rel="noopener noreferrer"
               className="flex text-center gap-2 p-2 rounded-lg dark:bg-bgdark dark:border-zinc-700 bg-bglight border-[1px] border-zinc-400 hover:border-primary dark:hover:border-primary"
               aria-label="Entre em contato"
             >
-              <span>Contato</span>
+              <span>Entrar em contato</span>
               <FaWhatsapp className="text-2xl text-primary" />
             </Link>
           </div>

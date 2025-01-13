@@ -10,7 +10,7 @@ export default function Footer() {
           href="/#highlight"
           className="md:text-2xl text-xl font-extrabold hover:text-primary"
         >
-          <Image src="/logo1.png" alt="" width={70} height={70} />
+          <Image src="/logo1.png" alt="logo" width={70} height={70} />
         </Link>
 
         <Socials />

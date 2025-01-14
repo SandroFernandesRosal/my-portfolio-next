@@ -61,7 +61,13 @@ export default async function ProjectPage({ params }: SlugProps) {
 
   return (
     <div className="pt-[90px] flex flex-col items-center gap-5 min-h-screen bg-bglightsecundary dark:bg-bgdarksecundary pb-10 px-5">
-      <h1 className="text-center text-2xl font-extrabold">{project.title}</h1>
+      <h1
+        id="projetos"
+        className="text-2xl border-[1px] flex items-center  gap-2 justify-center rounded-md px-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary"
+      >
+        <span className="text-primary text-2xl">&#123;</span> {project.title}
+        <span className="text-primary text-2xl">&#125;</span>
+      </h1>
 
       <div className="flex flex-col gap-5 justify-center items-center w-full ">
         <div className="flex flex-col gap-4">

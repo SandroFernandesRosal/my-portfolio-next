@@ -76,8 +76,14 @@ export default function Faq() {
 
   return (
     <section className="z-10 px-5   flex flex-col items-center  dark:bg-bgdarksecondary bg-bglightsecondary py-5 pb-[160px] dark:bg-[url(../assets/bg-dark2.webp)] bg-[url(../assets/bg-light2.webp)]   bg-bottom bg-repeat-x relative pt-[68px] -mt-[68px]">
-      <h1 className="text-3xl font-bold">Perguntas frequentes</h1>
-      <span className="border-b-4 pb-2 w-24  border-primary  text-3xl mb-5"></span>
+      <h1
+        id="projetos"
+        className="text-2xl border-[1px] flex items-center  gap-2 justify-center rounded-md px-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary mb-10"
+      >
+        <span className="text-primary text-2xl">&#123;</span> Perguntas
+        frequentes
+        <span className="text-primary text-2xl">&#125;</span>
+      </h1>
 
       <div ref={el} className="flex justify-center">
         <ul className="w-[90%] px-5 max-w-[500px] flex flex-col gap-3">

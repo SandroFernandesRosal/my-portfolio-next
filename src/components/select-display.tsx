@@ -12,7 +12,7 @@ export default function SelectDisplay() {
     <select
       aria-label="Selecionar entre destaques e todos"
       onChange={handleChange}
-      className="border-double border-4 border-primary   bg-bglightsecundary dark:bg-bgdarksecundary h-9 flex items-center rounded-md focus:ring-0 outline-none "
+      className="border-double border-4 border-primary   bg-bglightsecondary dark:bg-bgdarksecondary h-9 flex items-center rounded-md focus:ring-0 outline-none "
     >
       <option value="destaque" aria-label="destaques">
         Destaques

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Menu from './menu'
 import ChangeTheme from './change-theme'
 import ItensMenu from './itens-menu'
+import { FaWhatsapp } from 'react-icons/fa'
 
 export default function Header() {
   return (
@@ -21,6 +22,16 @@ export default function Header() {
         </div>
 
         <ItensMenu menu={false} />
+        <Link
+          href={'https://api.whatsapp.com/send?phone=5521935009933'}
+          target="blank"
+          rel="noopener noreferrer"
+          className="flex text-center md:hidden  gap-2  p-2 rounded-lg dark:bg-bgdark dark:border-zinc-700 bg-bglight border-[1px] border-zinc-400 hover:border-primary dark:hover:border-primary"
+          aria-label="Entre em contato"
+        >
+          <span>Contato</span>
+          <FaWhatsapp className="text-2xl text-primary" />
+        </Link>
 
         <div className="flex items-center gap-4">
           <div className="hidden md:flex">

@@ -1,6 +1,16 @@
 import Link from 'next/link'
 
-import { FaWhatsapp } from 'react-icons/fa'
+import {
+  FaCogs,
+  FaHandsHelping,
+  FaPaintBrush,
+  FaRocket,
+  FaSearch,
+  FaShieldAlt,
+  FaTools,
+  FaWhatsapp,
+  FaWrench,
+} from 'react-icons/fa'
 
 import Image from 'next/image'
 import SkillScroll from './skills-scroll'
@@ -40,6 +50,42 @@ export default function HighLight() {
             </Link>
           </div>
         </div>
+
+        <div className="flex  lg:text-xl gap-2 flex-wrap justify-center w-full mb-10 px-2 md:w-[90%] lg:w-[70%]">
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaSearch className="text-primary" />
+            Otimizado para SEO
+          </span>
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaRocket className="text-primary" />
+            Alta performance
+          </span>
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaCogs className="text-primary" />
+            Alta compatibilidade
+          </span>
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaShieldAlt className="text-primary" />
+            Segurança
+          </span>
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaPaintBrush className="text-primary" />
+            Design moderno
+          </span>
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaWrench className="text-primary" />
+            Personalização total
+          </span>
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaHandsHelping className="text-primary" />
+            Suporte total
+          </span>
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaTools className="text-primary" />
+            Manutenção
+          </span>
+        </div>
+
         <SkillScroll />
 
         <div

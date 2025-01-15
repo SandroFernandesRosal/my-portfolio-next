@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FaWhatsapp } from 'react-icons/fa'
 
 import Image from 'next/image'
+import SkillScroll from './skills-scroll'
 
 export default function HighLight() {
   return (
@@ -39,6 +40,7 @@ export default function HighLight() {
             </Link>
           </div>
         </div>
+        <SkillScroll />
 
         <div
           id="serviços"

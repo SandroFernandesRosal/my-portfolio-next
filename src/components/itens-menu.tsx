@@ -8,53 +8,62 @@ export interface MenuProps {
 export default function ItensMenu({ menu, handleMenu }: MenuProps) {
   return (
     <ul
-      className={`w-full md:w-auto text-2xl md:text-xl md:text-md ${!menu ? 'hidden' : 'flex flex-col'} md:flex md:items-center`}
+      className={`w-full md:w-auto text-2xl md:text-xl gap-3 md:text-md ${!menu ? 'hidden' : 'flex flex-col'} md:flex md:items-center`}
     >
-      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 md:pl-0 cursor-pointer  pr-2 ">
+      <li className="flex justify-center cursor-pointer">
         <Link
           onClick={handleMenu}
           href={'/sobre'}
-          className="border-l-8 md:border-none md:pl-0 md:my-0 border-primary pl-2 rounded-md my-2 md:hover:text-primary"
+          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
         >
-          Sobre
+          <span className="text-primary md:hidden text-2xl">&#123;</span>Sobre
+          <span className="text-primary md:hidden text-2xl">&#125;</span>
         </Link>
       </li>
 
-      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 md:pl-0 cursor-pointer  pr-2 ">
+      <li className="flex justify-center cursor-pointer">
         <Link
           onClick={handleMenu}
           href={'/#serviços'}
-          className="border-l-8 md:border-none  md:my-0 border-primary pl-2 rounded-md my-2 md:hover:text-primary"
+          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
         >
+          <span className="text-primary md:hidden text-2xl">&#123;</span>
           Serviços
+          <span className="text-primary md:hidden text-2xl">&#125;</span>
         </Link>
       </li>
 
-      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer  pr-2">
+      <li className="flex justify-center cursor-pointer">
         <Link
           onClick={handleMenu}
           href={'/#projetos'}
-          className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 md:hover:text-primary"
+          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
         >
+          <span className="text-primary md:hidden text-2xl">&#123;</span>
           Projetos
+          <span className="text-primary md:hidden text-2xl">&#125;</span>
         </Link>
       </li>
-      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer  pr-2">
+      <li className="flex justify-center cursor-pointer">
         <Link
           onClick={handleMenu}
           href={'/#contato'}
-          className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 md:hover:text-primary"
+          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
         >
+          <span className="text-primary md:hidden text-2xl">&#123;</span>
           Contato
+          <span className="text-primary md:hidden text-2xl">&#125;</span>
         </Link>
       </li>
-      <li className="hover:bg-bglight dark:hover:bg-bgdark pl-2 cursor-pointer">
+      <li className="flex justify-center cursor-pointer">
         <Link
           onClick={handleMenu}
           href={'/#faq'}
-          className="border-l-8  border-primary pl-2 rounded-md my-2 md:border-none md:pl-0 md:my-0 md:hover:text-primary"
+          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
         >
+          <span className="text-primary md:hidden text-2xl">&#123;</span>
           Dúvidas
+          <span className="text-primary md:hidden text-2xl">&#125;</span>
         </Link>
       </li>
     </ul>

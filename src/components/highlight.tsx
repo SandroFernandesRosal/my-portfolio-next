@@ -1,11 +1,12 @@
 import Link from 'next/link'
 
 import {
-  FaCogs,
   FaHandsHelping,
+  FaMobileAlt,
   FaPaintBrush,
   FaRocket,
   FaSearch,
+  FaServer,
   FaShieldAlt,
   FaTools,
   FaWhatsapp,
@@ -61,8 +62,8 @@ export default function HighLight() {
             Alta performance
           </span>
           <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
-            <FaCogs className="text-primary" />
-            Alta compatibilidade
+            <FaMobileAlt className="text-primary" />
+            Multi dispositivos
           </span>
           <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
             <FaShieldAlt className="text-primary" />
@@ -74,7 +75,7 @@ export default function HighLight() {
           </span>
           <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
             <FaWrench className="text-primary" />
-            Personalização total
+            Totalmente personalizável
           </span>
           <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
             <FaHandsHelping className="text-primary" />
@@ -83,6 +84,10 @@ export default function HighLight() {
           <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
             <FaTools className="text-primary" />
             Manutenção
+          </span>
+          <span className="flex items-center gap-2 bg-bglightsecondary dark:bg-bgdarksecondary rounded-md p-1 border-[1px] border-zinc-400 dark:border-zinc-700">
+            <FaServer className="text-primary" />
+            Hospedagem
           </span>
         </div>
 

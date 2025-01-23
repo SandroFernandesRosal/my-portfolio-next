@@ -33,7 +33,7 @@ export default function Faq() {
 
     'Após a finalização projeto, a pasta será enviada para a nuvem com seu projeto e com as instruções de uso. Caso queira, também será disponibilizado acesso ao respositório do Github. Caso não entenda nada disso, não se preocupe, pois também tenho o serviço de hospedagem e manutenção do seu site.',
 
-    'Aceito diversas formas de pagamento, incluindo pix, cartão de crédito, boleto e transferência bancária.',
+    'Aceito pix e cartão de crédito.',
 
     'Oferecemos suporte contínuo para garantir que seu site esteja sempre funcionando corretamente.',
   ]

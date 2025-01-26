@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import fotoPerfil from '../../public/perfil-4.webp'
+import fotoPerfil from '../../public/fotoperfil2.png'
 import Link from 'next/link'
 import { FaWhatsapp } from 'react-icons/fa'
 import { IoMdDownload } from 'react-icons/io'
@@ -60,15 +60,13 @@ export default function Resume() {
         </div>
       </div>
 
-      <div className=" h-[325px] md:mb-5 dark:shadow-shadowdark shadow-shadowlight flex items-end md:h-[270px] md:w-[270px] lg:h-[400px] lg:w-[400px]  justify-center rounded-perfil border-2px border-green dark:bg-bgdarksecundary overflow-hidden ">
-        <Image
-          src={fotoPerfil}
-          height={400}
-          width={400}
-          alt=""
-          className="w-[350px] h-[350px] md:w-[250px] md:h-[250px]  lg:h-[400px] lg:w-[400px] relative -bottom-5 hover:scale-105 transition-transform duration-500"
-        />
-      </div>
+      <Image
+        src={fotoPerfil}
+        height={787}
+        width={583}
+        alt="foto de Sandro"
+        className="w-full mb-10 max-w-[350px] [mask-image:linear-gradient(to_top,transparent,white_35%,white_90%,transparent)]"
+      />
     </div>
   )
 }

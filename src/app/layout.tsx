@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s | Sandro Fernandes',
     default: 'Sandro Fernandes',
   },
-  description: 'Desenvolvedor Front-end',
+  description: 'Desenvolvedor Web',
 }
 
 export default function RootLayout({

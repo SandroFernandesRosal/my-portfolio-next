@@ -25,6 +25,7 @@ html {
 .slick-prev, .slick-next {
   position: absolute !important;
   top: -20px !important;
+  display: none !important;
 }
 
 

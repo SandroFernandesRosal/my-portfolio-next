@@ -4,7 +4,8 @@ import SizeProject from './size-project'
 import SelectDisplay from './select-display'
 
 import Search from './search'
-import ProjectsLine from './projects-line'
+
+import CarouselItems from './carouse-item'
 
 export default async function ProjectsPage() {
   const response = await api('/products', {
@@ -32,8 +33,10 @@ export default async function ProjectsPage() {
           <SizeProject />
         </div>
       </div>
+      <ul className=" w-full flex justify-center">
+        <CarouselItems projects={projects} />
+      </ul>
 
-      <ProjectsLine projects={projects} />
       <div id="contato" />
     </section>
   )

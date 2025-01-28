@@ -16,7 +16,7 @@ export const useDataSearch = create((set) => ({
 }))
 
 export const useSize = create((set) => ({
-  size: 'large',
+  size: 'normal',
   setSize: (state) => set({ size: state }),
 }))
 

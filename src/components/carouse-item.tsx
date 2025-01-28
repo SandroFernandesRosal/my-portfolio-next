@@ -93,7 +93,6 @@ export default function CarouselItems({ projects }: ProjectArray) {
 
   return (
     <div
-      role="list"
       aria-label="Lista de sites"
       className="w-[90vw] lg:w-[70vw] pt-10 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
     >

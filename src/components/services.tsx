@@ -56,7 +56,7 @@ export default function Services() {
   return (
     <section className="z-10 px-5 flex flex-col items-center dark:bg-bgdarksecondary bg-bglightsecondary pb-40 bg-[url(../assets/bg-light2.webp)] dark:bg-[url(../assets/bg-dark2.webp)] w-full bg-bottom bg-repeat-x">
       <h1
-        id="projetos"
+        id="servicos"
         className="text-2xl border-[1px] flex items-center  gap-2 justify-center rounded-md px-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary mb-10"
       >
         <span className="text-primary text-2xl">&#123;</span> Meus serviços

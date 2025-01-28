@@ -92,7 +92,11 @@ export default function CarouselItems({ projects }: ProjectArray) {
   }
 
   return (
-    <div className="w-[90vw] lg:w-[70vw] pt-10 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
+    <div
+      role="list"
+      aria-label="Lista de sites"
+      className="w-[90vw] lg:w-[70vw] pt-10 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+    >
       {displayedProjects.length > 0 ? (
         <Slider {...settings}>
           {displayedProjects.map((project: ProjectProps) => (

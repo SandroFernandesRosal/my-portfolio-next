@@ -4,7 +4,6 @@ import SelectDisplay from './select-display'
 import Search from './search'
 import CarouselItems from './carouse-item'
 
-
 export default async function ProjectsPage() {
   const response = await api('/products', {
     next: {
@@ -31,7 +30,7 @@ export default async function ProjectsPage() {
           <SizeProject />
         </div>
       </div>
-      
+
       <div className=" w-full flex justify-center">
         <CarouselItems projects={projects} />
       </div>

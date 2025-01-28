@@ -37,8 +37,22 @@ export default function CarouselItems({ projects }: ProjectArray) {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: size === 'normal' ? 3 : size === 'large' ? 2 : size === 'small' ? 5 : 3,
-          slidesToScroll: size === 'normal' ? 3 : size === 'large' ? 2 : size === 'small' ? 5 : 3,
+          slidesToShow:
+            size === 'normal'
+              ? 3
+              : size === 'large'
+                ? 2
+                : size === 'small'
+                  ? 5
+                  : 3,
+          slidesToScroll:
+            size === 'normal'
+              ? 3
+              : size === 'large'
+                ? 2
+                : size === 'small'
+                  ? 5
+                  : 3,
           infinite: true,
           dots: true,
         },
@@ -46,8 +60,22 @@ export default function CarouselItems({ projects }: ProjectArray) {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: size === 'normal' ? 2 : size === 'large' ? 1 : size === 'small' ? 4 : 1,
-          slidesToScroll: size === 'normal' ? 2 : size === 'large' ? 1 : size === 'small' ? 4 : 1,
+          slidesToShow:
+            size === 'normal'
+              ? 2
+              : size === 'large'
+                ? 1
+                : size === 'small'
+                  ? 4
+                  : 1,
+          slidesToScroll:
+            size === 'normal'
+              ? 2
+              : size === 'large'
+                ? 1
+                : size === 'small'
+                  ? 4
+                  : 1,
           infinite: true,
           dots: true,
         },
@@ -70,21 +98,20 @@ export default function CarouselItems({ projects }: ProjectArray) {
         displayedProjects.length > 0 ? (
           <Slider {...settings}>
             {displayedProjects.map((project: ProjectProps) => (
-             
-                <Project
-                  id={project.id}
-                  title={project.title}
-                  img={project.img}
-                  video={project.video}
-                  repo={project.repo}
-                  page={project.page}
-                  tecs={project.tecs}
-                  slug={project.slug}
-                  imgs={project.imgs}
-                  featured={project.featured}
-                  description={project.description}
-                />
-             
+              <Project
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                img={project.img}
+                video={project.video}
+                repo={project.repo}
+                page={project.page}
+                tecs={project.tecs}
+                slug={project.slug}
+                imgs={project.imgs}
+                featured={project.featured}
+                description={project.description}
+              />
             ))}
           </Slider>
         ) : (

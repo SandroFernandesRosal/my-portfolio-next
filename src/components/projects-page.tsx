@@ -14,7 +14,7 @@ export default async function ProjectsPage() {
   const projects = await response.json()
 
   return (
-    <section className="lg:px-10 flex flex-col items-center dark:bg-bgdarksecondary bg-bglightsecondary  pb-40 dark:bg-[url(../assets/bg-dark2.webp)] bg-[url(../assets/bg-light2.webp)]  w-full bg-bottom bg-repeat-x">
+    <section className="lg:px-10 flex flex-col  items-center dark:bg-bgdarksecondary bg-bglightsecondary  pb-40 dark:bg-[url(../assets/bg-dark2.webp)] bg-[url(../assets/bg-light2.webp)]  w-full bg-bottom bg-repeat-x">
       <h1
         id="servicos"
         className="md:text-4xl text-2xl flex items-center  gap-2 justify-center rounded-md px-2  mb-10"
@@ -32,7 +32,7 @@ export default async function ProjectsPage() {
         </div>
       </div>
 
-      <div className=" w-full flex justify-center">
+      <div className=" w-full flex justify-center ">
         <CarouselItems projects={projects} />
       </div>
 

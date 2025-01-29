@@ -27,7 +27,7 @@ export default function CarouselItems({ projects }: ProjectArray) {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 600,
+    speed: 900,
     slidesToShow: size === 'normal' ? 3 : size === 'large' ? 2 : 3,
     slidesToScroll: size === 'normal' ? 3 : size === 'large' ? 2 : 3,
     autoplay: true,
@@ -94,31 +94,50 @@ export default function CarouselItems({ projects }: ProjectArray) {
   return (
     <div
       aria-label="Lista de sites"
-      className="w-[90vw] lg:w-[70vw] pt-10 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+      className="w-[90vw]  lg:w-[70vw] pt-10  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
     >
       {displayedProjects.length > 0 ? (
-        <Slider {...settings}>
-          {displayedProjects.map((project: ProjectProps) => (
-            <Project
-              key={project.id}
-              id={project.id}
-              title={project.title}
-              img={project.img}
-              video={project.video}
-              repo={project.repo}
-              page={project.page}
-              tecs={project.tecs}
-              slug={project.slug}
-              imgs={project.imgs}
-              featured={project.featured}
-              description={project.description}
-            />
-          ))}
-        </Slider>
+        search ? (
+          <div className="flex  w-full justify-center   gap-2 flex-wrap items-center">
+            {displayedProjects.map((project: ProjectProps) => (
+              <Project
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                img={project.img}
+                video={project.video}
+                repo={project.repo}
+                page={project.page}
+                tecs={project.tecs}
+                slug={project.slug}
+                imgs={project.imgs}
+                featured={project.featured}
+                description={project.description}
+              />
+            ))}
+          </div>
+        ) : (
+          <Slider {...settings}>
+            {displayedProjects.map((project: ProjectProps) => (
+              <Project
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                img={project.img}
+                video={project.video}
+                repo={project.repo}
+                page={project.page}
+                tecs={project.tecs}
+                slug={project.slug}
+                imgs={project.imgs}
+                featured={project.featured}
+                description={project.description}
+              />
+            ))}
+          </Slider>
+        )
       ) : (
-        <>
-          <p className="flex justify-center">Nenhum site encontrado.</p>
-        </>
+        <p className="flex justify-center">Nenhum site encontrado.</p>
       )}
     </div>
   )

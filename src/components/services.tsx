@@ -1,6 +1,6 @@
 'use client'
 import {
-  Monitor,
+  MonitorSmartphone,
   ShoppingCart,
   Rss,
   Speech,
@@ -57,10 +57,11 @@ export default function Services() {
     <section className="z-10 px-5 flex flex-col items-center dark:bg-bgdarksecondary bg-bglightsecondary pb-40 bg-[url(../assets/bg-light2.webp)] dark:bg-[url(../assets/bg-dark2.webp)] w-full bg-bottom bg-repeat-x">
       <h1
         id="servicos"
-        className="text-2xl border-[1px] flex items-center  gap-2 justify-center rounded-md px-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary mb-10"
+        className="md:text-4xl text-2xl flex items-center  gap-2 justify-center rounded-md px-2  mb-10"
       >
-        <span className="text-primary text-2xl">&#123;</span> Meus serviços
-        <span className="text-primary text-2xl">&#125;</span>
+        <span className="text-primary text-2xl md:text-4xl">&#123;</span> Todos
+        os serviços
+        <span className="text-primary text-2xl md:text-4xl">&#125;</span>
       </h1>
 
       <div
@@ -80,7 +81,7 @@ export default function Services() {
             >
               <div className="flex h-[50%] justify-center mx-2 py-4 flex-col gap-2 items-center bg-[url(../assets/bg-dot.svg)] w-full">
                 {service.icon === 'site' && (
-                  <Monitor className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
+                  <MonitorSmartphone className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />
                 )}
                 {service.icon === 'loja' && (
                   <ShoppingCart className="text-primary size-20 transform group-hover:rotate-[360deg] transition-transform duration-500 ease-in-out" />

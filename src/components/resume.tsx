@@ -6,7 +6,7 @@ import { IoMdDownload } from 'react-icons/io'
 
 export default function Resume() {
   return (
-    <div className="flex  flex-wrap w-full items-center px-5 mb-5 justify-center md:justify-around  pt-[100px]">
+    <div className="flex  flex-wrap w-full items-center px-5  justify-center md:justify-around  pt-[100px] dark:bg-bgdarksecondary dark:bg-[url(../assets/bg-dark2.webp)] bg-[url(../assets/bg-light2.webp)]  bg-bottom bg-repeat-x">
       <div className="">
         <div className="mb-5">
           <p className="text-xl pl-3">Olá, eu sou o</p>
@@ -65,7 +65,7 @@ export default function Resume() {
         height={787}
         width={583}
         alt="foto de Sandro"
-        className="w-full mb-10 max-w-[350px] [mask-image:linear-gradient(to_top,transparent,white_35%,white_90%,transparent)]"
+        className="w-full mb-40 max-w-[350px] [mask-image:linear-gradient(to_top,transparent,white_35%,white_90%,transparent)]"
       />
     </div>
   )

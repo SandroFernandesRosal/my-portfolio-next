@@ -17,7 +17,7 @@ export default function SearchForm() {
         <input
           name="search"
           type="text"
-          placeholder="Buscar projeto..."
+          placeholder="Buscar site..."
           className=" w-full bg-transparent text-sm outline-none placeholder:text-textlight dark:placeholder:text-textdark focus:ring-0 border-none rounded-full px-1"
           value={search}
           onChange={handleSearchChange}

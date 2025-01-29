@@ -95,11 +95,12 @@ export default function Contato() {
       className="flex flex-col justify-center items-center  py-5  pb-40 dark:bg-[url(../assets/bg-darksecondary2.webp)] bg-[url(../assets/bg-lightsecondary2.webp)]   bg-bottom bg-repeat-x px-5 relative pt-[68px] -mt-[68px]"
     >
       <h1
-        id="projetos"
-        className="text-2xl border-[1px] flex items-center  gap-2 justify-center rounded-md px-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary mb-10"
+        id="servicos"
+        className="md:text-4xl text-2xl flex items-center  gap-2 justify-center rounded-md px-2  mb-10"
       >
-        <span className="text-primary text-2xl">&#123;</span> Entre em contato
-        <span className="text-primary text-2xl">&#125;</span>
+        <span className="text-primary text-2xl md:text-4xl">&#123;</span> Entre
+        em contato
+        <span className="text-primary text-2xl md:text-4xl">&#125;</span>
       </h1>
 
       {alert && (

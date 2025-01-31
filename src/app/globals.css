@@ -17,10 +17,6 @@ html {
   
 }
 
-.slick-slide.slick-active {
-  display: none !important;
-  visibility: hidden !important;
-}
 
 .slick-dots {
   position: absolute !important;

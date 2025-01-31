@@ -1,9 +1,8 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { ProjectProps } from '@/data/types/projects'
 import { useSize, useSearch } from '@/store/useStore'
 
-export default function Project({ slug, title, img }: ProjectProps) {
+export default function Project({ title, img }: ProjectProps) {
   const { size } = useSize()
   const { search } = useSearch()
 

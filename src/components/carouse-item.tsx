@@ -25,13 +25,17 @@ export default function CarouselItems({ projects }: ProjectArray) {
       : filteredProjects
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 900,
+    speed: 5000,
     slidesToShow: size === 'normal' ? 3 : size === 'large' ? 2 : 3,
-    slidesToScroll: size === 'normal' ? 3 : size === 'large' ? 2 : 3,
+    slidesToScroll: size === 'normal' ? 1 : size === 'large' ? 1 : 1,
     autoplay: true,
     initialSlide: 0,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    pauseOnFocus: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -46,12 +50,12 @@ export default function CarouselItems({ projects }: ProjectArray) {
                   : 3,
           slidesToScroll:
             size === 'normal'
-              ? 3
+              ? 1
               : size === 'large'
-                ? 2
+                ? 1
                 : size === 'small'
-                  ? 5
-                  : 3,
+                  ? 1
+                  : 1,
           infinite: true,
           dots: true,
         },
@@ -69,11 +73,11 @@ export default function CarouselItems({ projects }: ProjectArray) {
                   : 1,
           slidesToScroll:
             size === 'normal'
-              ? 2
+              ? 1
               : size === 'large'
                 ? 1
                 : size === 'small'
-                  ? 4
+                  ? 1
                   : 1,
           infinite: true,
           dots: true,
@@ -93,12 +97,12 @@ export default function CarouselItems({ projects }: ProjectArray) {
 
   return (
     <div
-      aria-label="Lista de sites"
-      className="w-[90vw]  lg:w-[70vw] pt-10  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+      aria-hidden="true"
+      className="w-[90vw]  lg:w-[70vw] [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
     >
       {displayedProjects.length > 0 ? (
         search ? (
-          <div className="flex  w-full justify-center   gap-2 flex-wrap items-center">
+          <div className="flex  w-full justify-center  gap-2 flex-wrap items-center">
             {displayedProjects.map((project: ProjectProps) => (
               <Project
                 key={project.id}

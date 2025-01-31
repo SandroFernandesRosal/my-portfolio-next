@@ -24,7 +24,7 @@ export default async function ProjectsPage() {
         <span className="text-primary text-2xl md:text-4xl">&#125;</span>
       </h1>
 
-      <div className="flex flex-col items-center mb-5 ">
+      <div className="flex flex-col items-center">
         <Search />
         <div className="flex gap-2">
           <SelectDisplay />
@@ -32,7 +32,7 @@ export default async function ProjectsPage() {
         </div>
       </div>
 
-      <div className=" w-full flex justify-center ">
+      <div className=" w-full flex justify-center">
         <CarouselItems projects={projects} />
       </div>
 

@@ -96,10 +96,7 @@ export default function CarouselItems({ projects }: ProjectArray) {
   }
 
   return (
-    <div
-      aria-hidden="true"
-      className="w-[90vw]  lg:w-[70vw] [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
-    >
+    <div className="w-[90vw]  lg:w-[70vw] [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
       {displayedProjects.length > 0 ? (
         search ? (
           <div className="flex  w-full justify-center  gap-2 flex-wrap items-center">

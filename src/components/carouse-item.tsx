@@ -34,10 +34,9 @@ export default function CarouselItems({ projects }: ProjectArray) {
     initialSlide: 0,
     autoplaySpeed: 5000,
     cssEase: 'linear',
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    swipe: true,
-    swipeToSlide: true,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+
     responsive: [
       {
         breakpoint: 1024,

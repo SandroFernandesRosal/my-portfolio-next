@@ -36,6 +36,8 @@ export default function CarouselItems({ projects }: ProjectArray) {
     cssEase: 'linear',
     pauseOnHover: false,
     pauseOnFocus: false,
+    swipe: true,
+    swipeToSlide: true,
     responsive: [
       {
         breakpoint: 1024,

@@ -13,6 +13,8 @@ import { servicesData } from '@/data/serviceData'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
+import Link from 'next/link'
+import { FaWhatsapp } from 'react-icons/fa'
 
 export default function Services() {
   const el = useRef<HTMLDivElement | null>(null)
@@ -103,6 +105,16 @@ export default function Services() {
                 <h1 className="text-lg font-bold">{service.title}</h1>
                 {service.description}
               </div>
+              <Link
+                href={`https://api.whatsapp.com/send?phone=5521935009933&text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento%20para%20${service.title}!`}
+                target="blank"
+                rel="noopener noreferrer"
+                className="flex text-center gap-2  mt-5 p-2 rounded-lg dark:bg-bgdark dark:border-zinc-700 bg-bglight border-[1px] border-zinc-400 hover:border-primary dark:hover:border-primary"
+                aria-label="Entre em contato"
+              >
+                <span className="flex justify-center flex-1">Saiba mais</span>
+                <FaWhatsapp className="text-2xl text-primary" />
+              </Link>
             </div>
           )
         })}

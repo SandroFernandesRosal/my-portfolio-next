@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function Socials() {
@@ -15,23 +15,13 @@ export default function Socials() {
       </Link>
 
       <Link
-        href={'https://github.com/SandroFernandesRosal'}
+        href={'https://www.instagram.com/devsandro/'}
         target="blank"
         rel="noopener noreferrer"
         className="flex items-center justify-around gap-2 md:gap-0 md:w-[150px]   rounded-md  p-2 border-[1px] dark:border-zinc-700 font-bold  border-zinc-400 hover:border-primary dark:hover:border-primary"
-        aria-label="Meu github"
+        aria-label="Meu instagram"
       >
-        <span>Github</span> <FaGithub className="text-2xl text-primary" />
-      </Link>
-
-      <Link
-        href={'https://www.linkedin.com/in/sandrofernandesrosal'}
-        target="blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-around gap-2 md:gap-0 md:w-[150px]   rounded-md  p-2 border-[1px] dark:border-zinc-700 font-bold border-zinc-400 hover:border-primary dark:hover:border-primary"
-        aria-label="Meu linkedin"
-      >
-        <span>Linkedin</span> <FaLinkedin className="text-2xl text-primary" />
+        <span>Instagram</span> <FaInstagram className="text-2xl text-primary" />
       </Link>
     </div>
   )

@@ -20,10 +20,8 @@ export default function Footer() {
         </div>
       </div>
       <p className="text-xs sm:text-sm text-center  hover:text-primary transition-colors">
-        &copy; {new Date().getFullYear()} -{' '}
-        <span title="Este conteúdo está protegido por leis de direitos autorais.">
-          Todos os direitos reservados
-        </span>
+        &copy; {new Date().getFullYear()} SandroDev -
+        <span> Todos os direitos reservados</span>
       </p>
     </footer>
   )

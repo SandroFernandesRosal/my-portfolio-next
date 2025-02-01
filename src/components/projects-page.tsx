@@ -15,10 +15,7 @@ export default async function ProjectsPage() {
 
   return (
     <section className="lg:px-10 flex flex-col  items-center dark:bg-bgdarksecondary bg-bglightsecondary  pb-40 dark:bg-[url(../assets/bg-dark2.webp)] bg-[url(../assets/bg-light2.webp)]  w-full bg-bottom bg-repeat-x">
-      <h1
-        id="servicos"
-        className="md:text-4xl text-2xl flex items-center  gap-2 justify-center rounded-md px-2  mb-10"
-      >
+      <h1 className="md:text-4xl text-2xl flex items-center  gap-2 justify-center rounded-md px-2  mb-10">
         <span className="text-primary text-2xl md:text-4xl">&#123;</span>{' '}
         Últimos sites
         <span className="text-primary text-2xl md:text-4xl">&#125;</span>

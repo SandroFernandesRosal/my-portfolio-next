@@ -55,10 +55,7 @@ export default function Benefits() {
 
   return (
     <section className="z-10 px-5 flex flex-col items-center dark:bg-bgdark bg-bglight pb-40 bg-[url(../assets/bg-lightsecondary2.webp)] dark:bg-[url(../assets/bg-darksecondary2.webp)] w-full bg-bottom bg-repeat-x">
-      <h1
-        id="servicos"
-        className="md:text-4xl text-2xl flex items-center  gap-2 justify-center rounded-md px-2  mb-10"
-      >
+      <h1 className="md:text-4xl text-2xl flex items-center  gap-2 justify-center rounded-md px-2  mb-10">
         <span className="text-primary text-2xl md:text-4xl">&#123;</span>{' '}
         Benefícios para seu site
         <span className="text-primary text-2xl md:text-4xl">&#125;</span>
@@ -107,6 +104,7 @@ export default function Benefits() {
           )
         })}
       </div>
+      <div id="projetos" />
     </section>
   )
 }

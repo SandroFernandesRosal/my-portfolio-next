@@ -78,7 +78,7 @@ html {
       0px 0px 9px rgba(0, 0, 0, 0.3); 
   }
 
-  .service, .skill, .project, .contato, .faq, .timeline  {
+  .service, .skill, .project, .contato, .faq, .timeline, .site {
     
     opacity: 0;
   }

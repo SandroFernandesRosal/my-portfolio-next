@@ -36,6 +36,18 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
       <li className="flex justify-center cursor-pointer">
         <Link
           onClick={handleMenu}
+          href={'/#beneficios'}
+          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
+        >
+          <span className="text-primary md:hidden text-2xl">&#123;</span>
+          Beneficios
+          <span className="text-primary md:hidden text-2xl">&#125;</span>
+        </Link>
+      </li>
+
+      <li className="flex justify-center cursor-pointer">
+        <Link
+          onClick={handleMenu}
           href={'/#projetos'}
           className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
         >

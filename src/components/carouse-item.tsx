@@ -32,7 +32,7 @@ export default function CarouselItems({ projects }: ProjectArray) {
     slidesToScroll: size === 'normal' ? 1 : size === 'large' ? 1 : 1,
     autoplay: true,
     initialSlide: 0,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 0,
     cssEase: 'linear',
     pauseOnHover: false,
     pauseOnFocus: false,

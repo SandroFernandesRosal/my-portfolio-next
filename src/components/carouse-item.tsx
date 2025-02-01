@@ -40,56 +40,25 @@ export default function CarouselItems({ projects }: ProjectArray) {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow:
-            size === 'normal'
-              ? 3
-              : size === 'large'
-                ? 2
-                : size === 'small'
-                  ? 5
-                  : 3,
-          slidesToScroll:
-            size === 'normal'
-              ? 1
-              : size === 'large'
-                ? 1
-                : size === 'small'
-                  ? 1
-                  : 1,
+          slidesToShow: size === 'normal' ? 3 : size === 'large' ? 2 : 3,
+          slidesToScroll: size === 'normal' ? 1 : size === 'large' ? 1 : 1,
           infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow:
-            size === 'normal'
-              ? 2
-              : size === 'large'
-                ? 1
-                : size === 'small'
-                  ? 4
-                  : 1,
-          slidesToScroll:
-            size === 'normal'
-              ? 1
-              : size === 'large'
-                ? 1
-                : size === 'small'
-                  ? 1
-                  : 1,
+          slidesToShow: size === 'normal' ? 2 : size === 'large' ? 1 : 2,
+          slidesToScroll: size === 'normal' ? 1 : size === 'large' ? 1 : 1,
           infinite: true,
-          dots: true,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: size === 'normal' ? 2 : size === 'small' ? 3 : 1,
-          slidesToScroll: size === 'normal' ? 2 : size === 'small' ? 3 : 1,
+          slidesToShow: size === 'normal' ? 2 : size === 'large' ? 1 : 2,
+          slidesToScroll: size === 'normal' ? 1 : size === 'small' ? 1 : 1,
           infinite: true,
-          dots: true,
         },
       },
     ],

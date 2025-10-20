@@ -7,7 +7,15 @@ import {
   RiTailwindCssFill,
   RiBearSmileLine,
 } from 'react-icons/ri'
-import { FaCss3Alt, FaGitAlt, FaGithub, FaDatabase } from 'react-icons/fa'
+import {
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaDatabase,
+  FaHandsHelping,
+  FaTools,
+  FaWhatsapp,
+} from 'react-icons/fa'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
 import {
   SiInsomnia,
@@ -15,6 +23,10 @@ import {
   SiStyledcomponents,
   SiFastify,
   SiExpress,
+  SiMysql,
+  SiPostgresql,
+  SiSupabase,
+  SiOpenai,
 } from 'react-icons/si'
 
 import { skillsData } from '@/data/skilsData'
@@ -91,6 +103,20 @@ export default function Skills() {
         return <SiFastify className="text-6xl text-primary" />
       case 'Express':
         return <SiExpress className="text-6xl text-primary" />
+      case 'MySQL':
+        return <SiMysql className="text-6xl text-primary" />
+      case 'PostgreSQL':
+        return <SiPostgresql className="text-6xl text-primary" />
+      case 'Supabase':
+        return <SiSupabase className="text-6xl text-primary" />
+      case 'OpenAI':
+        return <SiOpenai className="text-6xl text-primary" />
+      case 'ZApi':
+        return <FaWhatsapp className="text-6xl text-primary" />
+      case 'Scrum':
+        return <FaHandsHelping className="text-6xl text-primary" />
+      case 'Kanban':
+        return <FaTools className="text-6xl text-primary" />
       default:
         return null
     }

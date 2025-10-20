@@ -11,9 +11,16 @@ import {
   RiTailwindCssFill,
   RiBearSmileLine,
 } from 'react-icons/ri'
-import { FaCss3Alt } from 'react-icons/fa'
+import { FaCss3Alt, FaHandsHelping, FaTools, FaWhatsapp } from 'react-icons/fa'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
-import { SiPrisma, SiStyledcomponents } from 'react-icons/si'
+import {
+  SiPrisma,
+  SiStyledcomponents,
+  SiMysql,
+  SiPostgresql,
+  SiSupabase,
+  SiOpenai,
+} from 'react-icons/si'
 import CarouselProject from '@/components/carousel-project'
 
 interface SlugProps {
@@ -116,6 +123,27 @@ export default async function ProjectPage({ params }: SlugProps) {
                   )}
                   {tec === 'Prisma' && (
                     <SiPrisma className="text-6xl text-primary" />
+                  )}
+                  {tec === 'MySQL' && (
+                    <SiMysql className="text-6xl text-primary" />
+                  )}
+                  {tec === 'PostgreSQL' && (
+                    <SiPostgresql className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Supabase' && (
+                    <SiSupabase className="text-6xl text-primary" />
+                  )}
+                  {tec === 'OpenAI' && (
+                    <SiOpenai className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Z-API' && (
+                    <FaWhatsapp className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Scrum' && (
+                    <FaHandsHelping className="text-6xl text-primary" />
+                  )}
+                  {tec === 'Kanban' && (
+                    <FaTools className="text-6xl text-primary" />
                   )}
                 </li>
               )

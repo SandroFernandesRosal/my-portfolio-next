@@ -104,4 +104,46 @@ export const skillsData = [
     icon: 'Express',
     type: 'backend',
   },
+  {
+    id: 18,
+    name: 'MySQL',
+    icon: 'MySQL',
+    type: 'backend',
+  },
+  {
+    id: 19,
+    name: 'PostgreSQL',
+    icon: 'PostgreSQL',
+    type: 'backend',
+  },
+  {
+    id: 20,
+    name: 'Supabase',
+    icon: 'Supabase',
+    type: 'backend',
+  },
+  {
+    id: 21,
+    name: 'OpenAI',
+    icon: 'OpenAI',
+    type: 'tools',
+  },
+  {
+    id: 22,
+    name: 'Z-API',
+    icon: 'ZApi',
+    type: 'tools',
+  },
+  {
+    id: 23,
+    name: 'Scrum',
+    icon: 'Scrum',
+    type: 'tools',
+  },
+  {
+    id: 24,
+    name: 'Kanban',
+    icon: 'Kanban',
+    type: 'tools',
+  },
 ]

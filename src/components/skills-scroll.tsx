@@ -1,7 +1,15 @@
 'use client'
 import { skillsData } from '@/data/skilsData'
 import { SkilsProps } from '@/data/types/skils'
-import { FaCss3Alt, FaGitAlt, FaGithub, FaDatabase } from 'react-icons/fa'
+import {
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaDatabase,
+  FaHandsHelping,
+  FaTools,
+  FaWhatsapp,
+} from 'react-icons/fa'
 import {
   RiAngularjsLine,
   RiBearSmileLine,
@@ -17,6 +25,10 @@ import {
   SiFastify,
   SiExpress,
   SiInsomnia,
+  SiMysql,
+  SiPostgresql,
+  SiSupabase,
+  SiOpenai,
 } from 'react-icons/si'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
 import React from 'react'
@@ -114,6 +126,13 @@ export default function SkillScroll() {
           {skill.icon === 'Fastify' && <SiFastify className="text-8xl" />}
           {skill.icon === 'Express' && <SiExpress className="text-8xl" />}
           {skill.icon === 'Insomnia' && <SiInsomnia className="text-8xl" />}
+          {skill.icon === 'MySQL' && <SiMysql className="text-8xl" />}
+          {skill.icon === 'PostgreSQL' && <SiPostgresql className="text-8xl" />}
+          {skill.icon === 'Supabase' && <SiSupabase className="text-8xl" />}
+          {skill.icon === 'OpenAI' && <SiOpenai className="text-8xl" />}
+          {skill.icon === 'ZApi' && <FaWhatsapp className="text-8xl" />}
+          {skill.icon === 'Scrum' && <FaHandsHelping className="text-8xl" />}
+          {skill.icon === 'Kanban' && <FaTools className="text-8xl" />}
         </div>
       ))}
     </Slider>

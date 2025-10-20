@@ -15,8 +15,7 @@ export default function Resume() {
           </p>
 
           <div className="pl-5">
-            <p>Desenvolvedor Web</p>
-            <p>Freelancer - Disponível </p>
+            <p>Desenvolvedor Fullstack</p>
           </div>
 
           <div className="flex my-5 gap-3 justify-center w-ful flex-wrap">
@@ -48,14 +47,15 @@ export default function Resume() {
 
         <div className="text-left mx-5 lg:mb-10 max-w-[600px]">
           <p className="pb-[20px] md:pb-[100px]">
-            Recem graduado em Análise e Desenvolvimento de Sistemas. Sempre fui
-            fascinado pela tecnologia, mas foi em um momento muito difícil que
-            descobri que a programação era o que eu realmente queria para a
-            minha vida. E esse momento difícil foi em 2020, ínicio da pândemia
-            do corona vírus. Eu trabalhava como garçom em eventos, e também
-            vendia trufas nas ruas. Quando começou a pândemia, eu não pude mais
-            ir trabalhar. Foi aí que eu tive mais tempo pra começar a estudar
-            programação.
+            Formado em Análise e Desenvolvimento de Sistemas, atuo como Desenvolvedor 
+            Fullstack, onde trabalho com React, Next.js, Node.js, Tailwind 
+            CSS, MySQL, PostgreSQL e Supabase. Tenho experiência em integrações com APIs 
+            (incluindo OpenAI e Z-API) e automação de processos, desde a criação de interfaces 
+            responsivas até a lógica de negócio e estruturação de dados. 
+            Minha atuação envolve desde a implementação de interfaces até a lógica de negócio e 
+            organização de dados, sempre alinhado a boas práticas de desenvolvimento. No dia 
+            a dia, utilizo Git/GitHub para versionamento e aplico metodologias ágeis como 
+            Scrum e Kanban para organizar e acompanhar as demandas de forma eficiente.
           </p>
         </div>
       </div>

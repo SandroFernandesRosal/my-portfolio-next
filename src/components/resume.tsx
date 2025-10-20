@@ -47,15 +47,17 @@ export default function Resume() {
 
         <div className="text-left mx-5 lg:mb-10 max-w-[600px]">
           <p className="pb-[20px] md:pb-[100px]">
-            Formado em Análise e Desenvolvimento de Sistemas, atuo como Desenvolvedor 
-            Fullstack, onde trabalho com React, Next.js, Node.js, Tailwind 
-            CSS, MySQL, PostgreSQL e Supabase. Tenho experiência em integrações com APIs 
-            (incluindo OpenAI e Z-API) e automação de processos, desde a criação de interfaces 
-            responsivas até a lógica de negócio e estruturação de dados. 
-            Minha atuação envolve desde a implementação de interfaces até a lógica de negócio e 
-            organização de dados, sempre alinhado a boas práticas de desenvolvimento. No dia 
-            a dia, utilizo Git/GitHub para versionamento e aplico metodologias ágeis como 
-            Scrum e Kanban para organizar e acompanhar as demandas de forma eficiente.
+            Formado em Análise e Desenvolvimento de Sistemas, atuo como
+            Desenvolvedor Fullstack, onde trabalho com React, Next.js, Node.js,
+            Tailwind CSS, MySQL, PostgreSQL e Supabase. Tenho experiência em
+            integrações com APIs (incluindo OpenAI e Z-API) e automação de
+            processos, desde a criação de interfaces responsivas até a lógica de
+            negócio e estruturação de dados. Minha atuação envolve desde a
+            implementação de interfaces até a lógica de negócio e organização de
+            dados, sempre alinhado a boas práticas de desenvolvimento. No dia a
+            dia, utilizo Git/GitHub para versionamento e aplico metodologias
+            ágeis como Scrum e Kanban para organizar e acompanhar as demandas de
+            forma eficiente.
           </p>
         </div>
       </div>

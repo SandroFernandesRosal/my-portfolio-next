@@ -1,7 +1,7 @@
 export function api(path: string, init?: RequestInit) {
   const baseUrl =
     process.env.NODE_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_API_URL || 'https://api.sandrodev.com.br'
+      ? process.env.NEXT_PUBLIC_API_URL
       : 'http://localhost:3333'
 
   if (!baseUrl) {

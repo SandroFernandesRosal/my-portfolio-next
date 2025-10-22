@@ -1,8 +1,15 @@
 export function api(path: string, init?: RequestInit) {
   const baseUrl =
     process.env.NODE_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_API_URL
+      ? process.env.NEXT_PUBLIC_API_URL || 'https://api.sandrodev.com.br'
       : 'http://localhost:3333'
+
+  if (!baseUrl) {
+    throw new Error(
+      'API URL not configured. Please set NEXT_PUBLIC_API_URL environment variable.',
+    )
+  }
+
   const url = new URL(path, baseUrl)
 
   // Garantir que credentials seja sempre 'include' para enviar cookies

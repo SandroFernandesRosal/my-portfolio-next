@@ -1,8 +1,7 @@
 export function api(path: string, init?: RequestInit) {
   const baseUrl =
     process.env.NODE_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_API_BASE_URL ||
-        'https://api-portfolio-eight.vercel.app'
+      ? 'https://api-portfolio-eight.vercel.app'
       : 'http://localhost:3333'
 
   if (!baseUrl) {

@@ -1,12 +1,13 @@
 export function api(path: string, init?: RequestInit) {
   const baseUrl =
     process.env.NODE_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_API_URL
+      ? process.env.NEXT_PUBLIC_API_BASE_URL ||
+        'https://api-portfolio-eight.vercel.app'
       : 'http://localhost:3333'
 
   if (!baseUrl) {
     throw new Error(
-      'API URL not configured. Please set NEXT_PUBLIC_API_URL environment variable.',
+      'API URL not configured. Please set NEXT_PUBLIC_API_BASE_URL environment variable.',
     )
   }
 

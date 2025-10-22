@@ -16,17 +16,27 @@ export default function AdminLogin() {
 
   const checkAuth = async () => {
     try {
+      console.log('🔍 Verificando autenticação...')
+      console.log('🍪 Cookies atuais:', document.cookie)
+
       const response = await api('/auth/me', {
         credentials: 'include',
       })
 
+      console.log('📡 Resposta /auth/me:', response.status, response.statusText)
+      console.log('📋 Headers da resposta:', response.headers)
+
       if (response.ok) {
+        const data = await response.json()
+        console.log('✅ Usuário autenticado:', data)
         // Se já está autenticado, redirecionar para o admin
         window.location.href = '/admin'
+      } else {
+        console.log('❌ Usuário não autenticado')
       }
     } catch (error) {
       // Se não está autenticado, continuar na página de login
-      console.log('Usuário não autenticado')
+      console.log('❌ Erro na verificação de autenticação:', error)
     }
   }
 
@@ -48,8 +58,12 @@ export default function AdminLogin() {
       })
 
       console.log('Resposta do login:', response.status, response.statusText)
+      console.log('Headers da resposta:', response.headers)
+      console.log('Cookies recebidos:', document.cookie)
 
       if (response.ok) {
+        const data = await response.json()
+        console.log('Dados do login:', data)
         console.log('Login bem-sucedido, redirecionando...')
         // Redirecionar para o dashboard
         window.location.href = '/admin'

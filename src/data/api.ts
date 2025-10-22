@@ -18,11 +18,16 @@ export function api(path: string, init?: RequestInit) {
     ...init,
   }
 
-  // Para rotas de upload, adicionar token via header também
-  if (path.includes('/upload/')) {
+  // Adicionar token via header para todas as rotas autenticadas
+  if (
+    path.includes('/auth/') ||
+    path.includes('/upload/') ||
+    path.includes('/projects')
+  ) {
     // Pegar token do cookie
     const cookies = document.cookie
     const tokenMatch = cookies.match(/token=([^;]+)/)
+
     if (tokenMatch) {
       options.headers = {
         ...options.headers,

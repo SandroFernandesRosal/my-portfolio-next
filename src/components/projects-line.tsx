@@ -119,11 +119,12 @@ export default function ProjectsLine({ projects }: ProjectArray) {
                 video={project.video}
                 repo={project.repo}
                 page={project.page}
-                tecs={project.tecs}
+                technologies={project.technologies}
                 slug={project.slug}
-                imgs={project.imgs}
+                images={project.images}
                 featured={project.featured}
                 description={project.description}
+                dateProject={project.dateProject}
               />
             ))}
           </ul>

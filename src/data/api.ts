@@ -24,14 +24,16 @@ export function api(path: string, init?: RequestInit) {
     path.includes('/upload/') ||
     path.includes('/projects')
   ) {
-    // Pegar token do cookie
-    const cookies = document.cookie
-    const tokenMatch = cookies.match(/token=([^;]+)/)
+    // Pegar token do cookie (apenas no cliente)
+    if (typeof window !== 'undefined') {
+      const cookies = document.cookie
+      const tokenMatch = cookies.match(/token=([^;]+)/)
 
-    if (tokenMatch) {
-      options.headers = {
-        ...options.headers,
-        Authorization: `Bearer ${tokenMatch[1]}`,
+      if (tokenMatch) {
+        options.headers = {
+          ...options.headers,
+          Authorization: `Bearer ${tokenMatch[1]}`,
+        }
       }
     }
   }

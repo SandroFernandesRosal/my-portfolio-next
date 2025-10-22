@@ -42,12 +42,16 @@ export default function AdminDashboard() {
     try {
       console.log('🔍 Admin: Verificando autenticação...')
       console.log('🍪 Admin: Cookies atuais:', document.cookie)
-      
+
       const response = await api('/auth/me', {
         credentials: 'include',
       })
 
-      console.log('📡 Admin: Resposta /auth/me:', response.status, response.statusText)
+      console.log(
+        '📡 Admin: Resposta /auth/me:',
+        response.status,
+        response.statusText,
+      )
 
       if (response.ok) {
         const data = await response.json()

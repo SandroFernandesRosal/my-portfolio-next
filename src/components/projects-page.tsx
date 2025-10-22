@@ -5,7 +5,7 @@ import Search from './search'
 import CarouselItems from './carouse-item'
 
 export default async function ProjectsPage() {
-  const response = await api('/products', {
+  const response = await api('/projects', {
     next: {
       revalidate: 1 * 1,
     },

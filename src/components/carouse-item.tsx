@@ -9,9 +9,14 @@ import { useSize, useDisplay, useSearch } from '@/store/useStore'
 import Project from './project'
 
 export default function CarouselItems({ projects }: ProjectArray) {
-  const { display } = useDisplay()
-  const { search } = useSearch()
-  const { size } = useSize()
+  const { display } = useDisplay() as { display: string }
+  const { search } = useSearch() as { search: string }
+  const { size } = useSize() as { size: string }
+
+  // Verificar se projects é um array
+  if (!Array.isArray(projects)) {
+    return <p className="flex justify-center">Carregando projetos...</p>
+  }
 
   const filteredProjects = projects.filter((project: ProjectProps) =>
     project.title.toLowerCase().includes(search.toLowerCase()),
@@ -79,11 +84,12 @@ export default function CarouselItems({ projects }: ProjectArray) {
                 video={project.video}
                 repo={project.repo}
                 page={project.page}
-                tecs={project.tecs}
+                technologies={project.technologies}
                 slug={project.slug}
-                imgs={project.imgs}
+                images={project.images}
                 featured={project.featured}
                 description={project.description}
+                dateProject={project.dateProject}
               />
             ))}
           </div>
@@ -98,11 +104,12 @@ export default function CarouselItems({ projects }: ProjectArray) {
                 video={project.video}
                 repo={project.repo}
                 page={project.page}
-                tecs={project.tecs}
+                technologies={project.technologies}
                 slug={project.slug}
-                imgs={project.imgs}
+                images={project.images}
                 featured={project.featured}
                 description={project.description}
+                dateProject={project.dateProject}
               />
             ))}
           </Slider>

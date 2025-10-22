@@ -5,11 +5,12 @@ export interface ProjectProps {
   video: string | null
   repo: string
   page: string
-  tecs: string[]
+  technologies: string[]
   slug: string
-  imgs: string[]
+  images: string[]
   featured: boolean
   description: string
+  dateProject: string | null
 }
 
 export interface ProjectArray {

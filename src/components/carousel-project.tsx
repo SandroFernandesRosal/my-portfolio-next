@@ -12,20 +12,24 @@ export interface ImgProps {
 export default function CarouselProject({ imgs }: ImgProps) {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     initialSlide: 0,
+    arrows: true,
+    fade: false,
+    cssEase: 'linear',
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true,
+          arrows: true,
         },
       },
       {
@@ -33,8 +37,9 @@ export default function CarouselProject({ imgs }: ImgProps) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true,
+          arrows: true,
         },
       },
       {
@@ -42,27 +47,31 @@ export default function CarouselProject({ imgs }: ImgProps) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true,
+          arrows: true,
         },
       },
     ],
   }
 
   return (
-    <Slider {...settings}>
-      {imgs.map((img: string, index: number) => (
-        <Image
-          key={index}
-          src={img}
-          alt={`Image ${index}`}
-          height={1200}
-          width={1200}
-          quality={100}
-          loading="lazy"
-          className=" object-cover aspect-[100/150] object-top "
-        />
-      ))}
-    </Slider>
+    <div className="w-full mx-auto">
+      <Slider {...settings}>
+        {imgs.map((img: string, index: number) => (
+          <div key={index} className="w-full flex place-items-center">
+            <Image
+              src={img}
+              alt={`Image ${index}`}
+              height={1200}
+              width={1200}
+              quality={100}
+              loading="lazy"
+              className="w-full   object-contain max-w-[700px]"
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
   )
 }

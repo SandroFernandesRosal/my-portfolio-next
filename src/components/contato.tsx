@@ -1,10 +1,10 @@
 'use client'
 import { useState, useRef, FormEvent, useLayoutEffect } from 'react'
-import emailjs from '@emailjs/browser'
 import { BiHappyAlt } from 'react-icons/bi'
 import Socials from './socials'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { api } from '@/data/api'
 
 export default function Contato() {
   const form = useRef<HTMLFormElement | null>(null)
@@ -14,43 +14,76 @@ export default function Contato() {
   const [assuntoInput, setAssuntoInput] = useState<string>('')
   const [textInput, setTextInput] = useState<string>('')
   const [alert, setAlert] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string>('')
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    console.log('🚀 FORMULÁRIO ENVIADO!')
+    setLoading(true)
+    setError('')
 
-    if (form.current) {
-      const emailjsId = process.env.NEXT_PUBLIC_EMAILJS_ID as string
-      const emailjsTemplate = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE as string
-      const emailjsPublicKey = process.env.NEXT_PUBLIC_PUBLICKEY as string
+    try {
+      console.log('Enviando dados:', {
+        nameInput,
+        emailInput,
+        assuntoInput,
+        textInput,
+      })
 
-      if (emailjsId && emailjsTemplate && emailjsPublicKey) {
-        emailjs
-          .sendForm(emailjsId, emailjsTemplate, form.current, emailjsPublicKey)
-          .then(
-            () => {
-              setAlert(true)
-              if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current)
-              }
-              timeoutRef.current = setTimeout(() => {
-                setAlert(false)
-              }, 2000)
-            },
-            (error) => {
-              setAlert(error.message)
-            },
-          )
+      // Teste simples primeiro
+      console.log('🧪 Testando conexão com API...')
+      const testResponse = await api('/health')
+      console.log('🏥 Health check:', testResponse.status)
+
+      const response = await api('/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: nameInput,
+          email: emailInput,
+          subject: assuntoInput,
+          message: textInput,
+        }),
+      })
+
+      console.log('📡 Resposta recebida:', response.status)
+
+      console.log('Resposta da API:', response.status)
+
+      const result = await response.json()
+      console.log('Resultado:', result)
+
+      if (result.success) {
+        console.log('Sucesso! Mostrando alerta')
+        setAlert(true)
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current)
+        }
+        timeoutRef.current = setTimeout(() => {
+          setAlert(false)
+        }, 3000)
+
+        // Limpar formulário
+        setNameInput('')
+        setEmailInput('')
+        setAssuntoInput('')
+        setTextInput('')
       } else {
-        console.error('Environment variables are missing')
+        console.log('Erro:', result.message)
+        setError(result.message || 'Erro ao enviar mensagem')
       }
+    } catch (err) {
+      console.error('Erro ao enviar mensagem:', err)
+      setError('Erro de conexão. Tente novamente.')
+    } finally {
+      console.log('Finalizando, loading:', false)
+      setLoading(false)
     }
-
-    setNameInput('')
-    setEmailInput('')
-    setAssuntoInput('')
-    setTextInput('')
   }
 
   const el = useRef<HTMLDivElement | null>(null)
@@ -104,9 +137,15 @@ export default function Contato() {
       </h1>
 
       {alert && (
-        <div className="flex items-center justify-center z-40 font-bold bg-bglightsecundary dark:bg-bgdarksecundary border-[1px] border-primary  rounded-md p-4">
-          Mensagem enviada com sucesso!{' '}
-          <BiHappyAlt className="text-[30px] text-primary" />
+        <div className="fixed top-4 right-4 z-50 flex items-center justify-center font-bold bg-green-500 text-white rounded-lg p-4 shadow-lg animate-pulse">
+          ✅ Mensagem enviada com sucesso!{' '}
+          <BiHappyAlt className="text-[30px] text-white ml-2" />
+        </div>
+      )}
+
+      {error && (
+        <div className="fixed top-4 right-4 z-50 flex items-center justify-center font-bold bg-red-500 text-white rounded-lg p-4 shadow-lg animate-pulse">
+          ❌ {error}
         </div>
       )}
 
@@ -169,9 +208,13 @@ export default function Contato() {
           <button
             type="submit"
             name="submit"
-            className="p-2 w-[25%] rounded-md self-center mt-2 border-[1px] border-zinc-400 dark:border-zinc-700 font-bold hover:border-primary dark:hover:border-primary"
+            disabled={loading}
+            onClick={() => console.log('🔘 Botão clicado!')}
+            className={`p-2 w-[25%] rounded-md self-center mt-2 border-[1px] border-zinc-400 dark:border-zinc-700 font-bold hover:border-primary dark:hover:border-primary ${
+              loading ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
           >
-            Enviar
+            {loading ? 'Enviando...' : 'Enviar'}
           </button>
         </form>
       </div>

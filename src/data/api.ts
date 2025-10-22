@@ -1,9 +1,25 @@
-import { env } from '@/env'
-
 export function api(path: string, init?: RequestInit) {
-  const baseUrl = env.NEXT_PUBLIC_API_BASE_URL
-  const apiPrefix = '/api'
-  const url = new URL(apiPrefix.concat(path), baseUrl)
+  const baseUrl = 'http://localhost:3333'
+  const url = new URL(path, baseUrl)
 
-  return fetch(url, init)
+  // Garantir que credentials seja sempre 'include' para enviar cookies
+  const options: RequestInit = {
+    credentials: 'include',
+    ...init,
+  }
+
+  // Para rotas de upload, adicionar token via header também
+  if (path.includes('/upload/')) {
+    // Pegar token do cookie
+    const cookies = document.cookie
+    const tokenMatch = cookies.match(/token=([^;]+)/)
+    if (tokenMatch) {
+      options.headers = {
+        ...options.headers,
+        Authorization: `Bearer ${tokenMatch[1]}`,
+      }
+    }
+  }
+
+  return fetch(url, options)
 }

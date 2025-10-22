@@ -4,8 +4,8 @@ import Project from './project'
 import { useDisplay, useSearch } from '@/store/useStore'
 
 export default function Projects({ projects }: ProjectArray) {
-  const { display } = useDisplay()
-  const { search } = useSearch()
+  const { display } = useDisplay() as { display: string }
+  const { search } = useSearch() as { search: string }
 
   const filteredProjects = projects.filter((project: ProjectProps) =>
     project.title.toLowerCase().includes(search.toLowerCase()),
@@ -29,11 +29,12 @@ export default function Projects({ projects }: ProjectArray) {
           video={project.video}
           repo={project.repo}
           page={project.page}
-          tecs={project.tecs}
+          technologies={project.technologies}
           slug={project.slug}
-          imgs={project.imgs}
+          images={project.images}
           featured={project.featured}
           description={project.description}
+          dateProject={project.dateProject}
         />
       ))}
     </ul>

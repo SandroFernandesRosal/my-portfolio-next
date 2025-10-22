@@ -9,9 +9,9 @@ import { useSize, useDisplay, useSearch } from '@/store/useStore'
 import Project from './project'
 
 export default function CarouselItems({ projects }: ProjectArray) {
-  const { display } = useDisplay() as { display: string }
-  const { search } = useSearch() as { search: string }
-  const { size } = useSize() as { size: string }
+  const { display } = useDisplay()
+  const { search } = useSearch()
+  const { size } = useSize()
 
   // Verificar se projects é um array
   if (!Array.isArray(projects)) {

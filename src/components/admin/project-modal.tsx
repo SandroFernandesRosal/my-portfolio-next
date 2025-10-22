@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { api } from '@/data/api'
 import { ProjectProps } from '@/data/types/projects'
 
@@ -383,9 +384,11 @@ export default function ProjectModal({
                   <p className="text-sm text-textlight dark:text-textdark opacity-70 mb-2">
                     Preview:
                   </p>
-                  <img
+                  <Image
                     src={coverPreview}
                     alt="Preview capa"
+                    width={160}
+                    height={96}
                     className="w-40 h-24 object-cover rounded border"
                   />
                 </div>
@@ -397,9 +400,11 @@ export default function ProjectModal({
                   <p className="text-sm text-textlight dark:text-textdark opacity-70 mb-2">
                     Capa atual:
                   </p>
-                  <img
+                  <Image
                     src={formData.img}
                     alt="Capa atual"
+                    width={160}
+                    height={96}
                     className="w-40 h-24 object-cover rounded border"
                   />
                 </div>
@@ -463,10 +468,12 @@ export default function ProjectModal({
                   </p>
                   <div className="flex gap-2 flex-wrap">
                     {carouselPreviews.map((preview, index) => (
-                      <img
+                      <Image
                         key={index}
                         src={preview}
                         alt={`Preview ${index + 1}`}
+                        width={80}
+                        height={64}
                         className="w-20 h-16 object-cover rounded border"
                       />
                     ))}
@@ -503,9 +510,11 @@ export default function ProjectModal({
                       <div className="flex gap-2 flex-wrap">
                         {formData.images.map((image, index) => (
                           <div key={index} className="relative group">
-                            <img
+                            <Image
                               src={image}
                               alt={`Foto ${index + 1}`}
+                              width={80}
+                              height={64}
                               className="w-20 h-16 object-cover rounded border"
                             />
                             <button

@@ -22,7 +22,8 @@ export function api(path: string, init?: RequestInit) {
   if (
     path.includes('/auth/') ||
     path.includes('/upload/') ||
-    path.includes('/projects')
+    path.includes('/projects') ||
+    path.includes('/admin')
   ) {
     // Pegar token do cookie (apenas no cliente)
     if (typeof window !== 'undefined') {

@@ -109,23 +109,25 @@ export default function AdminDashboard() {
 
   const handleToggleStatus = async (project: ProjectProps) => {
     try {
-      const response = await api(`/projects/${project.id}/toggle-status`, {
-        method: 'PATCH',
+      // Usa o mesmo endpoint de edição (PUT) para evitar CORS do PATCH
+      const nextStatus = !project.ativo
+      const response = await api(`/projects/${project.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ativo: nextStatus }),
         credentials: 'include',
       })
 
       if (response.ok) {
-        const updatedProject = await response.json()
+        const updated = await response.json()
         setProjects(
           projects.map((p) =>
-            p.id === project.id
-              ? { ...p, ativo: updatedProject.project.ativo }
-              : p,
+            p.id === project.id ? { ...p, ativo: updated.project.ativo } : p,
           ),
         )
         showToast(
           'success',
-          `Projeto ${updatedProject.project.ativo ? 'ativado' : 'desativado'} com sucesso!`,
+          `Projeto ${nextStatus ? 'ativado' : 'desativado'} com sucesso!`,
         )
       } else {
         showToast('error', 'Erro ao alterar status do projeto')

@@ -90,6 +90,7 @@ export default function CarouselItems({ projects }: ProjectArray) {
                 featured={project.featured}
                 description={project.description}
                 dateProject={project.dateProject}
+                ativo={project.ativo}
               />
             ))}
           </div>
@@ -110,6 +111,7 @@ export default function CarouselItems({ projects }: ProjectArray) {
                 featured={project.featured}
                 description={project.description}
                 dateProject={project.dateProject}
+                ativo={project.ativo}
               />
             ))}
           </Slider>

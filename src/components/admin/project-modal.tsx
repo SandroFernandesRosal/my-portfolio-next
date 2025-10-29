@@ -24,6 +24,7 @@ export default function ProjectModal({
     repo: '',
     page: '',
     featured: false,
+    ativo: true,
     dateProject: '',
     technologies: [] as string[],
     images: [] as string[],
@@ -61,6 +62,7 @@ export default function ProjectModal({
         repo: project.repo || '',
         page: project.page || '',
         featured: project.featured,
+        ativo: project.ativo,
         dateProject: formattedDate,
         technologies: project.technologies || [],
         images: project.images || [],
@@ -156,6 +158,7 @@ export default function ProjectModal({
             method: 'POST',
             body: carouselFormData,
             credentials: 'include',
+            // Não definir Content-Type - deixar o browser definir automaticamente para FormData
           },
         )
 
@@ -693,6 +696,19 @@ export default function ProjectModal({
               />
               <label className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
                 Projeto em destaque
+              </label>
+            </div>
+
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                name="ativo"
+                checked={formData.ativo}
+                onChange={handleInputChange}
+                className="h-4 w-4 text-green-600 focus:ring-green-600 border-gray-300 rounded"
+              />
+              <label className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
+                Projeto ativo (visível no portfólio)
               </label>
             </div>
 

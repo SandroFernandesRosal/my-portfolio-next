@@ -9,6 +9,7 @@ export interface ProjectProps {
   slug: string
   images: string[]
   featured: boolean
+  ativo: boolean
   description: string
   dateProject: string | null
 }

@@ -33,9 +33,7 @@ interface SlugProps {
 
 async function getProduct(slug: string): Promise<ProjectProps> {
   const response = await api(`/projects/${slug}`, {
-    next: {
-      revalidate: 1 * 1,
-    },
+    cache: 'no-store',
   })
 
   const project = await response.json()
@@ -45,7 +43,7 @@ async function getProduct(slug: string): Promise<ProjectProps> {
 
 export async function generateStaticParams() {
   const response = await api('/projects', {
-    next: { revalidate: 60 },
+    cache: 'no-store',
   })
 
   const products = await response.json()

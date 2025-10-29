@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { api } from '@/data/api'
 
 export default function AdminLogin() {
@@ -9,44 +9,18 @@ export default function AdminLogin() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  // Verificar se já está autenticado
-  useEffect(() => {
-    checkAuth()
-  }, [])
-
-  const checkAuth = async () => {
-    try {
-      console.log('🔍 Verificando autenticação...')
-      console.log('🍪 Cookies atuais:', document.cookie)
-
-      const response = await api('/auth/me', {
-        credentials: 'include',
-      })
-
-      console.log('📡 Resposta /auth/me:', response.status, response.statusText)
-      console.log('📋 Headers da resposta:', response.headers)
-
-      if (response.ok) {
-        const data = await response.json()
-        console.log('✅ Usuário autenticado:', data)
-        // Se já está autenticado, redirecionar para o admin
-        window.location.href = '/admin'
-      } else {
-        console.log('❌ Usuário não autenticado')
-      }
-    } catch (error) {
-      // Se não está autenticado, continuar na página de login
-      console.log('❌ Erro na verificação de autenticação:', error)
-    }
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setError('')
 
     try {
-      console.log('Tentando fazer login...', { email, password: '***' })
+      // Limpar TODOS os cookies antes do login
+      document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+      document.cookie =
+        'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=localhost;'
+      document.cookie =
+        'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.localhost;'
 
       const response = await api('/auth/login', {
         method: 'POST',
@@ -57,23 +31,21 @@ export default function AdminLogin() {
         credentials: 'include',
       })
 
-      console.log('Resposta do login:', response.status, response.statusText)
-      console.log('Headers da resposta:', response.headers)
-      console.log('Cookies recebidos:', document.cookie)
-
       if (response.ok) {
-        const data = await response.json()
-        console.log('Dados do login:', data)
-        console.log('Login bem-sucedido, redirecionando...')
-        // Redirecionar para o dashboard
-        window.location.href = '/admin'
+        console.log('✅ Login successful!')
+        console.log('🍪 Cookies after login:', document.cookie)
+        console.log('📋 Response headers:', response.headers)
+
+        // Aguardar um pouco para o cookie ser definido
+        setTimeout(() => {
+          console.log('🍪 Cookies after timeout:', document.cookie)
+          window.location.href = '/admin'
+        }, 500)
       } else {
         const data = await response.json()
-        console.error('Erro no login:', data)
         setError(data.message || 'Erro ao fazer login')
       }
     } catch (error) {
-      console.error('Erro de conexão:', error)
       setError('Erro de conexão. Tente novamente.')
     } finally {
       setLoading(false)
@@ -90,6 +62,16 @@ export default function AdminLogin() {
           <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
             Faça login para acessar o dashboard
           </p>
+          <button
+            onClick={() => {
+              document.cookie =
+                'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+              window.location.reload()
+            }}
+            className="mt-2 text-xs text-blue-600 hover:text-blue-800 underline"
+          >
+            Limpar cookies
+          </button>
         </div>
 
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

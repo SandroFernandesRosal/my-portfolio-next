@@ -6,9 +6,7 @@ import CarouselItems from './carouse-item'
 
 export default async function ProjectsPage() {
   const response = await api('/projects', {
-    next: {
-      revalidate: 1 * 1,
-    },
+    cache: 'no-store', // Sem cache para garantir dados atualizados
   })
 
   const projects = await response.json()

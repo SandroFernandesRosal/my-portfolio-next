@@ -116,14 +116,16 @@ export default function AdminDashboard() {
 
       if (response.ok) {
         const updatedProject = await response.json()
-        setProjects(projects.map(p => 
-          p.id === project.id 
-            ? { ...p, ativo: updatedProject.project.ativo }
-            : p
-        ))
+        setProjects(
+          projects.map((p) =>
+            p.id === project.id
+              ? { ...p, ativo: updatedProject.project.ativo }
+              : p,
+          ),
+        )
         showToast(
-          'success', 
-          `Projeto ${updatedProject.project.ativo ? 'ativado' : 'desativado'} com sucesso!`
+          'success',
+          `Projeto ${updatedProject.project.ativo ? 'ativado' : 'desativado'} com sucesso!`,
         )
       } else {
         showToast('error', 'Erro ao alterar status do projeto')
@@ -273,11 +275,13 @@ export default function AdminDashboard() {
                     Destaque
                   </div>
                 )}
-                <div className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-medium ${
-                  project.ativo 
-                    ? 'bg-green-500 text-white' 
-                    : 'bg-red-500 text-white'
-                }`}>
+                <div
+                  className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-medium ${
+                    project.ativo
+                      ? 'bg-green-500 text-white'
+                      : 'bg-red-500 text-white'
+                  }`}
+                >
                   {project.ativo ? 'Ativo' : 'Inativo'}
                 </div>
               </div>
@@ -340,8 +344,8 @@ export default function AdminDashboard() {
                   <button
                     onClick={() => handleToggleStatus(project)}
                     className={`transition-colors ${
-                      project.ativo 
-                        ? 'text-orange-600 hover:text-orange-800' 
+                      project.ativo
+                        ? 'text-orange-600 hover:text-orange-800'
                         : 'text-green-600 hover:text-green-800'
                     }`}
                     title={project.ativo ? 'Desativar' : 'Ativar'}

@@ -125,6 +125,7 @@ export default function ProjectsLine({ projects }: ProjectArray) {
                 featured={project.featured}
                 description={project.description}
                 dateProject={project.dateProject}
+                ativo={project.ativo}
               />
             ))}
           </ul>

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Menu from './menu'
 import ChangeTheme from './change-theme'
 import ItensMenu from './itens-menu'
+import UserAvatar from './user-avatar'
 import { FaWhatsapp } from 'react-icons/fa'
 
 export default function Header() {
@@ -36,6 +37,10 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex">
             <ChangeTheme />
+          </div>
+
+          <div className="hidden md:block">
+            <UserAvatar />
           </div>
 
           <Menu />

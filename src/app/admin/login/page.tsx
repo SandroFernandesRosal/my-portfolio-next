@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { api } from '@/data/api'
 
 export default function AdminLogin() {
@@ -8,6 +9,31 @@ export default function AdminLogin() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [checkingAuth, setCheckingAuth] = useState(true)
+
+  // Verificar se já está autenticado ao carregar a página
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const response = await api('/auth/me', {
+          credentials: 'include',
+        })
+
+        if (response.ok) {
+          // Usuário já está autenticado, redirecionar para o dashboard
+          window.location.href = '/admin'
+        } else {
+          // Usuário não está autenticado, pode mostrar a página de login
+          setCheckingAuth(false)
+        }
+      } catch (error) {
+        // Erro na verificação, pode mostrar a página de login
+        setCheckingAuth(false)
+      }
+    }
+
+    checkAuth()
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -52,32 +78,44 @@ export default function AdminLogin() {
     }
   }
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
-      <div className="max-w-md w-full space-y-8 p-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
-            Admin Login
-          </h2>
-          <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
-            Faça login para acessar o dashboard
-          </p>
-          <button
-            onClick={() => {
-              document.cookie =
-                'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
-              window.location.reload()
-            }}
-            className="mt-2 text-xs text-blue-600 hover:text-blue-800 underline"
-          >
-            Limpar cookies
-          </button>
-        </div>
+  // Mostrar loading enquanto verifica autenticação
+  if (checkingAuth) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-bglight dark:bg-bgdark">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    )
+  }
 
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm -space-y-px">
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-bglight dark:bg-bgdark px-4 py-12">
+      <div className="w-full max-w-md">
+        {/* Card Container */}
+        <div className="bg-bglightsecondary dark:bg-bgdarksecondary rounded-2xl  p-8 md:p-10 border border-zinc-300 dark:border-zinc-700">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="flex justify-center mb-4">
+              <Image
+                src="/logo1.png"
+                alt="Logo"
+                width={80}
+                height={80}
+                className="object-contain"
+              />
+            </div>
+            <h2 className="text-4xl font-extrabold text-textlight dark:text-textdark mb-3">
+              Login
+            </h2>
+          </div>
+
+          {/* Form */}
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            {/* Email Input */}
             <div>
-              <label htmlFor="email" className="sr-only">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-textlight dark:text-textdark mb-2"
+              >
                 Email
               </label>
               <input
@@ -86,14 +124,19 @@ export default function AdminLogin() {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-t-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
-                placeholder="Email"
+                className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-bglight dark:bg-bgdark text-textlight dark:text-textdark placeholder-zinc-500 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                placeholder="seu@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+
+            {/* Password Input */}
             <div>
-              <label htmlFor="password" className="sr-only">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-textlight dark:text-textdark mb-2"
+              >
                 Senha
               </label>
               <input
@@ -102,32 +145,37 @@ export default function AdminLogin() {
                 type="password"
                 autoComplete="current-password"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-b-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
-                placeholder="Senha"
+                className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-bglight dark:bg-bgdark text-textlight dark:text-textdark placeholder-zinc-500 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-          </div>
 
-          {error && (
-            <div className="text-red-600 text-sm text-center">{error}</div>
-          )}
+            {/* Error Message */}
+            {error && (
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 px-4 py-3 rounded-lg text-sm text-center">
+                {error}
+              </div>
+            )}
 
-          <div>
+            {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 px-4 rounded-lg bg-primary hover:bg-[#059669] text-white font-semibold text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-bgdarksecondary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               {loading ? (
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                <div className="flex items-center justify-center">
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                  <span className="ml-2">Entrando...</span>
+                </div>
               ) : (
                 'Entrar'
               )}
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   )

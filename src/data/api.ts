@@ -31,9 +31,22 @@ export function api(path: string, init?: RequestInit) {
       const tokenMatch = cookies.match(/token=([^;]+)/)
 
       if (tokenMatch) {
-        options.headers = {
-          ...options.headers,
-          Authorization: `Bearer ${tokenMatch[1]}`,
+        // Se for FormData, não definir Content-Type (deixa o navegador fazer)
+        const isFormData = init?.body instanceof FormData
+        const existingHeaders = options.headers || {}
+        
+        // Remover Content-Type se for FormData (navegador define automaticamente)
+        if (isFormData && 'Content-Type' in existingHeaders) {
+          const { 'Content-Type': _, ...headersWithoutContentType } = existingHeaders as Record<string, string>
+          options.headers = {
+            ...headersWithoutContentType,
+            Authorization: `Bearer ${tokenMatch[1]}`,
+          }
+        } else {
+          options.headers = {
+            ...existingHeaders,
+            Authorization: `Bearer ${tokenMatch[1]}`,
+          }
         }
       }
     }

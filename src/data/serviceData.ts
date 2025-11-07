@@ -1,9 +1,9 @@
 export const servicesData = [
   {
     id: 1,
-    title: 'Site responsivo',
+    title: 'Sistemas personalizados',
     description:
-      'Crie uma conexão marcante com seu público através de sites elegantes e funcionais, otimizados para todos os tamanhos de tela. Oferecemos soluções personalizadas que combinam design moderno, desempenho eficiente e compatibilidade com qualquer dispositivo.',
+      'Desenvolvo sistemas completos e totalmente personalizados para negócio, com integração de inteligência artificial e WhatsApp. Soluções sob medida que automatizam processos, otimizam vendas e transformam a gestão do seu negócio através de tecnologia de ponta.',
     icon: 'site',
   },
   {

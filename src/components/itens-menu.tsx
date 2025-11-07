@@ -1,4 +1,9 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { api } from '@/data/api'
+import { UserCircle, Settings, Star, FolderOpen, Mail, HelpCircle } from 'lucide-react'
 
 export interface MenuProps {
   menu: boolean
@@ -6,76 +11,95 @@ export interface MenuProps {
 }
 
 export default function ItensMenu({ menu, handleMenu }: MenuProps) {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [checkingAuth, setCheckingAuth] = useState(true)
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const response = await api('/auth/me', {
+          credentials: 'include',
+        })
+
+        if (response.ok) {
+          setIsAuthenticated(true)
+        } else {
+          setIsAuthenticated(false)
+        }
+      } catch (error) {
+        setIsAuthenticated(false)
+      } finally {
+        setCheckingAuth(false)
+      }
+    }
+
+    checkAuth()
+  }, [])
   return (
     <ul
-      className={`w-full md:w-auto text-2xl md:text-xl gap-3 md:text-md ${!menu ? 'hidden' : 'flex flex-col'} md:flex md:items-center`}
+      className={`w-full md:w-auto text-2xl md:text-base gap-2 md:gap-6 ${!menu ? 'hidden' : 'flex flex-col'} md:flex md:items-center md:flex-row`}
     >
-      <li className="flex justify-center cursor-pointer">
+      <li className="w-full px-4 md:px-0">
         <Link
           onClick={handleMenu}
           href={'/sobre'}
-          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
+          className="flex items-center gap-3 px-4 py-3 text-sm md:text-base md:px-0 md:py-2 text-textlight dark:text-textdark border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary from-bglight via-bglightsecondary to-bglightsecondary hover:border-primary dark:hover:border-primary transition-all duration-200 md:border-none md:bg-none md:hover:bg-none md:hover:text-primary md:relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:w-0 md:after:h-[2px] md:after:bg-primary md:after:transition-all md:after:duration-200 md:hover:after:w-full"
         >
-          <span className="text-primary md:hidden text-2xl">&#123;</span>Sobre
-          <span className="text-primary md:hidden text-2xl">&#125;</span>
+          <UserCircle size={18} className="md:hidden" />
+          <span>Sobre</span>
         </Link>
       </li>
 
-      <li className="flex justify-center cursor-pointer">
+      <li className="w-full px-4 md:px-0">
         <Link
           onClick={handleMenu}
           href={'/#serviços'}
-          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
+          className="flex items-center gap-3 px-4 py-3 text-sm md:text-base md:px-0 md:py-2 text-textlight dark:text-textdark border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary from-bglight via-bglightsecondary to-bglightsecondary hover:border-primary dark:hover:border-primary transition-all duration-200 md:border-none md:bg-none md:hover:bg-none md:hover:text-primary md:relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:w-0 md:after:h-[2px] md:after:bg-primary md:after:transition-all md:after:duration-200 md:hover:after:w-full"
         >
-          <span className="text-primary md:hidden text-2xl">&#123;</span>
-          Serviços
-          <span className="text-primary md:hidden text-2xl">&#125;</span>
+          <Settings size={18} className="md:hidden" />
+          <span>Serviços</span>
         </Link>
       </li>
 
-      <li className="flex justify-center cursor-pointer">
+      <li className="w-full px-4 md:px-0">
         <Link
           onClick={handleMenu}
           href={'/#beneficios'}
-          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
+          className="flex items-center gap-3 px-4 py-3 text-sm md:text-base md:px-0 md:py-2 text-textlight dark:text-textdark border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary from-bglight via-bglightsecondary to-bglightsecondary hover:border-primary dark:hover:border-primary transition-all duration-200 md:border-none md:bg-none md:hover:bg-none md:hover:text-primary md:relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:w-0 md:after:h-[2px] md:after:bg-primary md:after:transition-all md:after:duration-200 md:hover:after:w-full"
         >
-          <span className="text-primary md:hidden text-2xl">&#123;</span>
-          Beneficios
-          <span className="text-primary md:hidden text-2xl">&#125;</span>
+          <Star size={18} className="md:hidden" />
+          <span>Beneficios</span>
         </Link>
       </li>
 
-      <li className="flex justify-center cursor-pointer">
+      <li className="w-full px-4 md:px-0">
         <Link
           onClick={handleMenu}
           href={'/#projetos'}
-          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
+          className="flex items-center gap-3 px-4 py-3 text-sm md:text-base md:px-0 md:py-2 text-textlight dark:text-textdark border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary from-bglight via-bglightsecondary to-bglightsecondary hover:border-primary dark:hover:border-primary transition-all duration-200 md:border-none md:bg-none md:hover:bg-none md:hover:text-primary md:relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:w-0 md:after:h-[2px] md:after:bg-primary md:after:transition-all md:after:duration-200 md:hover:after:w-full"
         >
-          <span className="text-primary md:hidden text-2xl">&#123;</span>
-          Projetos
-          <span className="text-primary md:hidden text-2xl">&#125;</span>
+          <FolderOpen size={18} className="md:hidden" />
+          <span>Projetos</span>
         </Link>
       </li>
-      <li className="flex justify-center cursor-pointer">
+      <li className="w-full px-4 md:px-0">
         <Link
           onClick={handleMenu}
           href={'/#contato'}
-          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
+          className="flex items-center gap-3 px-4 py-3 text-sm md:text-base md:px-0 md:py-2 text-textlight dark:text-textdark border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary from-bglight via-bglightsecondary to-bglightsecondary hover:border-primary dark:hover:border-primary transition-all duration-200 md:border-none md:bg-none md:hover:bg-none md:hover:text-primary md:relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:w-0 md:after:h-[2px] md:after:bg-primary md:after:transition-all md:after:duration-200 md:hover:after:w-full"
         >
-          <span className="text-primary md:hidden text-2xl">&#123;</span>
-          Contato
-          <span className="text-primary md:hidden text-2xl">&#125;</span>
+          <Mail size={18} className="md:hidden" />
+          <span>Contato</span>
         </Link>
       </li>
-      <li className="flex justify-center cursor-pointer">
+      <li className="w-full px-4 md:px-0">
         <Link
           onClick={handleMenu}
           href={'/#faq'}
-          className=" md:hover:text-primary border-[1px] md:border-none rounded-md px-2 md:px-0 flex gap-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary md:bg-none hover:border-primary hover:border-[1px] dark:hover:border-primary"
+          className="flex items-center gap-3 px-4 py-3 text-sm md:text-base md:px-0 md:py-2 text-textlight dark:text-textdark border-[1px] border-zinc-400 dark:border-zinc-700 rounded-md bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary from-bglight via-bglightsecondary to-bglightsecondary hover:border-primary dark:hover:border-primary transition-all duration-200 md:border-none md:bg-none md:hover:bg-none md:hover:text-primary md:relative md:after:absolute md:after:bottom-0 md:after:left-0 md:after:w-0 md:after:h-[2px] md:after:bg-primary md:after:transition-all md:after:duration-200 md:hover:after:w-full"
         >
-          <span className="text-primary md:hidden text-2xl">&#123;</span>
-          Dúvidas
-          <span className="text-primary md:hidden text-2xl">&#125;</span>
+          <HelpCircle size={18} className="md:hidden" />
+          <span>Dúvidas</span>
         </Link>
       </li>
     </ul>

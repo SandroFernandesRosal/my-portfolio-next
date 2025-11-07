@@ -175,22 +175,6 @@ export default function AdminDashboard() {
     )
   }
 
-  const handleLogout = async () => {
-    try {
-      await api('/auth/logout', {
-        method: 'POST',
-        credentials: 'include',
-      })
-
-      // Redirecionar para login
-      window.location.href = '/admin/login'
-    } catch (error) {
-      console.error('Erro ao fazer logout:', error)
-      // Mesmo com erro, redirecionar para login
-      window.location.href = '/admin/login'
-    }
-  }
-
   if (!isAuthenticated) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bglight dark:bg-bgdark">
@@ -220,16 +204,16 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-bglight dark:bg-bgdark">
       {/* Header */}
-      <div className="pt-20">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="pt-20 w-full md:px-5">
+        <div className="max-w-7xl lg:mx-auto mx-5 px-5  py-4 rounded-2xl bg-bglightsecondary dark:bg-bgdarksecondary border border-zinc-300 dark:border-zinc-700">
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col">
               <h1 className="text-2xl font-bold text-textlight dark:text-textdark">
-                Dashboard
+                Projetos
               </h1>
-              <span className="text-sm text-textlight dark:text-textdark opacity-60">
-                Gerenciar Projetos
-              </span>
+              <p className="text-sm text-textlight dark:text-textdark opacity-60">
+                {projects.length} projetos
+              </p>
             </div>
             <div className="flex items-center gap-4">
               <button
@@ -238,19 +222,13 @@ export default function AdminDashboard() {
               >
                 + Novo Projeto
               </button>
-              <button
-                onClick={handleLogout}
-                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-200 font-medium"
-              >
-                Sair
-              </button>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="max-w-7xl mx-5 lg:mx-auto py-6 md:px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {projects.map((project) => (
             <div

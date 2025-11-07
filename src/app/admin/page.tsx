@@ -204,7 +204,7 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-bglight dark:bg-bgdark">
       {/* Header */}
-      <div className="pt-20 w-full md:px-5">
+      <div className="pt-24 w-full md:px-5">
         <div className="max-w-7xl lg:mx-auto mx-5 px-5  py-4 rounded-2xl bg-bglightsecondary dark:bg-bgdarksecondary border border-zinc-300 dark:border-zinc-700">
           <div className="flex justify-between items-center">
             <div className="flex flex-col">
@@ -228,8 +228,8 @@ export default function AdminDashboard() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-5 lg:mx-auto py-6 md:px-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="max-w-7xl  lg:mx-auto py-6 px-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {projects.map((project) => (
             <div
               key={project.id}

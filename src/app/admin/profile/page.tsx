@@ -112,7 +112,13 @@ export default function ProfilePage() {
     if (!file) return
 
     // Validar tipo de arquivo
-    const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/gif']
+    const allowedTypes = [
+      'image/jpeg',
+      'image/jpg',
+      'image/png',
+      'image/webp',
+      'image/gif',
+    ]
     if (!allowedTypes.includes(file.type)) {
       setError('Tipo de arquivo não permitido. Use: JPEG, PNG, WebP ou GIF')
       return
@@ -132,14 +138,11 @@ export default function ProfilePage() {
       const uploadFormData = new FormData()
       uploadFormData.append('file', file)
 
-      const uploadResponse = await api(
-        '/upload/image?folder=users/profile',
-        {
-          method: 'POST',
-          body: uploadFormData,
-          credentials: 'include',
-        },
-      )
+      const uploadResponse = await api('/upload/image?folder=users/profile', {
+        method: 'POST',
+        body: uploadFormData,
+        credentials: 'include',
+      })
 
       if (uploadResponse.ok) {
         const uploadResult = await uploadResponse.json()
@@ -244,7 +247,9 @@ export default function ProfilePage() {
                   <>
                     <Upload size={18} />
                     <span>
-                      {formData.imageUrl ? 'Alterar Imagem' : 'Selecionar Imagem'}
+                      {formData.imageUrl
+                        ? 'Alterar Imagem'
+                        : 'Selecionar Imagem'}
                     </span>
                   </>
                 )}
@@ -310,7 +315,6 @@ export default function ProfilePage() {
               />
             </div>
 
-
             {/* Submit Button */}
             <div className="flex gap-4">
               <button
@@ -345,4 +349,3 @@ export default function ProfilePage() {
     </div>
   )
 }
-

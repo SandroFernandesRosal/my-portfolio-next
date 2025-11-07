@@ -4,7 +4,12 @@ import Image from 'next/image'
 import { ProjectProps } from '@/data/types/projects'
 import { useSize, useSearch } from '@/store/useStore'
 
-export default function Project({ slug, title, img, dateProject }: ProjectProps) {
+export default function Project({
+  slug,
+  title,
+  img,
+  dateProject,
+}: ProjectProps) {
   const { size } = useSize()
   const { search } = useSearch()
 

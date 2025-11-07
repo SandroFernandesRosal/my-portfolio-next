@@ -34,10 +34,12 @@ export function api(path: string, init?: RequestInit) {
         // Se for FormData, não definir Content-Type (deixa o navegador fazer)
         const isFormData = init?.body instanceof FormData
         const existingHeaders = options.headers || {}
-        
+
         // Remover Content-Type se for FormData (navegador define automaticamente)
         if (isFormData && 'Content-Type' in existingHeaders) {
-          const { 'Content-Type': _, ...headersWithoutContentType } = existingHeaders as Record<string, string>
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          const { 'Content-Type': _, ...headersWithoutContentType } =
+            existingHeaders as Record<string, string>
           options.headers = {
             ...headersWithoutContentType,
             Authorization: `Bearer ${tokenMatch[1]}`,

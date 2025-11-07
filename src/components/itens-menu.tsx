@@ -3,7 +3,14 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { api } from '@/data/api'
-import { UserCircle, Settings, Star, FolderOpen, Mail, HelpCircle } from 'lucide-react'
+import {
+  UserCircle,
+  Settings,
+  Star,
+  FolderOpen,
+  Mail,
+  HelpCircle,
+} from 'lucide-react'
 
 export interface MenuProps {
   menu: boolean
@@ -11,7 +18,9 @@ export interface MenuProps {
 }
 
 export default function ItensMenu({ menu, handleMenu }: MenuProps) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isAuthenticated, setIsAuthenticated] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [checkingAuth, setCheckingAuth] = useState(true)
 
   useEffect(() => {

@@ -181,10 +181,16 @@ export default async function ProjectPage({ params }: SlugProps) {
                       <FaTools className="text-6xl text-primary" />
                     )}
                     {tec === 'N8N' && (
-                      <Workflow className="text-6xl text-primary" style={{ width: '3.75rem', height: '3.75rem' }} />
+                      <Workflow
+                        className="text-6xl text-primary"
+                        style={{ width: '3.75rem', height: '3.75rem' }}
+                      />
                     )}
                     {tec === 'Evolution-API' && (
-                      <MessageSquare className="text-6xl text-primary" style={{ width: '3.75rem', height: '3.75rem' }} />
+                      <MessageSquare
+                        className="text-6xl text-primary"
+                        style={{ width: '3.75rem', height: '3.75rem' }}
+                      />
                     )}
                   </li>
                 )

@@ -45,7 +45,6 @@ export default function AdminDashboard() {
       })
 
       if (response.ok) {
-        const data = await response.json()
         setIsAuthenticated(true)
       } else {
         // Redirecionar para login se não autenticado

@@ -167,10 +167,16 @@ export default function ProjectViewModal({
                           <FaTools className="text-4xl text-primary" />
                         )}
                         {tec === 'N8N' && (
-                          <Workflow className="text-4xl text-primary" style={{ width: '2.5rem', height: '2.5rem' }} />
+                          <Workflow
+                            className="text-4xl text-primary"
+                            style={{ width: '2.5rem', height: '2.5rem' }}
+                          />
                         )}
                         {tec === 'Evolution-API' && (
-                          <MessageSquare className="text-4xl text-primary" style={{ width: '2.5rem', height: '2.5rem' }} />
+                          <MessageSquare
+                            className="text-4xl text-primary"
+                            style={{ width: '2.5rem', height: '2.5rem' }}
+                          />
                         )}
                       </li>
                     )

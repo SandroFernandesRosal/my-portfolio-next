@@ -31,5 +31,13 @@ export function api(path: string, init?: RequestInit) {
     }
   }
 
-  return fetch(url, options)
+  return fetch(url, options).then((response) => {
+    // Para rotas de autenticação, 401 é esperado quando não autenticado
+    // Não logar como erro no console
+    if (path.includes('/auth/me') && response.status === 401) {
+      // Retornar response normalmente, mas não deixar o navegador logar como erro
+      return response
+    }
+    return response
+  })
 }

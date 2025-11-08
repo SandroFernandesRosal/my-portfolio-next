@@ -2,6 +2,7 @@ import Resume from '@/components/resume'
 import Skills from '@/components/skills'
 
 import TimeLine from '@/components/timeline'
+import Experiences from '@/components/experiences'
 
 export default function Sobre() {
   return (
@@ -11,14 +12,25 @@ export default function Sobre() {
 
       <h1
         id="projetos"
-        className="text-2xl border-[1px] flex items-center  gap-2 justify-center rounded-md px-2 border-zinc-400 dark:border-zinc-700 bg-bglight dark:bg-bgdark bg-gradient-to-r dark:from-bgdark dark:via-bgdarksecondary dark:to-bgdarksecondary  from-bglight via-bglightsecondary to-bglightsecondary mb-10"
+        className="md:text-4xl text-2xl flex items-center gap-2 justify-center rounded-md px-2 mb-10"
       >
-        <span className="text-primary text-2xl">&#123;</span> Formação
-        <span className="text-primary text-2xl">&#125;</span>
+        <span className="text-primary text-2xl md:text-4xl">&#123;</span>{' '}
+        Formação
+        <span className="text-primary text-2xl md:text-4xl">&#125;</span>
       </h1>
 
       <div className="flex pb-10 w-full justify-center">
         <TimeLine />
+      </div>
+
+      <h1 className="md:text-4xl text-2xl flex items-center gap-2 justify-center rounded-md px-2 mb-10">
+        <span className="text-primary text-2xl md:text-4xl">&#123;</span>{' '}
+        Experiência
+        <span className="text-primary text-2xl md:text-4xl">&#125;</span>
+      </h1>
+
+      <div className="flex pb-10 w-full justify-center">
+        <Experiences />
       </div>
     </section>
   )

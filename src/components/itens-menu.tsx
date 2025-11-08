@@ -1,8 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { api } from '@/data/api'
 import {
   UserCircle,
   Settings,
@@ -18,34 +16,6 @@ export interface MenuProps {
 }
 
 export default function ItensMenu({ menu, handleMenu }: MenuProps) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [checkingAuth, setCheckingAuth] = useState(true)
-
-  useEffect(() => {
-    const checkAuth = async () => {
-      try {
-        const response = await api('/auth/me', {
-          credentials: 'include',
-        })
-
-        if (response.ok) {
-          setIsAuthenticated(true)
-        } else {
-          // Não autenticado - não é erro, apenas definir estado
-          setIsAuthenticated(false)
-        }
-      } catch (error) {
-        // Silenciar erros de autenticação - são esperados quando não logado
-        setIsAuthenticated(false)
-      } finally {
-        setCheckingAuth(false)
-      }
-    }
-
-    checkAuth()
-  }, [])
   return (
     <ul
       className={`w-full md:w-auto text-2xl md:text-base gap-2 md:gap-6 ${!menu ? 'hidden' : 'flex flex-col'} md:flex md:items-center md:flex-row`}

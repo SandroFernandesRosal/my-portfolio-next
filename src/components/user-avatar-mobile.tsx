@@ -1,46 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { api } from '@/data/api'
+import { useAuth } from '@/contexts/auth-context'
 import { LogOut, User, LayoutDashboard } from 'lucide-react'
 
-interface UserData {
-  id: string
-  email: string
-  name: string
-  imageUrl: string | null
-}
-
 export default function UserAvatarMobile() {
-  const [user, setUser] = useState<UserData | null>(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await api('/auth/me', {
-          credentials: 'include',
-        })
-
-        if (response.ok) {
-          const data = await response.json()
-          setUser(data)
-        } else {
-          // Usuário não autenticado - não é erro, apenas não mostrar o avatar
-          setUser(null)
-        }
-      } catch (error) {
-        // Silenciar erros de autenticação - são esperados quando não logado
-        setUser(null)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchUser()
-  }, [])
+  const { user, loading } = useAuth()
 
   const handleLogout = async () => {
     try {

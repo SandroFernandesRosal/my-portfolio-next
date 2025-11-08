@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 
 import './globals.css'
 import { ThemeProviders } from './theme-provider'
+import { AuthProvider } from '@/contexts/auth-context'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 
@@ -37,11 +38,13 @@ export default function RootLayout({
         className={`${roboto.variable} ${msmadi.variable}   overflow-x-hidden `}
       >
         <ThemeProviders>
-          <Header />
+          <AuthProvider>
+            <Header />
 
-          {children}
-          <Analytics />
-          <Footer />
+            {children}
+            <Analytics />
+            <Footer />
+          </AuthProvider>
         </ThemeProviders>
       </body>
     </html>

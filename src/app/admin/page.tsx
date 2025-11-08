@@ -40,31 +40,15 @@ export default function AdminDashboard() {
 
   const checkAuth = async () => {
     try {
-      console.log('🔍 Admin: Verificando autenticação...')
-      console.log('🍪 Admin: Cookies atuais:', document.cookie)
-
       const response = await api('/auth/me', {
         credentials: 'include',
       })
 
-      console.log(
-        '📡 Admin: Resposta /auth/me:',
-        response.status,
-        response.statusText,
-      )
-
       if (response.ok) {
         const data = await response.json()
-        console.log('✅ Admin: Usuário autenticado:', data)
         setIsAuthenticated(true)
       } else {
-        const data = await response.json()
-        console.log('❌ Admin: Erro de autenticação:', data)
-
         // Redirecionar para login se não autenticado
-        if (data.code === 'TOKEN_EXPIRED') {
-          console.log('⏰ Admin: Token expirado, redirecionando para login...')
-        }
         window.location.href = '/admin/login'
       }
     } catch (error) {

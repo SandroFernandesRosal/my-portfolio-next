@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { api } from '@/data/api'
@@ -17,7 +16,6 @@ interface UserData {
 export default function UserAvatarMobile() {
   const [user, setUser] = useState<UserData | null>(null)
   const [loading, setLoading] = useState(true)
-  const router = useRouter()
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -46,10 +44,11 @@ export default function UserAvatarMobile() {
         method: 'POST',
         credentials: 'include',
       })
-      router.push('/')
-      router.refresh()
+      window.location.href = '/admin/login'
     } catch (error) {
       console.error('Erro ao fazer logout:', error)
+      // Mesmo em caso de erro, redirecionar para login
+      window.location.href = '/admin/login'
     }
   }
 

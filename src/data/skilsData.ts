@@ -146,4 +146,16 @@ export const skillsData = [
     icon: 'Kanban',
     type: 'tools',
   },
+  {
+    id: 25,
+    name: 'N8N',
+    icon: 'N8N',
+    type: 'tools',
+  },
+  {
+    id: 26,
+    name: 'Evolution-API',
+    icon: 'EvolutionAPI',
+    type: 'tools',
+  },
 ]

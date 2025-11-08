@@ -31,6 +31,7 @@ import {
   SiOpenai,
 } from 'react-icons/si'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
+import { Workflow, MessageSquare } from 'lucide-react'
 import React from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -133,6 +134,10 @@ export default function SkillScroll() {
           {skill.icon === 'ZApi' && <FaWhatsapp className="text-8xl" />}
           {skill.icon === 'Scrum' && <FaHandsHelping className="text-8xl" />}
           {skill.icon === 'Kanban' && <FaTools className="text-8xl" />}
+          {skill.icon === 'N8N' && <Workflow className="text-8xl" size={96} />}
+          {skill.icon === 'EvolutionAPI' && (
+            <MessageSquare className="text-8xl" size={96} />
+          )}
         </div>
       ))}
     </Slider>

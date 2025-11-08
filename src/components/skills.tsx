@@ -34,6 +34,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect, useRef } from 'react'
 import Image from 'next/image'
+import { Workflow, MessageSquare } from 'lucide-react'
 
 export default function Skills() {
   const el = useRef<HTMLDivElement | null>(null)
@@ -117,6 +118,10 @@ export default function Skills() {
         return <FaHandsHelping className="text-6xl text-primary" />
       case 'Kanban':
         return <FaTools className="text-6xl text-primary" />
+      case 'N8N':
+        return <Workflow className="text-6xl text-primary" size={72} />
+      case 'EvolutionAPI':
+        return <MessageSquare className="text-6xl text-primary" size={72} />
       default:
         return null
     }

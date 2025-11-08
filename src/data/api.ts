@@ -12,45 +12,22 @@ export function api(path: string, init?: RequestInit) {
 
   const url = new URL(path, baseUrl)
 
-  // Garantir que credentials seja sempre 'include' para enviar cookies
+  // Garantir que credentials seja sempre 'include' para enviar cookies HttpOnly automaticamente
   const options: RequestInit = {
     credentials: 'include',
     ...init,
   }
 
-  // Adicionar token via header para todas as rotas autenticadas
-  if (
-    path.includes('/auth/') ||
-    path.includes('/upload/') ||
-    path.includes('/projects') ||
-    path.includes('/admin')
-  ) {
-    // Pegar token do cookie (apenas no cliente)
-    if (typeof window !== 'undefined') {
-      const cookies = document.cookie
-      const tokenMatch = cookies.match(/token=([^;]+)/)
-
-      if (tokenMatch) {
-        // Se for FormData, não definir Content-Type (deixa o navegador fazer)
-        const isFormData = init?.body instanceof FormData
-        const existingHeaders = options.headers || {}
-
-        // Remover Content-Type se for FormData (navegador define automaticamente)
-        if (isFormData && 'Content-Type' in existingHeaders) {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          const { 'Content-Type': _, ...headersWithoutContentType } =
-            existingHeaders as Record<string, string>
-          options.headers = {
-            ...headersWithoutContentType,
-            Authorization: `Bearer ${tokenMatch[1]}`,
-          }
-        } else {
-          options.headers = {
-            ...existingHeaders,
-            Authorization: `Bearer ${tokenMatch[1]}`,
-          }
-        }
-      }
+  // Se for FormData, não definir Content-Type (deixa o navegador fazer)
+  if (init?.body instanceof FormData) {
+    const existingHeaders = options.headers || {}
+    if ('Content-Type' in existingHeaders) {
+      const headersWithoutContentType = Object.fromEntries(
+        Object.entries(existingHeaders).filter(
+          ([key]) => key !== 'Content-Type',
+        ),
+      )
+      options.headers = headersWithoutContentType
     }
   }
 

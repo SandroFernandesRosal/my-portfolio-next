@@ -58,13 +58,8 @@ export default function AdminLogin() {
       })
 
       if (response.ok) {
-        console.log('✅ Login successful!')
-        console.log('🍪 Cookies after login:', document.cookie)
-        console.log('📋 Response headers:', response.headers)
-
         // Aguardar um pouco para o cookie ser definido
         setTimeout(() => {
-          console.log('🍪 Cookies after timeout:', document.cookie)
           window.location.href = '/admin'
         }, 500)
       } else {

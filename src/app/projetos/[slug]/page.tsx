@@ -13,6 +13,7 @@ import {
 } from 'react-icons/ri'
 import { FaCss3Alt, FaHandsHelping, FaTools, FaWhatsapp } from 'react-icons/fa'
 import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
+import { Workflow, MessageSquare } from 'lucide-react'
 import {
   SiPrisma,
   SiStyledcomponents,
@@ -22,6 +23,7 @@ import {
   SiOpenai,
   SiFastify,
   SiNodedotjs,
+  SiExpress,
 } from 'react-icons/si'
 import CarouselProject from '@/components/carousel-project'
 
@@ -148,6 +150,9 @@ export default async function ProjectPage({ params }: SlugProps) {
                     {tec === 'Fastify' && (
                       <SiFastify className="text-6xl text-primary" />
                     )}
+                    {tec === 'Express' && (
+                      <SiExpress className="text-6xl text-primary" />
+                    )}
                     {tec === 'Styled Components' && (
                       <SiStyledcomponents className="text-6xl text-primary" />
                     )}
@@ -174,6 +179,12 @@ export default async function ProjectPage({ params }: SlugProps) {
                     )}
                     {tec === 'Kanban' && (
                       <FaTools className="text-6xl text-primary" />
+                    )}
+                    {tec === 'N8N' && (
+                      <Workflow className="text-6xl text-primary" style={{ width: '3.75rem', height: '3.75rem' }} />
+                    )}
+                    {tec === 'Evolution-API' && (
+                      <MessageSquare className="text-6xl text-primary" style={{ width: '3.75rem', height: '3.75rem' }} />
                     )}
                   </li>
                 )

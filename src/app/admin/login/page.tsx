@@ -9,31 +9,7 @@ export default function AdminLogin() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  const [checkingAuth, setCheckingAuth] = useState(true)
-
-  // Verificar se já está autenticado ao carregar a página
-  useEffect(() => {
-    const checkAuth = async () => {
-      try {
-        const response = await api('/auth/me', {
-          credentials: 'include',
-        })
-
-        if (response.ok) {
-          // Usuário já está autenticado, redirecionar para o dashboard
-          window.location.href = '/admin'
-        } else {
-          // Usuário não está autenticado, pode mostrar a página de login
-          setCheckingAuth(false)
-        }
-      } catch (error) {
-        // Erro na verificação, pode mostrar a página de login
-        setCheckingAuth(false)
-      }
-    }
-
-    checkAuth()
-  }, [])
+  // Não verificar autenticação na página de login - se está aqui, não está autenticado
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -71,15 +47,6 @@ export default function AdminLogin() {
     } finally {
       setLoading(false)
     }
-  }
-
-  // Mostrar loading enquanto verifica autenticação
-  if (checkingAuth) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-bglight dark:bg-bgdark">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-      </div>
-    )
   }
 
   return (

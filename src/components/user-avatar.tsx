@@ -29,9 +29,13 @@ export default function UserAvatar() {
         if (response.ok) {
           const data = await response.json()
           setUser(data)
+        } else {
+          // Usuário não autenticado - não é erro, apenas não mostrar o avatar
+          setUser(null)
         }
       } catch (error) {
-        console.error('Erro ao buscar usuário:', error)
+        // Silenciar erros de autenticação - são esperados quando não logado
+        setUser(null)
       } finally {
         setLoading(false)
       }

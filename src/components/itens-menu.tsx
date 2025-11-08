@@ -33,9 +33,11 @@ export default function ItensMenu({ menu, handleMenu }: MenuProps) {
         if (response.ok) {
           setIsAuthenticated(true)
         } else {
+          // Não autenticado - não é erro, apenas definir estado
           setIsAuthenticated(false)
         }
       } catch (error) {
+        // Silenciar erros de autenticação - são esperados quando não logado
         setIsAuthenticated(false)
       } finally {
         setCheckingAuth(false)

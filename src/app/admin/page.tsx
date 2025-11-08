@@ -148,14 +148,11 @@ export default function AdminDashboard() {
     setProjectToDelete(null)
   }
 
-  const handleProjectSaved = (isEdit: boolean = false) => {
+  const handleProjectSaved = () => {
     setShowProjectModal(false)
     setSelectedProject(null)
     fetchProjects()
-    showToast(
-      'success',
-      isEdit ? 'Projeto editado com sucesso!' : 'Projeto criado com sucesso!',
-    )
+    // Toast já é exibido no modal antes de chamar onSave
   }
 
   if (!isAuthenticated) {

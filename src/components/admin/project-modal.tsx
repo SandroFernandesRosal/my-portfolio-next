@@ -32,6 +32,10 @@ export default function ProjectModal({
   })
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [toast, setToast] = useState<{
+    type: 'success' | 'error'
+    message: string
+  } | null>(null)
   const [selectedCoverFile, setSelectedCoverFile] = useState<File | null>(null)
   const [selectedCarouselFiles, setSelectedCarouselFiles] = useState<File[]>([])
   const [selectedVideoFile, setSelectedVideoFile] = useState<File | null>(null)
@@ -231,7 +235,16 @@ export default function ProjectModal({
       })
 
       if (response.ok) {
-        onSave(!!project) // Se project existe, é edição
+        setToast({
+          type: 'success',
+          message: project
+            ? 'Projeto editado com sucesso!'
+            : 'Projeto criado com sucesso!',
+        })
+        setTimeout(() => {
+          setToast(null)
+          onSave()
+        }, 1500)
       } else {
         let errorMessage = 'Erro ao salvar projeto'
         try {
@@ -242,11 +255,16 @@ export default function ProjectModal({
           errorMessage = `Erro ${response.status}: ${response.statusText}`
         }
         setError(errorMessage)
+        setToast({ type: 'error', message: errorMessage })
+        setTimeout(() => setToast(null), 3000)
         setLoading(false)
       }
     } catch (error) {
       console.error('Erro geral no submit:', error)
-      setError('Erro interno do servidor durante o upload')
+      const errorMessage = 'Erro interno do servidor durante o upload'
+      setError(errorMessage)
+      setToast({ type: 'error', message: errorMessage })
+      setTimeout(() => setToast(null), 3000)
     } finally {
       setLoading(false)
     }
@@ -601,45 +619,77 @@ export default function ProjectModal({
               </label>
 
               {/* Input para adicionar nova tecnologia */}
-              <div className="flex gap-2 mb-3">
-                <input
-                  type="text"
-                  id="newTech"
-                  placeholder="Digite uma tecnologia"
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                  onKeyPress={(e) => {
-                    if (e.key === 'Enter') {
-                      e.preventDefault()
-                      const value = (e.target as HTMLInputElement).value.trim()
+              <div className="flex flex-col gap-2 mb-3">
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    id="newTech"
+                    placeholder="Digite uma tecnologia"
+                    className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-primary focus:border-primary bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault()
+                        const value = (
+                          e.target as HTMLInputElement
+                        ).value.trim()
+                        if (value && !formData.technologies.includes(value)) {
+                          setFormData((prev) => ({
+                            ...prev,
+                            technologies: [...prev.technologies, value],
+                          }))
+                          ;(e.target as HTMLInputElement).value = ''
+                          setToast({
+                            type: 'success',
+                            message: 'Tecnologia adicionada com sucesso!',
+                          })
+                          setTimeout(() => setToast(null), 3000)
+                        } else if (
+                          value &&
+                          formData.technologies.includes(value)
+                        ) {
+                          setToast({
+                            type: 'error',
+                            message: 'Esta tecnologia já foi adicionada',
+                          })
+                          setTimeout(() => setToast(null), 3000)
+                        }
+                      }
+                    }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const input = document.getElementById(
+                        'newTech',
+                      ) as HTMLInputElement
+                      const value = input.value.trim()
                       if (value && !formData.technologies.includes(value)) {
                         setFormData((prev) => ({
                           ...prev,
                           technologies: [...prev.technologies, value],
                         }))
-                        ;(e.target as HTMLInputElement).value = ''
+                        input.value = ''
+                        setToast({
+                          type: 'success',
+                          message: 'Tecnologia adicionada com sucesso!',
+                        })
+                        setTimeout(() => setToast(null), 3000)
+                      } else if (
+                        value &&
+                        formData.technologies.includes(value)
+                      ) {
+                        setToast({
+                          type: 'error',
+                          message: 'Esta tecnologia já foi adicionada',
+                        })
+                        setTimeout(() => setToast(null), 3000)
                       }
-                    }
-                  }}
-                />
-                <button
-                  type="button"
-                  onClick={() => {
-                    const input = document.getElementById(
-                      'newTech',
-                    ) as HTMLInputElement
-                    const value = input.value.trim()
-                    if (value && !formData.technologies.includes(value)) {
-                      setFormData((prev) => ({
-                        ...prev,
-                        technologies: [...prev.technologies, value],
-                      }))
-                      input.value = ''
-                    }
-                  }}
-                  className="px-4 py-2 bg-primary text-white rounded-md hover:bg-green-700 transition-colors"
-                >
-                  Adicionar
-                </button>
+                    }}
+                    className="px-4 py-2 bg-primary text-white rounded-md hover:bg-green-700 transition-colors"
+                  >
+                    Adicionar
+                  </button>
+                </div>
               </div>
 
               {/* Tags das tecnologias */}
@@ -733,6 +783,24 @@ export default function ProjectModal({
           </form>
         </div>
       </div>
+
+      {/* Toast de notificação */}
+      {toast && (
+        <div
+          className={`fixed top-4 right-4 z-[100] p-4 rounded-lg shadow-lg animate-pulse ${
+            toast.type === 'success'
+              ? 'bg-green-500 text-white'
+              : 'bg-red-500 text-white'
+          }`}
+        >
+          <div className="flex items-center">
+            <span className="mr-2">
+              {toast.type === 'success' ? '✅' : '❌'}
+            </span>
+            {toast.message}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

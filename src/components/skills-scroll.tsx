@@ -45,11 +45,12 @@ export default function SkillScroll() {
     slidesToScroll: 1,
     autoplay: true,
     speed: 3000,
-    autoplaySpeed: 0,
+    autoplaySpeed: 50,
     cssEase: 'linear',
     pauseOnHover: false,
     pauseOnFocus: false,
     variableWidth: true,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 1536,

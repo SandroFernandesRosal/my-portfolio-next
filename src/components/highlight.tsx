@@ -1,4 +1,8 @@
+'use client'
+
 import Link from 'next/link'
+import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 
 import {
   FaHandsHelping,
@@ -14,17 +18,60 @@ import {
   FaWrench,
 } from 'react-icons/fa'
 
-import Image from 'next/image'
 import SkillScroll from './skills-scroll'
 
 export default function HighLight() {
+  const gridRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // Animação do grid
+    if (gridRef.current) {
+      let position = 0
+      const animate = () => {
+        if (gridRef.current) {
+          position += 0.3
+          gridRef.current.style.backgroundPosition = `${position}px ${position}px`
+          requestAnimationFrame(animate)
+        }
+      }
+      animate()
+    }
+  }, [])
+
   return (
     <section className="flex flex-col relative w-[100vw] overflow-hidden">
-      <section className="relative flex flex-wrap items-center pt-8  justify-center md:justify-around bg-bglight dark:bg-bgdark md:items-start min-h-[80vh]">
-        {/* Background Effects */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[80%] h-40 bg-gradient-to-r from-green-500/20 via-emerald-500/30 to-green-500/20 blur-[120px] rounded-full" />
-        <div className="absolute top-20 right-10 w-32 h-32 bg-blue-500/10 blur-[80px] rounded-full" />
-        <div className="absolute bottom-20 left-10 w-24 h-24 bg-purple-500/10 blur-[60px] rounded-full" />
+      <section className="relative flex flex-wrap items-center pt-8 justify-center md:justify-around bg-bglight dark:bg-bgdark md:items-start min-h-[80vh]">
+        {/* Animated Grid Background */}
+        <div
+          ref={gridRef}
+          className="absolute inset-0 opacity-30 dark:opacity-20"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+          }}
+        />
+
+        {/* Enhanced Background Effects */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[80%] h-40 bg-gradient-to-r from-green-500/20 via-emerald-500/30 to-green-500/20 blur-[120px] rounded-full animate-pulse" />
+        <div
+          className="absolute top-20 right-10 w-32 h-32 bg-blue-500/10 blur-[80px] rounded-full animate-pulse"
+          style={{ animationDelay: '1s' }}
+        />
+        <div
+          className="absolute bottom-20 left-10 w-24 h-24 bg-purple-500/10 blur-[60px] rounded-full animate-pulse"
+          style={{ animationDelay: '2s' }}
+        />
+        <div
+          className="absolute top-1/2 left-1/4 w-40 h-40 bg-green-500/5 blur-[100px] rounded-full animate-pulse"
+          style={{ animationDelay: '0.5s' }}
+        />
+        <div
+          className="absolute bottom-1/4 right-1/4 w-36 h-36 bg-emerald-500/5 blur-[90px] rounded-full animate-pulse"
+          style={{ animationDelay: '1.5s' }}
+        />
 
         {/* Hero Image */}
         <div className="my-8 flex px-6 md:px-8 flex-col items-center justify-center w-[100%] md:w-[45%] relative z-10">
